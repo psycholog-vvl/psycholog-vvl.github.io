@@ -1,0 +1,2191 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Віртуальний кабінет психолога · Великовисківський ліцей</title>
+<meta name="description" content="Віртуальний кабінет практичного психолога Великовисківського ліцею: поради учням, батькам і вчителям, вправи для заспокоєння, самоперевірка, гарячі лінії.">
+<meta property="og:title" content="Віртуальний кабінет психолога · Великовисківський ліцей">
+<meta property="og:description" content="Поради, вправи для заспокоєння і підтримка для учнів, батьків і вчителів.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1D6B58">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.35' cy='.35'%3E%3Cstop offset='0' stop-color='%23F3B23A'/%3E%3Cstop offset='.55' stop-color='%23E7705A'/%3E%3Cstop offset='1' stop-color='%238C7BDB'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='30' fill='url(%23g)'/%3E%3C/svg%3E">
+<style>[hidden]{display:none!important} img{max-width:100%} :root{padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Onest:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#EEF3EF; --bg2:#E3ECE6; --surface:#FFFFFF; --ink:#142C2A; --muted:#546B67; --line:#D3DFD8;
+  --pine:#1D6B58; --pine-ink:#FFFFFF; --pine-soft:#D8ECE4;
+  --sun:#F3B23A; --sun-soft:#FCEFD2; --sun-ink:#5A3E00;
+  --coral:#E7705A; --coral-soft:#FBE3DC; --coral-ink:#6B2416;
+  --lilac:#8C7BDB; --lilac-soft:#E7E3FA; --lilac-ink:#2F2470;
+  --alert:#B83B2E; --alert-soft:#F9E1DD;
+  --display:"Unbounded","Trebuchet MS",system-ui,sans-serif;
+  --body:"Onest","Segoe UI",system-ui,sans-serif;
+  --r:22px;
+  --shadow:0 1px 2px rgba(20,44,42,.06),0 8px 24px -12px rgba(20,44,42,.18);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0E1A19; --bg2:#132322; --surface:#172B29; --ink:#E6F0EC; --muted:#98AFA9; --line:#27403D;
+    --pine:#5CC2A3; --pine-ink:#062019; --pine-soft:#1B3A33;
+    --sun:#F5C35E; --sun-soft:#352A12; --sun-ink:#FBE3AE;
+    --coral:#F08C78; --coral-soft:#3A221D; --coral-ink:#FAD0C6;
+    --lilac:#A99BEF; --lilac-soft:#27234A; --lilac-ink:#DCD6FB;
+    --alert:#F07E70; --alert-soft:#3B211E;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0E1A19; --bg2:#132322; --surface:#172B29; --ink:#E6F0EC; --muted:#98AFA9; --line:#27403D;
+  --pine:#5CC2A3; --pine-ink:#062019; --pine-soft:#1B3A33;
+  --sun:#F5C35E; --sun-soft:#352A12; --sun-ink:#FBE3AE;
+  --coral:#F08C78; --coral-soft:#3A221D; --coral-ink:#FAD0C6;
+  --lilac:#A99BEF; --lilac-soft:#27234A; --lilac-ink:#DCD6FB;
+  --alert:#F07E70; --alert-soft:#3B211E;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:90px}
+body{background:var(--bg); color:var(--ink); font-family:var(--body); font-size:16.5px; line-height:1.6; margin:0; -webkit-font-smoothing:antialiased}
+a{color:var(--pine); text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--sun); outline-offset:3px; border-radius:8px}
+h1,h2,h3,h4{font-family:var(--display); line-height:1.15; text-wrap:balance; margin:0; font-weight:600; letter-spacing:-.01em}
+p{margin:0}
+ul,ol{margin:0; padding-left:1.25em}
+.wrap{max-width:1140px; margin:0 auto; padding-inline:20px}
+.eyebrow{font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:var(--muted)}
+.muted{color:var(--muted)}
+button{font-family:inherit}
+
+/* ---------- NAV ---------- */
+.nav{position:sticky; top:env(safe-area-inset-top,0px); z-index:20; background:color-mix(in srgb,var(--bg) 86%,transparent); backdrop-filter:saturate(1.4) blur(12px); -webkit-backdrop-filter:saturate(1.4) blur(12px); border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex; align-items:center; gap:18px; min-height:64px}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); flex:none}
+.brand-mark{width:34px; height:34px; border-radius:50%; background:radial-gradient(circle at 35% 35%,var(--sun),var(--coral) 55%,var(--lilac)); flex:none}
+.brand b{font-family:var(--display); font-weight:600; font-size:.9rem; line-height:1.1; display:block}
+.brand small{font-size:.72rem; color:var(--muted); display:block}
+.tabs{display:flex; gap:4px; overflow-x:auto; scrollbar-width:none; margin-left:auto; padding-block:4px}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{padding:9px 14px; border-radius:999px; text-decoration:none; color:var(--ink); font-weight:600; font-size:.92rem; white-space:nowrap; transition:background .15s}
+.tabs a:hover{background:var(--bg2)}
+.tabs a[aria-current="page"]{background:var(--ink); color:var(--bg)}
+.tabs a.sos{color:var(--alert)}
+.tabs a.sos[aria-current="page"]{background:var(--alert); color:#fff}
+@media (max-width:820px){.nav .wrap{flex-direction:column; align-items:stretch; gap:4px; padding-block:10px 6px}.tabs{margin-left:0; margin-inline:-6px}}
+
+/* ---------- VIEWS ---------- */
+.view{padding-block:40px 72px}
+.view-head{display:grid; gap:14px; max-width:760px; margin-bottom:36px}
+.view-head h1{font-size:clamp(2rem,5vw,3.2rem)}
+.view-head p{font-size:1.1rem; color:var(--muted); max-width:62ch}
+.chip{display:inline-flex; align-items:center; gap:8px; align-self:start; justify-self:start; padding:6px 14px; border-radius:999px; font-weight:700; font-size:.82rem}
+.c-sun{background:var(--sun-soft); color:var(--sun-ink)}
+.c-coral{background:var(--coral-soft); color:var(--coral-ink)}
+.c-lilac{background:var(--lilac-soft); color:var(--lilac-ink)}
+.c-pine{background:var(--pine-soft); color:var(--pine)}
+.c-alert{background:var(--alert-soft); color:var(--alert)}
+
+/* ---------- HOME / HERO ---------- */
+.hero{display:grid; grid-template-columns:1.15fr 1fr; gap:32px; align-items:center; padding-block:24px 8px}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.2rem,6vw,4.1rem); font-weight:700; letter-spacing:-.02em}
+.hero h1 .hl{background:linear-gradient(transparent 62%,var(--sun-soft) 62%); padding-inline:.08em}
+.hero .lead{font-size:1.15rem; color:var(--muted); max-width:52ch; margin-top:18px}
+.hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 22px; border-radius:999px; font-weight:700; font-size:.97rem; text-decoration:none; border:2px solid transparent; cursor:pointer; line-height:1.1; transition:transform .12s, filter .12s}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:none}
+.btn.dark{background:var(--ink); color:var(--bg)}
+.btn.pine{background:var(--pine); color:var(--pine-ink)}
+.btn.line{border-color:var(--line); background:var(--surface); color:var(--ink)}
+.btn.sos{background:var(--alert-soft); color:var(--alert)}
+.btn.sm{padding:10px 16px; font-size:.88rem}
+
+.orb-stage{position:relative; aspect-ratio:1; max-width:460px; width:100%; justify-self:center; display:grid; place-items:center}
+.orb-ring{position:absolute; inset:6%; border-radius:50%; border:1.5px dashed color-mix(in srgb,var(--pine) 35%,transparent)}
+.orb{width:62%; aspect-ratio:1; border-radius:50%; background:
+  radial-gradient(circle at 32% 30%,rgba(255,255,255,.75),transparent 34%),
+  radial-gradient(circle at 70% 75%,var(--lilac),transparent 60%),
+  radial-gradient(circle at 30% 70%,var(--coral),transparent 55%),
+  radial-gradient(circle at 60% 30%,var(--sun),transparent 60%),
+  var(--pine);
+  box-shadow:0 30px 80px -30px color-mix(in srgb,var(--pine) 70%,transparent);
+  animation:breathe 10s ease-in-out infinite}
+@keyframes breathe{0%{transform:scale(.72)}40%{transform:scale(1)}100%{transform:scale(.72)}}
+.orb-label{position:absolute; bottom:4%; left:0; right:0; text-align:center; font-family:var(--display); font-size:1rem; color:var(--muted); height:1.4em}
+.orb-label span{position:absolute; inset:0; animation:lab 10s ease-in-out infinite}
+.orb-label span:nth-child(2){animation-name:lab2}
+@keyframes lab{0%,38%{opacity:1}42%,96%{opacity:0}100%{opacity:1}}
+@keyframes lab2{0%,38%{opacity:0}44%,94%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion: reduce){.orb,.orb-label span{animation:none}.orb-label span:nth-child(2){display:none}}
+
+.doors{display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:44px}
+@media (max-width:1080px){.doors{grid-template-columns:repeat(2,1fr)}.door:last-child{grid-column:span 2}}
+@media (max-width:520px){.doors{grid-template-columns:1fr}.door:last-child{grid-column:auto}}
+.door.d-ink{background:var(--bg2)} .door.d-ink svg{color:var(--ink)}
+.door{position:relative; display:flex; flex-direction:column; gap:10px; padding:24px; border-radius:var(--r); text-decoration:none; color:var(--ink); min-height:210px; overflow:hidden; transition:transform .18s}
+.door:hover{transform:translateY(-3px)}
+.door h3{font-size:1.35rem}
+.door p{font-size:.95rem; opacity:.85}
+.door .go{margin-top:auto; font-weight:700; font-size:.9rem}
+.door svg{width:46px; height:46px}
+.door.d-sun{background:var(--sun-soft)} .door.d-sun svg{color:var(--sun)}
+.door.d-coral{background:var(--coral-soft)} .door.d-coral svg{color:var(--coral)}
+.door.d-lilac{background:var(--lilac-soft)} .door.d-lilac svg{color:var(--lilac)}
+.door.d-pine{background:var(--pine-soft)} .door.d-pine svg{color:var(--pine)}
+
+.home-row{display:grid; grid-template-columns:1.2fr 1fr; gap:16px; margin-top:16px}
+@media (max-width:900px){.home-row{grid-template-columns:1fr}}
+.panel{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:26px; box-shadow:var(--shadow)}
+.panel h3{font-size:1.15rem}
+.month-card{display:grid; gap:10px}
+.month-card .m{font-family:var(--display); font-size:2rem; font-weight:700; color:var(--pine)}
+.tip-card{display:grid; gap:14px; align-content:start}
+.tip-text{font-size:1.1rem; font-weight:500; min-height:4.8em}
+
+/* weather check */
+.weather{display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-block:14px 12px}
+@media (max-width:520px){.weather{grid-template-columns:repeat(3,1fr)}}
+.weather button{border:2px solid var(--line); background:var(--bg); color:var(--ink); border-radius:16px; padding:12px 6px; cursor:pointer; display:grid; justify-items:center; gap:6px; font-weight:600; font-size:.82rem}
+.weather button svg{width:34px; height:34px}
+.weather button[aria-pressed="true"]{border-color:var(--pine); background:var(--pine-soft)}
+.weather-out{min-height:3em}
+.weather-out.bad{background:var(--alert-soft); padding:12px 14px; border-radius:12px}
+
+/* ---------- TOPIC GRID ---------- */
+.seg{display:inline-flex; background:var(--bg2); border-radius:999px; padding:4px; gap:4px; margin-bottom:24px; flex-wrap:wrap}
+.seg button{border:0; background:transparent; padding:10px 18px; border-radius:999px; font-weight:700; color:var(--muted); cursor:pointer; font-size:.92rem}
+.seg button[aria-selected="true"]{background:var(--surface); color:var(--ink); box-shadow:var(--shadow)}
+.topics{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; align-items:start}
+@media (max-width:820px){.topics{grid-template-columns:1fr}}
+.topics details{background:var(--surface); border:1px solid var(--line); border-radius:18px; transition:box-shadow .2s}
+.topics details[open]{box-shadow:var(--shadow)}
+.topics summary{cursor:pointer; list-style:none; padding:20px 22px; display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:center}
+.topics summary::-webkit-details-marker{display:none}
+.topics summary .ic{width:40px; height:40px; border-radius:12px; display:grid; place-items:center; font-family:var(--display); font-weight:700; font-size:1rem}
+.topics summary h3{font-size:1.02rem; font-weight:600}
+.topics summary small{display:block; color:var(--muted); font-family:var(--body); font-weight:500; font-size:.85rem; margin-top:3px; letter-spacing:0}
+.topics summary::after{content:""; width:12px; height:12px; border-right:2.5px solid var(--muted); border-bottom:2.5px solid var(--muted); transform:rotate(45deg) translate(-3px,-3px); transition:transform .2s}
+.topics details[open] summary::after{transform:rotate(225deg) translate(-2px,-2px)}
+.tb{padding:0 22px 22px; display:grid; gap:12px; max-width:68ch}
+.tb h4{font-family:var(--body); font-weight:700; font-size:.98rem; margin-top:4px}
+.tb ul,.tb ol{display:grid; gap:6px}
+.tb .say{background:var(--bg); border-left:3px solid var(--pine); padding:10px 14px; border-radius:0 10px 10px 0; font-style:italic}
+.tb .warn{background:var(--alert-soft); color:var(--ink); padding:12px 14px; border-radius:12px}
+.tb .law{background:var(--lilac-soft); padding:12px 14px; border-radius:12px; font-size:.95rem}
+.tb table{border-collapse:collapse; width:100%; font-size:.93rem}
+.tb th,.tb td{text-align:left; padding:8px 10px; border-top:1px solid var(--line); vertical-align:top}
+.tb th{font-weight:700}
+.tscroll{overflow-x:auto}
+
+.i-sun{background:var(--sun-soft); color:var(--sun-ink)}
+.i-coral{background:var(--coral-soft); color:var(--coral-ink)}
+.i-lilac{background:var(--lilac-soft); color:var(--lilac-ink)}
+.i-pine{background:var(--pine-soft); color:var(--pine)}
+.i-alert{background:var(--alert-soft); color:var(--alert)}
+
+.callout{margin-top:28px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; padding:22px 26px; border-radius:var(--r); background:var(--ink); color:var(--bg)}
+.callout p{max-width:60ch}
+.callout .btn.line{background:transparent; color:var(--bg); border-color:color-mix(in srgb,var(--bg) 40%,transparent)}
+
+/* ---------- RELAX STUDIO ---------- */
+.studio{display:grid; grid-template-columns:repeat(12,1fr); gap:16px}
+.studio > *{grid-column:span 6}
+.studio .wide{grid-column:span 12}
+.studio .third{grid-column:span 4}
+@media (max-width:900px){.studio > *, .studio .third{grid-column:span 12}}
+.tool{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:26px; display:grid; gap:14px; align-content:start}
+.tool h3{font-size:1.25rem}
+.tool .how{color:var(--muted); font-size:.95rem}
+.breather{display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:center}
+@media (max-width:760px){.breather{grid-template-columns:1fr}}
+.patterns{display:grid; gap:8px}
+.patterns button{text-align:left; border:2px solid var(--line); background:var(--bg); color:var(--ink); border-radius:14px; padding:12px 14px; cursor:pointer}
+.patterns button b{display:block; font-size:.98rem}
+.patterns button span{font-size:.85rem; color:var(--muted)}
+.patterns button[aria-pressed="true"]{border-color:var(--pine); background:var(--pine-soft)}
+.bstage{display:grid; place-items:center; gap:14px; text-align:center}
+.bcircle{width:min(240px,70vw); aspect-ratio:1; border-radius:50%; display:grid; place-items:center; position:relative}
+.bcircle::before{content:""; position:absolute; inset:0; border-radius:50%; border:2px dashed var(--line)}
+.bball{width:100%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.6),transparent 40%),linear-gradient(140deg,var(--pine),var(--lilac)); transform:scale(.45); transition-property:transform; transition-timing-function:ease-in-out}
+.bphase{font-family:var(--display); font-size:1.5rem; min-height:1.4em}
+.bmeta{color:var(--muted); font-variant-numeric:tabular-nums; min-height:1.5em}
+
+.stepper{display:grid; gap:14px}
+.step-card{background:var(--bg); border-radius:16px; padding:20px; min-height:132px; display:grid; gap:8px; align-content:center}
+.step-card .n{font-family:var(--display); font-size:2.6rem; font-weight:700; color:var(--pine); line-height:1}
+.step-card p{font-size:1.05rem}
+.dots{display:flex; gap:6px}
+.dots i{width:8px; height:8px; border-radius:50%; background:var(--line)}
+.dots i.on{background:var(--pine)}
+.row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+
+.pmr-stage{background:var(--bg); border-radius:16px; padding:20px; display:grid; gap:6px; min-height:132px; align-content:center}
+.pmr-part{font-family:var(--display); font-size:1.3rem}
+.pmr-cue{font-size:1.05rem}
+.bar{height:6px; background:var(--line); border-radius:6px; overflow:hidden}
+.bar i{display:block; height:100%; width:0; background:var(--pine); transition:width .95s linear}
+
+.butterfly{display:flex; justify-content:center; gap:28px; padding-block:10px}
+.wing{width:64px; height:64px; border-radius:50% 50% 50% 50%/60% 60% 40% 40%; background:var(--lilac-soft); border:2px solid var(--lilac); opacity:.45}
+.butterfly.run .wing.l{animation:tapL 1.2s infinite}
+.butterfly.run .wing.r{animation:tapR 1.2s infinite}
+@keyframes tapL{0%,49%{opacity:1; transform:scale(1.08)}50%,100%{opacity:.35; transform:scale(1)}}
+@keyframes tapR{0%,49%{opacity:.35; transform:scale(1)}50%,100%{opacity:1; transform:scale(1.08)}}
+
+.script{display:grid; gap:10px; counter-reset:s}
+.script p{padding-left:36px; position:relative}
+.script p::before{counter-increment:s; content:counter(s); position:absolute; left:0; top:0; width:24px; height:24px; border-radius:50%; background:var(--pine-soft); color:var(--pine); font-size:.8rem; font-weight:700; display:grid; place-items:center}
+
+.games{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+@media (max-width:760px){.games{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.games{grid-template-columns:1fr}}
+.game{background:var(--sun-soft); border-radius:16px; padding:18px; display:grid; gap:6px; align-content:start}
+.game b{font-family:var(--display); font-weight:600; font-size:1rem; color:var(--sun-ink)}
+.game p{font-size:.93rem}
+
+.diary{display:grid; gap:12px}
+.diary-days{display:grid; grid-template-columns:repeat(14,1fr); gap:5px}
+.diary-days i{aspect-ratio:1; border-radius:50%; background:var(--bg2); display:block}
+.legend{display:flex; flex-wrap:wrap; gap:10px 16px; font-size:.82rem; color:var(--muted)}
+.legend span{display:inline-flex; align-items:center; gap:6px}
+.legend i{width:10px; height:10px; border-radius:50%; display:inline-block}
+
+/* ---------- HELP ---------- */
+.lines{display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px}
+.line{background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:20px; display:grid; gap:6px; align-content:start}
+.line .num{font-family:var(--display); font-size:1.65rem; font-weight:600; font-variant-numeric:tabular-nums; user-select:all; letter-spacing:-.01em}
+.line .alt{font-size:.9rem; font-weight:600}
+.line p{color:var(--muted); font-size:.92rem}
+.line .copy{justify-self:start; margin-top:6px; background:none; border:1.5px solid var(--line); border-radius:999px; padding:6px 14px; font-weight:600; font-size:.82rem; color:var(--ink); cursor:pointer}
+.line.urgent{background:var(--alert-soft); border-color:transparent}
+.line.urgent .num{color:var(--alert)}
+.help-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:28px}
+@media (max-width:820px){.help-grid{grid-template-columns:1fr}}
+.group-title{font-size:1.15rem; margin:36px 0 14px}
+
+/* ---------- ABOUT ---------- */
+.about{display:grid; grid-template-columns:1fr 1.3fr; gap:16px}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+.portrait{aspect-ratio:4/5; max-width:100%; border-radius:var(--r); background:linear-gradient(160deg,var(--pine-soft),var(--lilac-soft)); display:grid; place-items:center; color:var(--muted); font-weight:600}
+.facts{display:grid; grid-template-columns:auto 1fr; gap:8px 18px; margin:0}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0; font-weight:600}
+.checks{list-style:none; padding:0; display:grid; gap:10px}
+.checks li{padding-left:30px; position:relative}
+.checks li::before{content:""; position:absolute; left:0; top:.35em; width:18px; height:18px; border-radius:50%; background:var(--pine-soft); box-shadow:inset 0 0 0 5px var(--pine-soft),inset 0 0 0 9px var(--pine)}
+
+/* ---------- studio groups ---------- */
+.sgroup{grid-column:span 12; display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-top:22px; padding-bottom:4px; border-bottom:1px solid var(--line)}
+.sgroup:first-child{margin-top:0}
+.sgroup h2{font-size:1.35rem}
+.sgroup p{color:var(--muted); font-size:.95rem}
+.src{font-size:.82rem; color:var(--muted)}
+.choice{display:flex; gap:8px; flex-wrap:wrap}
+.choice button{border:2px solid var(--line); background:var(--bg); color:var(--ink); border-radius:999px; padding:9px 16px; font-weight:700; cursor:pointer; font-size:.9rem}
+.choice button:hover{border-color:var(--pine)}
+.choice button.ok{border-color:var(--pine); background:var(--pine-soft)}
+.choice button.no{border-color:var(--coral); background:var(--coral-soft)}
+.qcard{background:var(--bg); border-radius:16px; padding:20px; display:grid; gap:12px; min-height:150px; align-content:center}
+.qcard .q{font-size:1.1rem; font-weight:600}
+.qcard .fb{font-size:.95rem; min-height:1.5em}
+.tree-out{background:var(--pine-soft); border-radius:14px; padding:14px 16px}
+.sos3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+@media (max-width:820px){.sos3{grid-template-columns:1fr}}
+.circle-ctl{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+@media (max-width:520px){.circle-ctl{grid-template-columns:1fr}}
+.circle-ctl div{border-radius:14px; padding:14px 16px}
+.circle-ctl ul{display:grid; gap:4px; font-size:.93rem; margin-top:6px}
+
+/* ---------- self-check ---------- */
+.checks-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start}
+@media (max-width:900px){.checks-grid{grid-template-columns:1fr}}
+.test{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:26px; display:grid; gap:16px}
+.test.wide{grid-column:1/-1}
+.test h3{font-size:1.25rem}
+.qlist{display:grid; gap:12px; counter-reset:q}
+.qrow{display:grid; gap:8px; padding-top:12px; border-top:1px solid var(--line)}
+.qrow > span{font-weight:600}
+.qrow > span::before{counter-increment:q; content:counter(q) ". "; color:var(--muted)}
+.scale{display:flex; flex-wrap:wrap; gap:6px}
+.scale label{cursor:pointer}
+.scale input{position:absolute; opacity:0; pointer-events:none}
+.scale span{display:inline-block; border:1.5px solid var(--line); border-radius:999px; padding:6px 12px; font-size:.84rem; font-weight:600; background:var(--bg)}
+.scale input:checked + span{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.scale input:focus-visible + span{outline:3px solid var(--sun); outline-offset:2px}
+.result{border-radius:16px; padding:18px 20px; display:grid; gap:8px}
+.result h4{font-size:1.15rem}
+.meter{height:10px; border-radius:10px; background:linear-gradient(90deg,#6FBF8E,#F3B23A 55%,#E7705A); position:relative}
+.meter i{position:absolute; top:-5px; width:4px; height:20px; border-radius:2px; background:var(--ink); transform:translateX(-2px)}
+.riasec{display:grid; gap:10px}
+.riasec .bar-row{display:grid; grid-template-columns:120px 1fr 28px; gap:10px; align-items:center; font-size:.9rem; font-weight:600}
+.riasec .bar-row .track{height:10px; background:var(--bg2); border-radius:10px; overflow:hidden}
+.riasec .bar-row .track i{display:block; height:100%; background:var(--lilac); border-radius:10px}
+.plan{display:grid; gap:14px}
+.plan label{font-weight:700; display:block; margin-bottom:6px}
+.plan label small{display:block; font-weight:500; color:var(--muted); font-size:.85rem}
+.plan textarea{width:100%; min-height:88px; resize:vertical; border:1.5px solid var(--line); border-radius:12px; padding:10px 12px; font:inherit; background:var(--bg); color:var(--ink)}
+.plan textarea:focus{outline:none; border-color:var(--pine)}
+
+/* ---------- feature / groups ---------- */
+.feature{background:var(--surface); border:1px solid var(--line); border-radius:28px; padding:28px; margin-bottom:40px; display:grid; gap:22px; box-shadow:var(--shadow)}
+@media (max-width:520px){.feature{padding:18px}}
+.feature-head{display:grid; gap:10px; max-width:70ch}
+.feature-head h2{font-size:clamp(1.4rem,3vw,2rem)}
+.feature-head p{color:var(--muted)}
+.feature .topics details{background:var(--bg)}
+.tgroup{grid-column:1/-1; display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; margin-top:18px; padding-bottom:6px; border-bottom:1px solid var(--line)}
+.tgroup:first-child{margin-top:0}
+.tgroup h3{font-size:1.25rem}
+.tgroup p{color:var(--muted); font-size:.93rem}
+.tl{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(5,1fr); gap:10px; counter-reset:t}
+.tl li{position:relative; background:var(--alert-soft); border-radius:16px; padding:16px 14px 14px; display:grid; gap:4px; align-content:start}
+.tl li b{font-family:var(--display); font-weight:600; font-size:.98rem; color:var(--alert)}
+.tl li span{font-size:.88rem; line-height:1.45}
+.tl li:not(:last-child)::after{content:""; position:absolute; right:-9px; top:22px; width:8px; height:8px; border-top:2px solid var(--alert); border-right:2px solid var(--alert); transform:rotate(45deg)}
+.tl li:nth-child(n+4){background:var(--pine-soft)} .tl li:nth-child(n+4) b{color:var(--pine)}
+@media (max-width:900px){.tl{grid-template-columns:1fr}.tl li:not(:last-child)::after{right:auto; left:22px; top:auto; bottom:-8px; transform:rotate(135deg)}}
+.dodont{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+@media (max-width:560px){.dodont{grid-template-columns:1fr}}
+.dodont > div{border-radius:14px; padding:14px 16px}
+.dodont .do{background:var(--pine-soft)}
+.dodont .dont{background:var(--coral-soft)}
+.dodont ul{margin-top:6px; display:grid; gap:4px; font-size:.93rem}
+.letter{white-space:pre-wrap; font-family:var(--body); font-size:.9rem; line-height:1.55; background:var(--surface); border:1px dashed var(--line); border-radius:14px; padding:16px 18px; margin:0; max-width:100%; overflow-x:auto}
+
+footer{border-top:1px solid var(--line); padding-block:28px 40px; color:var(--muted); font-size:.87rem}
+footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px}
+</style>
+</head>
+<body>
+
+
+<nav class="nav" aria-label="Розділи сайту">
+  <div class="wrap">
+    <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"></span><span><b>Кабінет психолога</b><small>Великовисківський ліцей</small></span></a>
+    <div class="tabs" id="tabs">
+      <a href="#home">Головна</a>
+      <a href="#students">Учням</a>
+      <a href="#parents">Батькам</a>
+      <a href="#teachers">Вчителям</a>
+      <a href="#relax">Релакс-студія</a>
+      <a href="#tests">Самоперевірка</a>
+      <a href="#about">Про кабінет</a>
+      <a href="#help" class="sos">Допомога зараз</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- =================== HOME =================== -->
+<section class="view" id="v-home" data-view="home">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Психологічна служба · 1–11 класи</span>
+        <h1 style="margin-top:14px">Місце, де можна <span class="hl">видихнути</span></h1>
+        <p class="lead">Поради, вправи для заспокоєння і підтримка для учнів, батьків і вчителів Великовисківського ліцею. Сюди можна прийти з будь-яким питанням, навіть якщо здається, що воно дрібне.</p>
+        <div class="hero-actions">
+          <a class="btn dark" href="#relax">Заспокоїтися зараз</a>
+          <a class="btn line" href="#about">Звернутися до психолога</a>
+          <a class="btn sos" href="#help">Мені дуже погано</a>
+        </div>
+      </div>
+      <div class="orb-stage" aria-hidden="true">
+        <div class="orb-ring"></div>
+        <div class="orb"></div>
+        <div class="orb-label"><span>вдих…</span><span>видих…</span></div>
+      </div>
+    </div>
+
+    <div class="doors">
+      <a class="door d-sun" href="#students">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="24" cy="24" r="9" fill="currentColor"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.9 9.9l4.2 4.2M33.9 33.9l4.2 4.2M9.9 38.1l4.2-4.2M33.9 14.1l4.2-4.2"/></svg>
+        <h3>Я учень</h3>
+        <p>Емоції, дружба, булінг, тривога, іспити. Окремо для молодших і старших.</p>
+        <span class="go">Відкрити →</span>
+      </a>
+      <a class="door d-coral" href="#parents">
+        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 42s-15-9.2-15-20.2C9 16 13.2 12 18 12c2.8 0 4.9 1.3 6 3.3C25.1 13.3 27.2 12 30 12c4.8 0 9 4 9 9.8C39 32.8 24 42 24 42z"/></svg>
+        <h3>Я батьки</h3>
+        <p>Адаптація, розмови про війну, підлітки, гаджети, ознаки булінгу.</p>
+        <span class="go">Відкрити →</span>
+      </a>
+      <a class="door d-lilac" href="#teachers">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M6 12c6-3 12-3 18 1 6-4 12-4 18-1v26c-6-3-12-3-18 1-6-4-12-4-18-1z" fill="currentColor" fill-opacity=".2"/><path d="M24 13v26"/></svg>
+        <h3>Я вчитель</h3>
+        <p>Алгоритми дій, психологія уроку, п'ятихвилинки, профілактика вигорання.</p>
+        <span class="go">Відкрити →</span>
+      </a>
+      <a class="door d-pine" href="#relax">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 20c5-5 10-5 15 0s10 5 15 0 7-4 10-2"/><path d="M4 30c5-5 10-5 15 0s10 5 15 0 7-4 10-2"/></svg>
+        <h3>Релакс-студія</h3>
+        <p>Понад 20 вправ: дихання, заземлення, тіло, думки, ігри для малечі.</p>
+        <span class="go">Спробувати →</span>
+      </a>
+      <a class="door d-ink" href="#tests">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="30" height="36" rx="5"/><path d="M16 18l3 3 6-6M16 30l3 3 6-6M29 19h4M29 31h4"/></svg>
+        <h3>Самоперевірка</h3>
+        <p>Рівень стресу, тест «Ким я можу стати», план безпеки.</p>
+        <span class="go">Пройти →</span>
+      </a>
+    </div>
+
+    <div class="home-row">
+      <div class="panel">
+        <h3>Яка в тебе сьогодні внутрішня погода?</h3>
+        <div class="weather" id="weather-home"></div>
+        <p class="weather-out muted" id="weather-home-out" aria-live="polite">Обери, що ближче до твого стану. Ніхто, крім тебе, цього не побачить.</p>
+      </div>
+      <div class="panel tip-card">
+        <span class="eyebrow">Порада дня</span>
+        <p class="tip-text" id="tip">…</p>
+        <button type="button" class="btn line sm" id="tip-next" style="justify-self:start">Ще одна порада</button>
+      </div>
+    </div>
+    <div class="panel month-card" style="margin-top:16px">
+      <span class="eyebrow">Тема місяця</span>
+      <div class="m" id="month-name">Вересень</div>
+      <p id="month-text" style="max-width:70ch"></p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== STUDENTS =================== -->
+<section class="view" id="v-students" data-view="students" hidden>
+  <div class="wrap">
+    <div class="view-head">
+      <span class="chip c-sun">Учням</span>
+      <h1>Коли всередині неспокійно</h1>
+      <p>Тут відповіді на питання, які буває соромно поставити вголос. Обери свій вік.</p>
+    </div>
+    <div class="seg" role="tablist" aria-label="Вік">
+      <button type="button" role="tab" id="seg-young" aria-selected="true" data-seg="young">1–4 клас</button>
+      <button type="button" role="tab" id="seg-teen" aria-selected="false" data-seg="teen">5–11 клас</button>
+    </div>
+
+    <!-- молодші -->
+    <div class="topics" data-pane="young">
+      <details>
+        <summary><span class="ic i-sun">1</span><h3>Мої емоції<small>Що я відчуваю і що з цим робити</small></h3></summary>
+        <div class="tb">
+          <p>Усі почуття потрібні: і радість, і злість, і сум. Погано не почуття, а коли через нього ми робимо боляче собі чи іншим.</p>
+          <div class="tscroll"><table>
+            <tr><th>Почуття</th><th>Як це в тілі</th><th>Що допоможе</th></tr>
+            <tr><td>Злість</td><td>Гаряче обличчя, стиснуті кулаки</td><td>Вправа «Черепаха», потупотіти ногами, порахувати до 10</td></tr>
+            <tr><td>Страх</td><td>Серце б'ється швидко, холодні руки</td><td>Взяти за руку дорослого, дихання «Кулька»</td></tr>
+            <tr><td>Сум</td><td>Хочеться плакати, важко в грудях</td><td>Поплакати можна. Обійняти маму, улюблену іграшку</td></tr>
+            <tr><td>Образа</td><td>Клубок у горлі</td><td>Сказати: «Мені неприємно, коли ти так робиш»</td></tr>
+          </table></div>
+          <p>Спробуй щодня називати свою «погоду» на головній сторінці: сонце, хмарка чи дощик.</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-coral">2</span><h3>Коли я злюся<small>Вправа «Черепаха»</small></h3></summary>
+        <div class="tb">
+          <ol>
+            <li><b>Стоп.</b> Зупинись і нічого не роби руками.</li>
+            <li><b>Сховайся в панцир.</b> Обійми себе руками, опусти голову.</li>
+            <li><b>Три повільні вдихи.</b> Уяви, що всередині панцира тихо й тепло.</li>
+            <li><b>Подумай.</b> Що сталося? Як можна вчинити по-іншому?</li>
+            <li><b>Вилазь.</b> Скажи словами, що тобі не подобається.</li>
+          </ol>
+          <p class="say">«Я дуже злюся, бо ти взяв мою ручку без дозволу. Поверни, будь ласка».</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-lilac">3</span><h3>Коли мене ображають<small>Що робити, якщо хтось кривдить</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Скажи голосно і впевнено: «Припини! Мені це не подобається».</li>
+            <li>Відійди до інших дітей або до вчителя.</li>
+            <li>Обов'язково розкажи дорослому: вчительці, мамі, татові, психологу. Це не ябедництво, це турбота про себе.</li>
+            <li>Якщо ображають іншого, поклич дорослого. Так ти допомагаєш.</li>
+          </ul>
+          <p class="say">Ябедничати — це коли хочеш, щоб когось покарали. Розповісти — це коли комусь потрібна допомога.</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-pine">4</span><h3>Як знайти друга<small>Маленькі кроки до дружби</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Посміхнись і назви своє ім'я: «Привіт, я Софійка. А тебе як звати?»</li>
+            <li>Запропонуй пограти разом або поділись олівцем.</li>
+            <li>Запитай, що людині подобається: мультики, ігри, тварини.</li>
+            <li>Друзі іноді сваряться. Важливо вміти помиритися: «Вибач, я не хотів».</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-alert">5</span><h3>Коли повітряна тривога<small>Як бути сміливим в укритті</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Слухай учительку і тримайся поруч з класом.</li>
+            <li>Боятися — нормально. Навіть дорослим буває страшно.</li>
+            <li>Зроби дихання «Задуй свічку»: вдихни носиком, повільно видихни, ніби задуваєш свічку на торті.</li>
+            <li>Пограй у «Я бачу щось…» з однокласниками: вгадуйте предмети за кольором.</li>
+            <li>Май з собою маленьку іграшку або брелок-«сміливця».</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-sun">6</span><h3>Якщо тато чи мама далеко<small>Коли сумуєш за рідними</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Сумувати за рідними — це любов. З тобою все гаразд.</li>
+            <li>Намалюй малюнок або напиши листа й передай його, коли буде можливість.</li>
+            <li>Зробіть з родиною «коробку спогадів» з фото і приємними дрібничками.</li>
+            <li>Розповідай про свої почуття тим, хто поруч.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-lilac">7</span><h3>Коли страшно вночі<small>Темрява, звуки, погані сни</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Нічник або ліхтарик біля ліжка — це нормально, навіть для сміливців.</li>
+            <li>Обійми улюблену іграшку і скажи їй: «Я тебе захищаю». Так тобі теж стане сміливіше.</li>
+            <li>Намалюй свій страшний сон, а потім домалюй йому смішний кінець. Можна порвати малюнок.</li>
+            <li>Перед сном попроси маму чи тата розповісти, що хорошого було сьогодні.</li>
+            <li>Зроби дихання «Кулька» 5 разів, лежачи в ліжку.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-pine">8</span><h3>Коли помилився або програв<small>Помилки — це частина навчання</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Усі помиляються: і вчителі, і батьки, і чемпіони.</li>
+            <li>Замість «Я не вмію» кажи «Я ще не навчився».</li>
+            <li>Спитай себе: «Що я зроблю інакше наступного разу?»</li>
+            <li>Програв у грі? Потисни руку переможцю. Це вчинок сильної людини.</li>
+          </ul>
+          <p class="say">Мозок росте, коли ми пробуємо складне і помиляємося.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- підлітки -->
+    <div class="topics" data-pane="teen" hidden>
+      <details>
+        <summary><span class="ic i-alert">1</span><h3>Булінг і кібербулінг<small>Що це, що робити, що каже закон</small></h3></summary>
+        <div class="tb">
+          <p>Булінг — це <b>систематичне</b> цькування: образи, ігнор, погрози, поширення чуток, фото, бійки, вимагання грошей. Одна сварка — ще не булінг. Коли це повторюється і одна сторона слабша — так.</p>
+          <h4>Якщо цькують тебе</h4>
+          <ul>
+            <li>Ти не винен. Причина завжди в поведінці кривдника, а не в тобі.</li>
+            <li>Розкажи дорослому, якому довіряєш. Можна анонімно, через скриньку довіри.</li>
+            <li>Збирай докази: скріншоти, дати, імена свідків.</li>
+            <li>Не відповідай агресією і не залишайся наодинці з кривдниками.</li>
+          </ul>
+          <h4>Якщо це в інтернеті</h4>
+          <ul>
+            <li>Не відповідай. Зроби скріншот, заблокуй, поскаржся на акаунт у соцмережі.</li>
+            <li>Не пересилай образливі фото і відео інших, навіть «для сміху».</li>
+          </ul>
+          <h4>Якщо ти свідок</h4>
+          <p>Свідки мають найбільшу силу. Не смійся, не знімай на відео. Підійди до того, кого цькують, або поклич дорослого.</p>
+          <div class="law">За ст. 173-4 КУпАП булінг карається штрафом або громадськими роботами. Якщо кривдникові менше 16 років, відповідають батьки. Про булінг повідомляють директора ліцею, консультує також лінія <b>1547</b>.</div>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-lilac">2</span><h3>Тривога<small>Коли думки не зупиняються</small></h3></summary>
+        <div class="tb">
+          <p>Тривога — це сигналізація мозку, яка вмикається навіть тоді, коли небезпеки поруч немає. Її можна «перевести в тихий режим».</p>
+          <ul>
+            <li><b>Тіло спершу.</b> Довгий видих заспокоює нервову систему: вдих на 4, видих на 6.</li>
+            <li><b>Заземлення 5-4-3-2-1.</b> Є в Релакс-студії.</li>
+            <li><b>Час для тривоги.</b> Виділи 15 хвилин на день, щоб записати всі страхи. Решту дня кажи собі: «Подумаю про це о 18:00».</li>
+            <li><b>Новини дозовано.</b> Двічі на день достатньо. Прибери сповіщення з тривожних каналів.</li>
+            <li><b>Рух.</b> 20 хвилин ходьби знижують рівень стресових гормонів.</li>
+          </ul>
+          <div class="warn">Якщо тривога заважає спати, їсти чи ходити до школи понад два тижні — прийди до психолога. Це те, з чим можна і треба працювати.</div>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-sun">3</span><h3>Контрольні, ДПА і НМТ<small>Як готуватися без паніки</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li><b>Метод помідора:</b> 25 хвилин навчання, 5 хвилин перерви, після 4 кіл — 20 хвилин відпочинку.</li>
+            <li><b>Повторення, а не перечитування.</b> Закрий підручник і перекажи своїми словами або склади картки з питаннями.</li>
+            <li><b>Сон важливіший за нічну зубрьожку.</b> Під час сну мозок закріплює вивчене.</li>
+            <li><b>Пробні тести.</b> Звикання до формату знижує страх.</li>
+            <li><b>На тесті:</b> зроби 3 довгі видихи, почни з легких завдань, повертайся до складних у кінці.</li>
+          </ul>
+          <p class="say">Хвилювання — це енергія. Скажи собі не «я спокійний», а «я зібраний і готовий».</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-coral">4</span><h3>Самооцінка і соцмережі<small>Коли порівнюєш себе з іншими</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>У соцмережах люди показують найкращі 5% свого життя. Ти порівнюєш свої будні з чужими «трейлерами».</li>
+            <li>Відпишись від акаунтів, після яких тобі гірше.</li>
+            <li>Щовечора записуй 3 речі, які тобі вдалися сьогодні, навіть дрібні.</li>
+            <li>Говори з собою так, як говорив би з найкращим другом.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-pine">5</span><h3>Конфлікти і особисті кордони<small>Як сказати «ні» і не посваритися</small></h3></summary>
+        <div class="tb">
+          <p><b>Я-повідомлення</b> замість звинувачень:</p>
+          <p class="say">«Мені неприємно (почуття), коли ти читаєш мої повідомлення (факт). Будь ласка, питай дозволу (прохання)».</p>
+          <ul>
+            <li>«Ні» — це нормальна відповідь. Ти не зобов'язаний пояснювати кожну відмову.</li>
+            <li>Якщо дуже злишся, візьми паузу: «Давай поговоримо пізніше».</li>
+            <li>Спробуй зрозуміти, що важливо для іншої людини. Часто ви хочете одного.</li>
+            <li>Здорові стосунки не містять контролю, погроз і ревнощів «з любові».</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-alert">6</span><h3>Безпека онлайн<small>Шантаж, фейки, незнайомці</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Не надсилай інтимні фото нікому. Навіть «своїй» людині: переписки зливають, акаунти зламують.</li>
+            <li>Якщо тобі погрожують чи вимагають фото або гроші — <b>не виконуй вимог</b>. Шантаж від цього не припиняється.</li>
+            <li>Збережи скріншоти, заблокуй, одразу скажи дорослому. Це злочин кривдника, а не твоя провина.</li>
+            <li>Не приймай зустрічі з людьми, яких знаєш лише з інтернету, без дорослих.</li>
+            <li>Вмикай двофакторну автентифікацію в месенджерах.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-lilac">7</span><h3>Коли рідна людина на фронті або її втрачено<small>Як жити з тривогою і горем</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Будь-які почуття нормальні: страх, злість, провина, оніміння. Горе не має правильного графіка.</li>
+            <li>Домовся з родиною про ритуал зв'язку, щоб чекати менш болісно.</li>
+            <li>Не залишайся наодинці з переживаннями. Розмова з другом, класним керівником або психологом справді полегшує.</li>
+            <li>Пиши листи, щоденник, малюй. Почуття, які мають форму, менше тиснуть зсередини.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-coral">8</span><h3>Якщо другові погано<small>Як помітити і як допомогти</small></h3></summary>
+        <div class="tb">
+          <h4>Тривожні сигнали</h4>
+          <ul>
+            <li>Каже, що все безглуздо, що він тягар для інших або що хоче зникнути.</li>
+            <li>Роздає свої речі, прощається, закривається від усіх.</li>
+            <li>Різко змінився: не їсть, не спить, перестав робити те, що любив.</li>
+          </ul>
+          <h4>Що робити</h4>
+          <ul>
+            <li>Спитай прямо і спокійно: «Я бачу, що тобі важко. Що відбувається?» Прямі питання не шкодять.</li>
+            <li>Слухай без порад і осуду.</li>
+            <li>Не тримай це в секреті, навіть якщо просять. Скажи дорослому — психологу, класному керівнику, батькам.</li>
+          </ul>
+          <div class="warn">Якщо є пряма загроза життю — телефонуй 112 і не залишай друга самого.</div>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-sun">9</span><h3>Сон і енергія<small>Чому ти постійно втомлений</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Підліткам потрібно 8–10 годин сну. Нестача сну посилює тривогу і дратівливість.</li>
+            <li>Синє світло екрана збиває внутрішній годинник. Відклади телефон за 60 хвилин до сну.</li>
+            <li>Лягай і вставай в один і той самий час, навіть у вихідні (різниця не більше години).</li>
+            <li>Енергетики і кава після 15:00 крадуть твій сон.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-pine">10</span><h3>Навіщо йти до психолога<small>І чого там точно не буде</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Психолог не ставить діагнозів, не оцінює і не «лікує божевільних».</li>
+            <li>Те, що ти розкажеш, залишиться між вами. Винятки — лише коли є загроза життю чи здоров'ю.</li>
+            <li>Можна прийти з будь-чим: від сварки з другом до питання «ким мені бути».</li>
+            <li>Можна прийти просто подихати і посидіти в тиші.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-coral">11</span><h3>Прокрастинація<small>Коли відкладаєш усе на потім</small></h3></summary>
+        <div class="tb">
+          <p>Прокрастинація — не лінь, а спосіб уникнути неприємних почуттів: страху помилитися, нудьги, втоми.</p>
+          <ul>
+            <li><b>Правило 5 хвилин.</b> Скажи собі: «Попрацюю лише 5 хвилин». Найважче — почати.</li>
+            <li><b>Розбий завдання.</b> Не «зробити проєкт», а «відкрити документ і написати заголовок».</li>
+            <li><b>Прибери телефон</b> в іншу кімнату або вимкни сповіщення.</li>
+            <li><b>Винагорода.</b> Після кожного кроку — маленька приємність.</li>
+            <li><b>Не чекай натхнення.</b> Воно приходить під час роботи, а не до неї.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-alert">12</span><h3>Злість<small>Як злитися і нікого не ранити</small></h3></summary>
+        <div class="tb">
+          <p>Злість — сигнал, що порушено твої кордони чи щось несправедливо. Сама вона не погана. Важливо, що ти з нею робиш.</p>
+          <ul>
+            <li>Помічай перші ознаки: жар в обличчі, стиснуті кулаки, прискорене серце.</li>
+            <li>Використай техніку СТОПП з Релакс-студії.</li>
+            <li>Виплесни енергію безпечно: пробіжка, віджимання, подушка, порвати папір.</li>
+            <li>Коли охолонеш, скажи про злість словами: «Я злюся, бо…»</li>
+            <li>Не приймай рішень і не пиши повідомлень на піку злості.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-lilac">13</span><h3>Закоханість і розставання<small>Коли серце болить</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Перші почуття сильні й справжні, навіть якщо дорослі кажуть «це мине».</li>
+            <li>Здорові стосунки — це повага, довіра і свобода. Контроль телефону, ревнощі й погрози — тривожні сигнали.</li>
+            <li>Після розставання біль нормальний. Дай собі час сумувати.</li>
+            <li>Не перечитуй старі переписки і на час прибери спільні фото.</li>
+            <li>Проводь час з друзями і роби те, що любиш.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-sun">14</span><h3>Моє тіло і зовнішність<small>Коли не подобаєшся собі в дзеркалі</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>У підлітковому віці тіло змінюється швидко і нерівномірно. Це тимчасово і нормально.</li>
+            <li>Фото в соцмережах часто оброблені фільтрами. Ти порівнюєш себе з тим, чого не існує.</li>
+            <li>Дякуй тілу за те, що воно вміє: бігати, обіймати, танцювати.</li>
+            <li>Не обговорюй чужу зовнішність і не дозволяй обговорювати свою.</li>
+          </ul>
+          <div class="warn">Якщо думки про їжу, вагу чи зовнішність займають більшу частину дня — поговори з психологом або лікарем.</div>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-pine">15</span><h3>Ким бути<small>Як обрати професію</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Випиши три списки: що мені цікаво, що в мене виходить, що потрібно людям. Шукай перетин.</li>
+            <li>Пройди тест «Ким я можу стати» у розділі <a href="#tests">Самоперевірка</a>.</li>
+            <li>Поговори з людьми, які вже працюють за цією професією. Спитай, що їм не подобається.</li>
+            <li>Спробуй на практиці: гуртки, волонтерство, літня робота, онлайн-курси.</li>
+            <li>Перший вибір — не вирок. Люди змінюють професію кілька разів за життя.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+    <div class="callout">
+      <p>Не хочеш розповідати вголос? Напиши у скриньку довіри. Ім'я вказувати не потрібно.</p>
+      <div class="row"><a class="btn pine" href="#about">Скринька довіри</a><a class="btn line" href="#relax">Релакс-студія</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PARENTS =================== -->
+<section class="view" id="v-parents" data-view="parents" hidden>
+  <div class="wrap">
+    <div class="view-head">
+      <span class="chip c-coral">Батькам</span>
+      <h1>Спокійний дорослий — найкраща опора</h1>
+      <p>Практичні пам'ятки про адаптацію, розмови з дітьми і тривожні сигнали. Консультація для батьків можлива особисто або онлайн.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-head">
+        <span class="chip c-alert">Булінг</span>
+        <h2>Якщо дитину цькують або цькує вона</h2>
+        <p>Покрокові дії для батьків: як розпізнати, як говорити, куди і як звертатися, які у вас права.</p>
+      </div>
+      <div class="topics">
+        <details>
+          <summary><span class="ic i-alert">1</span><h3>Тривожні сигнали<small>Діти рідко розповідають самі</small></h3></summary>
+          <div class="tb">
+            <p>Лише частина дітей розповідає дорослим про цькування: соромно, страшно, не вірять, що допоможуть. Тому важливо помічати зміни.</p>
+            <div class="tscroll"><table>
+              <tr><th>Що помітно</th><th>Приклади</th></tr>
+              <tr><td>Школа</td><td>Не хоче йти, «хворіє» зранку, просить підвезти, змінює маршрут додому</td></tr>
+              <tr><td>Речі і тіло</td><td>Зіпсовані або «загублені» речі, синці без пояснень, просить більше кишенькових</td></tr>
+              <tr><td>Телефон</td><td>Засмучується після повідомлень, ховає екран, раптом видалив соцмережі</td></tr>
+              <tr><td>Настрій і сон</td><td>Замкнутість, сльози, дратівливість, нічні жахи, втрата апетиту</td></tr>
+              <tr><td>Друзі</td><td>Не має друзів, не запрошують на свята, проводить перерви на самоті</td></tr>
+            </table></div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-coral">2</span><h3>Як поговорити з дитиною<small>Перша розмова найважливіша</small></h3></summary>
+          <div class="tb">
+            <p>Почніть здалеку і не допитуйте. Найкраще — під час спільної справи: прогулянки, дороги, приготування їжі.</p>
+            <p class="say">«Мені здається, останнім часом тобі невесело в школі. Що там відбувається на перервах? Як до тебе ставляться однокласники?»</p>
+            <div class="dodont">
+              <div class="do"><b>Кажіть</b><ul><li>«Добре, що ти мені розповів».</li><li>«Ти не винен. Ніхто не заслуговує на таке».</li><li>«Я на твоєму боці».</li><li>«Ми разом вирішимо, що робити. Без твого відома нічого не зроблю».</li></ul></div>
+              <div class="dont"><b>Не кажіть</b><ul><li>«Не зважай на них».</li><li>«Дай здачі, будь мужиком».</li><li>«А ти що їм зробив?»</li><li>«Зараз я піду і розберуся з ними».</li></ul></div>
+            </div>
+            <p>Не йдіть самі «розбиратися» з кривдником чи його батьками. Це небезпечно і може посилити цькування. Дійте через школу.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-lilac">3</span><h3>Покрокові дії батьків<small>Від доказів до заяви</small></h3></summary>
+          <div class="tb">
+            <ol>
+              <li><b>Зберіть докази.</b> Скріншоти повідомлень з датами, фото пошкоджених речей чи травм, імена свідків. Ведіть записи: що, коли, хто.</li>
+              <li><b>Зверніться до лікаря</b>, якщо є травми. Довідка стане доказом.</li>
+              <li><b>Поговоріть з класним керівником</b> і психологом ліцею.</li>
+              <li><b>Подайте заяву на ім'я директора.</b> Краще письмово і зареєструйте її (попросіть поставити вхідний номер на вашій копії).</li>
+              <li><b>Беріть участь у засіданні комісії.</b> Батьки мають право бути присутніми.</li>
+              <li><b>Отримайте рішення комісії</b> і стежте за виконанням рекомендацій.</li>
+              <li><b>Підтримуйте дитину</b>: консультації психолога, більше часу разом, заняття, де дитина почувається успішною.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-pine">4</span><h3>Зразок заяви про булінг<small>Скопіюйте і доповніть</small></h3></summary>
+          <div class="tb">
+            <pre class="letter" id="letter">Директору Великовисківського ліцею
+[ПІБ директора]
+[ПІБ заявника],
+який(-а) проживає за адресою: [адреса],
+тел. [номер]
+
+ЗАЯВА
+
+Повідомляю, що мій син / моя донька [ПІБ дитини], учень(-иця) [клас] класу, систематично зазнає булінгу (цькування) з боку [ПІБ або опис осіб, якщо відомо].
+
+Випадки: [дати, місце, що саме відбувалося — образи, погрози, фізичні дії, повідомлення в соцмережах].
+Свідки: [імена, якщо є].
+Докази: [скріншоти, фото, медична довідка — додаю копії].
+
+Прошу розглянути цю заяву відповідно до Порядку реагування на випадки булінгу (цькування), скликати комісію з розгляду випадку булінгу, повідомити мене про дату засідання та вжити заходів для припинення булінгу і захисту моєї дитини.
+
+Додатки: [перелік].
+
+[Дата]                [Підпис]</pre>
+            <button type="button" class="btn line sm" id="letter-copy" style="justify-self:start">Скопіювати текст заяви</button>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-sun">5</span><h3>Ваші права і строки<small>Що зобов'язана зробити школа</small></h3></summary>
+          <div class="tb">
+            <ul>
+              <li>Директор <b>невідкладно, не пізніше 1 доби</b>, повідомляє поліцію, батьків, службу у справах дітей і центр соціальних служб.</li>
+              <li>Засідання комісії — <b>не пізніше 3 робочих днів</b> після звернення.</li>
+              <li>Розгляд триває <b>не більше 10 робочих днів</b>.</li>
+              <li>До складу комісії входять психолог і соціальний педагог. Ви можете бути присутні на засіданні.</li>
+              <li>Члени комісії зобов'язані не розголошувати інформацію.</li>
+              <li>Постраждала дитина має право на психологічну підтримку.</li>
+            </ul>
+            <h4>Якщо школа не реагує</h4>
+            <ol>
+              <li>Відділ освіти Великовисківської сільської ради.</li>
+              <li>Служба освітнього омбудсмена: <a href="https://eo.gov.ua" target="_blank" rel="noopener">eo.gov.ua</a>.</li>
+              <li>Ювенальна поліція: <b>102</b>.</li>
+              <li>Урядова лінія: <b>1547</b>.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-coral">6</span><h3>Якщо цькує ваша дитина<small>Найважче визнати</small></h3></summary>
+          <div class="tb">
+            <ul>
+              <li>Не захищайте автоматично і не соромте. Спершу вислухайте школу і дитину.</li>
+              <li>Скажіть чітко: «Я люблю тебе, але те, що ти робиш, неприпустимо».</li>
+              <li>Шукайте причини: бажання влади в групі, заздрість, насильство чи приниження, яке дитина сама переживає, вплив компанії.</li>
+              <li>Розвивайте емпатію: «Як, на твою думку, він почувався?»</li>
+              <li>Домовтеся про конкретні наслідки і способи виправити шкоду.</li>
+              <li>Співпрацюйте з психологом. Кривдник теж потребує допомоги.</li>
+            </ul>
+            <p class="muted" style="font-size:.9rem">Якщо дитині 14–16 років, штраф за булінг сплачують батьки (ст. 173-4 КУпАП).</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-lilac">7</span><h3>Якщо дитина — свідок<small>Навчіть її діяти безпечно</small></h3></summary>
+          <div class="tb">
+            <ul>
+              <li>Поясніть, що мовчання і сміх підтримують кривдника.</li>
+              <li>Безпечні дії свідка: не приєднуватися, покликати дорослого, підійти до постраждалого після і підтримати.</li>
+              <li>Розповісти дорослому — не ябедництво, а допомога.</li>
+              <li>Похваліть дитину, якщо вона заступилася чи повідомила.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-pine">8</span><h3>Кібербулінг<small>Цькування в інтернеті</small></h3></summary>
+          <div class="tb">
+            <ul>
+              <li>Не забирайте телефон як покарання. Дитина перестане розповідати.</li>
+              <li>Зробіть скріншоти з датами і назвами акаунтів.</li>
+              <li>Заблокуйте кривдника і поскаржтеся на контент у соцмережі.</li>
+              <li>Шантаж, погрози чи поширення інтимних фото — звертайтеся до поліції (102).</li>
+              <li>Налаштуйте приватність акаунтів разом з дитиною.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="topics">
+      <div class="tgroup"><h3>Вікові етапи</h3><p>Що відбувається з дитиною в ключові роки навчання</p></div>
+      <details>
+        <summary><span class="ic i-sun">1</span><h3>Першокласник<small>6 порад на період адаптації</small></h3></summary>
+        <div class="tb">
+          <ol>
+            <li><b>Слухайте.</b> Ваша увага — найцінніше. Розпитуйте про день не «Що отримав?», а «Що було найцікавіше?»</li>
+            <li><b>Говоріть про школу добре.</b> Не критикуйте вчителя при дитині, питання вирішуйте напряму з педагогом.</li>
+            <li><b>Зберігайте спокій.</b> Ваша тривога передається дитині.</li>
+            <li><b>Допоможіть подружитися.</b> Запрошуйте однокласників у гості, гуляйте разом після уроків.</li>
+            <li><b>Тримайте режим.</b> Сон 10–11 годин, відпочинок після школи, без перевантаження гуртками у перші місяці.</li>
+            <li><b>Хваліть за старання</b>, а не лише за результат.</li>
+          </ol>
+          <p class="muted">Втома, капризи і сльози у перші 1–2 місяці — нормальна частина адаптації.</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-coral">2</span><h3>П'ятикласник<small>Новий етап, нові вчителі</small></h3></summary>
+        <div class="tb">
+          <p>Перехід у 5 клас часто визначає ставлення до навчання на роки вперед. Кілька вчителів замість одного, нові кабінети і предмети — стрес навіть для відмінників.</p>
+          <ol>
+            <li>Щодня розмовляйте з дитиною про її шкільне життя.</li>
+            <li>Помічайте зміни настрою і поведінки.</li>
+            <li>Дбайте про охайний вигляд і гігієну: це впливає на стосунки з однолітками.</li>
+            <li>Облаштуйте спокійне місце для навчання вдома.</li>
+            <li>Підтримуйте регулярний зв'язок з класним керівником.</li>
+            <li>У конфліктах не гарячкуйте: спершу вислухайте всі сторони.</li>
+            <li>Не карайте за нижчі оцінки у перші місяці.</li>
+            <li>Стежте за балансом уроків і відпочинку.</li>
+            <li>Будьте з учителями в одній команді.</li>
+          </ol>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-lilac">3</span><h3>Підліток<small>Як зберегти контакт</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Відстороненість підлітка — нормальний етап відокремлення, а не відмова від вас.</li>
+            <li>Найкращі розмови стаються «між ділом»: в машині, на кухні, на прогулянці, а не віч-на-віч за столом.</li>
+            <li>Слухайте більше, ніж радите. Спитайте: «Тобі зараз порада потрібна чи щоб я просто вислухав?»</li>
+            <li>Поважайте приватність, але знайте, з ким дитина спілкується.</li>
+            <li>Визнавайте свої помилки. Це вчить дитину відповідальності краще за нотації.</li>
+          </ul>
+          <div class="dodont">
+            <div class="do"><b>Замість</b><ul><li>«Скільки можна сидіти в телефоні!»</li><li>«У твоєму віці я вже…»</li><li>«Бо я так сказав»</li></ul></div>
+            <div class="dont" style="background:var(--pine-soft)"><b>Спробуйте</b><ul><li>«Покажеш, що там цікавого? Домовимося, скільки часу на день?»</li><li>«Мені цікаво, як це для тебе»</li><li>«Давай я поясню, чому це для мене важливо»</li></ul></div>
+          </div>
+          <h4>Тривожні сигнали у підлітка</h4>
+          <p>Різка зміна кола друзів, прогули, запах алкоголю чи тютюну, сліди порізів, розмови про безглуздість життя. У таких випадках не чекайте — зверніться до психолога.</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-pine">4</span><h3>Підтримка під час НМТ<small>Що допомагає, а що заважає</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Не порівнюйте з іншими і не лякайте «якщо не вступиш…».</li>
+            <li>Обговоріть план Б. Коли є запасний варіант, тиск падає.</li>
+            <li>Забезпечте сон, їжу і тишу, а не контроль кожної години.</li>
+            <li>Перед тестом — підтримка, а не інструкції: «Я в тебе вірю, що б не сталося».</li>
+          </ul>
+        </div>
+      </details>
+      <div class="tgroup"><h3>Емоції і поведінка</h3><p>Як розуміти дитину і реагувати</p></div>
+      <details>
+        <summary><span class="ic i-sun">1</span><h3>Ознаки стресу в дитини<small>На що звернути увагу за віком</small></h3></summary>
+        <div class="tb">
+          <div class="tscroll"><table>
+            <tr><th>Вік</th><th>Можливі сигнали</th></tr>
+            <tr><td>6–10 років</td><td>Повернення «малюкових» звичок, страх залишатися самому, нічні жахи, скарги на живіт і голову, агресія в іграх</td></tr>
+            <tr><td>11–14 років</td><td>Дратівливість, різкі зміни настрою, відмова від друзів і хобі, падіння успішності, «хвороби» зранку</td></tr>
+            <tr><td>15–18 років</td><td>Замкнутість, ризикована поведінка, порушення сну, байдужість, розмови про безглуздість життя</td></tr>
+          </table></div>
+          <p>Один сигнал — не привід для паніки. Кілька сигналів понад 2 тижні — привід поговорити з психологом.</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-coral">2</span><h3>Тривожна дитина<small>Як допомогти і не посилити</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li><b>Визнавайте почуття</b>: «Я бачу, що тобі страшно». Не «нічого страшного».</li>
+            <li><b>Не рятуйте від усього.</b> Якщо дитина постійно уникає страшного, тривога росте. Підтримуйте маленькі кроки назустріч страху.</li>
+            <li><b>Будьте передбачуваними.</b> Розказуйте план дня, попереджайте про зміни.</li>
+            <li><b>Навчіть дихати.</b> Робіть дихальні вправи разом, коли дитина спокійна, щоб вона вміла ними користуватися в тривозі.</li>
+            <li><b>Показуйте приклад.</b> Кажіть вголос: «Я хвилююсь, тому зроблю кілька видихів».</li>
+          </ul>
+          <div class="dodont">
+            <div class="do" style="background:var(--coral-soft)"><b>Не допомагає</b><ul><li>«Не бійся, це дурниці»</li><li>«Не будь боягузом»</li><li>Постійно заспокоювати і все робити замість дитини</li></ul></div>
+            <div class="dont" style="background:var(--pine-soft)"><b>Допомагає</b><ul><li>«Страшно — це нормально. Я поруч»</li><li>«Що найгірше може статися? А що ми тоді зробимо?»</li><li>«Спробуймо маленький крок разом»</li></ul></div>
+          </div>
+          <p>Звертайтеся до психолога, якщо тривога заважає ходити до школи, спати чи спілкуватися довше ніж 2–4 тижні.</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-lilac">3</span><h3>Істерики у молодших<small>Що робити під час і після</small></h3></summary>
+        <div class="tb">
+          <h4>Під час істерики</h4>
+          <ul>
+            <li>Зберігайте спокій. Дитина позичає ваше спокійне тіло.</li>
+            <li>Забезпечте безпеку, менше слів. Пояснення в цей момент не чутні.</li>
+            <li>Будьте поруч: «Я тут. Я почекаю, поки тобі стане легше».</li>
+          </ul>
+          <h4>Після</h4>
+          <ul>
+            <li>Обійміть і назвіть почуття: «Ти дуже розсердився, бо хотів ще погратися».</li>
+            <li>Обговоріть, що можна робити наступного разу, коли злість накриває.</li>
+            <li>Межі залишаються: «Злитися можна, битися не можна».</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-pine">4</span><h3>Гаджети і сон<small>Домовленості без війни</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Складіть правила разом з дитиною і запишіть їх. Правила, які дитина створила сама, вона виконує краще.</li>
+            <li>Екрани вимикаються за годину до сну, телефон заряджається поза спальнею. Для всіх у родині.</li>
+            <li>Замість заборон — альтернатива: настільні ігри, спорт, спільні справи.</li>
+            <li>Знайте, в які ігри грає дитина, і цікавтеся ними без осуду.</li>
+          </ul>
+        </div>
+      </details>
+      <div class="tgroup"><h3>Складні життєві ситуації</h3><p>Війна, втрати, зміни в родині</p></div>
+      <details>
+        <summary><span class="ic i-sun">1</span><h3>Розмова про війну<small>Що і як казати дитині</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li><b>Чесно і за віком.</b> Молодшим — коротко і просто, підліткам — більше фактів. Не обіцяйте того, чого не знаєте.</li>
+            <li><b>Дозвольте почуття.</b> Замість «не бійся» скажіть «я поруч, ми впораємося разом».</li>
+            <li><b>Ритуали і режим.</b> Спільна вечеря, казка на ніч, прогулянка дають дитині відчуття стабільності.</li>
+            <li><b>Менше новин при дитині.</b> Особливо відео і фото з місць обстрілів.</li>
+            <li><b>Дайте дію.</b> Допомога тваринам, малюнки захисникам, волонтерство повертають відчуття контролю.</li>
+          </ul>
+          <h4>За віком</h4>
+          <div class="tscroll"><table>
+            <tr><th>Вік</th><th>Як говорити</th></tr>
+            <tr><td>6–9 років</td><td>Коротко, конкретно, з акцентом на безпеку: «Військові нас захищають. Коли звучить сирена, ми йдемо в укриття, і там безпечно»</td></tr>
+            <tr><td>10–13 років</td><td>Більше фактів, відповідайте на питання. Обговорюйте, звідки інформація і чи їй можна вірити</td></tr>
+            <tr><td>14–18 років</td><td>Як з дорослим: чесно, з повагою до думки, говоріть про цінності, дайте можливість допомагати</td></tr>
+          </table></div>
+          <p class="say">«Так, зараз війна. Дорослі роблять усе, щоб тебе захистити. Ти можеш питати мене про все».</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-coral">2</span><h3>Дитина боїться обстрілів і тривог<small>Як підтримати вдома</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Перетворіть укриття на «затишний куточок»: ковдра, ліхтарик, настільні ігри, перекус.</li>
+            <li>Складіть разом «тривожний рюкзачок» — це дає відчуття контролю.</li>
+            <li>Пояснюйте правила безпеки спокійно, як правила дорожнього руху.</li>
+            <li>Під час тривоги грайте, розповідайте історії, дихайте разом.</li>
+            <li>Порушення сну, нічне нетримання, «прилипання» до батьків — нормальні реакції на стрес. Якщо вони тривають понад місяць, зверніться до психолога.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-lilac">3</span><h3>Родинам військових<small>Коли тато чи мама служить</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Підтримуйте зв'язок у зрозумілому ритмі: голосові, відео, листи, малюнки.</li>
+            <li>Не перекладайте на дитину роль «головного в домі». Вона має залишатися дитиною.</li>
+            <li>Готуйтеся до повернення рідного: людина може змінитися, і це потребує часу для обох.</li>
+            <li>Повідомте класного керівника, щоб школа могла делікатно підтримати дитину.</li>
+          </ul>
+          <p>Лінія підтримки для військових і їхніх родин: <b>0 800 33 27 20</b> (щодня 10:00–20:00).</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-pine">4</span><h3>Як сказати про смерть близького<small>Найважча розмова</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Кажіть правду простими словами: «помер», а не «заснув» чи «поїхав». Евфемізми лякають і плутають.</li>
+            <li>Скажіть самі, в спокійному місці, тримаючи дитину за руку.</li>
+            <li>Дозвольте будь-які реакції: сльози, злість, байдужість, гру. Діти горюють «хвилями».</li>
+            <li>Відповідайте на питання, навіть якщо вони повторюються.</li>
+            <li>Запропонуйте попрощатися: малюнок, лист, свічка, участь у пам'ятних ритуалах.</li>
+            <li>Повідомте класного керівника і психолога, щоб школа могла підтримати.</li>
+          </ul>
+          <p class="say">«Тато помер. Його тіло перестало працювати, і він більше не повернеться. Нам дуже сумно, і ми будемо сумувати разом».</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-sun">5</span><h3>Розлучення батьків<small>Як захистити дитину</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Скажіть разом, якщо можливо: «Ми вирішили жити окремо. Це рішення дорослих, і ти в ньому не винен».</li>
+            <li>Не критикуйте іншого батька при дитині і не робіть її посланцем.</li>
+            <li>Не змушуйте обирати сторону.</li>
+            <li>Зберігайте звичний розпорядок і зв'язок з обома батьками, якщо це безпечно.</li>
+          </ul>
+        </div>
+      </details>
+      <div class="tgroup"><h3>Для вас</h3><p>Щоб мати сили підтримувати дитину</p></div>
+      <details>
+        <summary><span class="ic i-sun">1</span><h3>Турбота про себе<small>Правило кисневої маски</small></h3></summary>
+        <div class="tb">
+          <p>Як у літаку: спершу маску собі, потім дитині. Виснажений дорослий не може бути опорою.</p>
+          <ul>
+            <li>Знайдіть 15 хвилин на день лише для себе.</li>
+            <li>Просіть про допомогу: родичів, друзів, сусідів.</li>
+            <li>Помічайте власну втому і роздратування. Це сигнали, а не слабкість.</li>
+            <li>Безкоштовна підтримка для дорослих: лінія «Людина в біді» <b>0 800 21 01 60</b> і лінія для чоловіків <b>2345</b>.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+    <div class="callout">
+      <p>Хочете обговорити ситуацію вашої дитини? Запишіться на консультацію, можна онлайн.</p>
+      <a class="btn pine" href="#about">Записатися</a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TEACHERS =================== -->
+<section class="view" id="v-teachers" data-view="teachers" hidden>
+  <div class="wrap">
+    <div class="view-head">
+      <span class="chip c-lilac">Вчителям</span>
+      <h1>Для тих, хто щодня тримає клас</h1>
+      <p>Алгоритми дій, прийоми для уроку і підтримка для вас самих.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-head">
+        <span class="chip c-alert">Протидія булінгу</span>
+        <h2>Булінг: від першого сигналу до супроводу</h2>
+        <p>Педагог найчастіше першим бачить цькування. Нижче — що саме робити, говорити і в які строки, згідно з Порядком реагування на випадки булінгу (наказ МОН № 1646).</p>
+      </div>
+
+      <ol class="tl" aria-label="Строки реагування">
+        <li><b>Одразу</b><span>Педагог припиняє насильство, надає допомогу постраждалому, повідомляє директора</span></li>
+        <li><b>До 1 доби</b><span>Директор повідомляє поліцію, батьків, службу у справах дітей і центр соціальних служб</span></li>
+        <li><b>До 3 робочих днів</b><span>Засідання комісії з розгляду випадку булінгу</span></li>
+        <li><b>До 10 робочих днів</b><span>Комісія завершує розгляд і дає рекомендації</span></li>
+        <li><b>Далі</b><span>Психологічний супровід сторін, заходи виховного впливу, моніторинг</span></li>
+      </ol>
+
+      <div class="topics">
+        <details>
+          <summary><span class="ic i-alert">1</span><h3>Як відрізнити булінг від конфлікту<small>Чотири ключові ознаки</small></h3></summary>
+          <div class="tb">
+            <div class="tscroll"><table>
+              <tr><th>Ознака</th><th>Булінг</th><th>Конфлікт</th></tr>
+              <tr><td>Повторюваність</td><td>Систематично, тижнями</td><td>Разово або епізодично</td></tr>
+              <tr><td>Сили сторін</td><td>Нерівні: старший, сильніший, група проти одного</td><td>Приблизно рівні</td></tr>
+              <tr><td>Намір</td><td>Принизити, налякати, ізолювати</td><td>Відстояти свою позицію</td></tr>
+              <tr><td>Наслідки</td><td>Страх, сором, уникання школи</td><td>Образа, що минає після примирення</td></tr>
+            </table></div>
+            <h4>Форми булінгу</h4>
+            <ul>
+              <li><b>Психологічний:</b> образливі прізвиська, ігнорування, бойкот, погрози, чутки.</li>
+              <li><b>Фізичний:</b> штовхання, удари, підніжки, псування речей.</li>
+              <li><b>Економічний:</b> вимагання грошей, відбирання їжі, крадіжки.</li>
+              <li><b>Сексуальний:</b> образливі жарти й жести, торкання, поширення інтимних фото.</li>
+              <li><b>Кібербулінг:</b> цькування в чатах, фейкові акаунти, публікація принизливих відео.</li>
+            </ul>
+            <h4>Ролі в булінгу</h4>
+            <p>Кривдник, постраждалий і <b>свідки</b>. Свідки — найбільша група. Коли вони мовчать або сміються, кривдник отримує «глядачів» і підтримку. Робота з класом важить не менше, ніж робота з кривдником.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-coral">2</span><h3>Сигнали, які варто помітити<small>У постраждалого, кривдника і класу</small></h3></summary>
+          <div class="tb">
+            <h4>Можливо, дитину цькують</h4>
+            <ul>
+              <li>Сидить сама на перервах, приходить до кабінету в останню секунду.</li>
+              <li>Її останньою обирають у команду, над її відповідями сміються.</li>
+              <li>Часто «губить» речі, приходить із зіпсованим зошитом чи одягом.</li>
+              <li>Різко впала успішність, часті пропуски, скарги на здоров'я.</li>
+              <li>Здригається від різких рухів, тримається ближче до дорослих.</li>
+            </ul>
+            <h4>Можливо, дитина кривдить</h4>
+            <ul>
+              <li>Потребує домінувати, принижує слабших, «жартує» на чужий рахунок.</li>
+              <li>Має групу, яка підтримує її дії.</li>
+              <li>Не відчуває провини, перекладає відповідальність: «Він сам напросився».</li>
+            </ul>
+            <h4>У класі</h4>
+            <ul>
+              <li>Сміх або перезирання, коли певний учень відповідає.</li>
+              <li>Ніхто не хоче сидіти поруч з однією дитиною.</li>
+              <li>Раптова тиша, коли ви заходите до класу.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-lilac">3</span><h3>Що робити в момент цькування<small>Перші 5 хвилин</small></h3></summary>
+          <div class="tb">
+            <ol>
+              <li><b>Зупиніть</b> чітко і спокійно, не принижуючи кривдника.</li>
+              <li><b>Назвіть поведінку</b> і правило, яке порушено.</li>
+              <li><b>Розведіть сторін.</b> Постраждалого — у безпечне місце, до себе чи до психолога.</li>
+              <li><b>Не розбирайте</b> ситуацію при класі. Скажіть, що поговорите окремо.</li>
+              <li><b>Зафіксуйте</b>: що бачили, дата, час, учасники, свідки.</li>
+              <li><b>Повідомте директора</b> того ж дня. Краще письмово.</li>
+            </ol>
+            <p class="say">«Стоп. Те, що відбувається, — неприпустимо. У нашому класі ніхто не має права принижувати іншого. Максиме, ходімо зі мною. З рештою поговоримо окремо».</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-pine">4</span><h3>Розмова з постраждалим<small>Що казати і чого не казати</small></h3></summary>
+          <div class="tb">
+            <div class="dodont">
+              <div class="do"><b>Кажіть</b><ul><li>«Дякую, що розповів. Це було сміливо».</li><li>«Ти не винен у тому, що відбувається».</li><li>«Я тобі вірю».</li><li>«Ми разом вирішимо, що робити далі».</li><li>«Ти можеш прийти до мене будь-коли».</li></ul></div>
+              <div class="dont"><b>Не кажіть</b><ul><li>«Не звертай уваги, і вони відстануть».</li><li>«Дай здачі».</li><li>«А що ти зробив, що вони так?»</li><li>«Це ж просто жарти».</li><li>«Я не можу нічого вдіяти».</li></ul></div>
+            </div>
+            <ul>
+              <li>Говоріть наодинці, у спокійному місці, без поспіху.</li>
+              <li>Не обіцяйте тримати все в таємниці. Поясніть, кому і навіщо розповісте.</li>
+              <li>Домовтеся про план безпеки: де бути на перервах, до кого бігти.</li>
+              <li>Скеруйте до психолога і регулярно перевіряйте, як справи.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-sun">5</span><h3>Розмова з кривдником<small>Твердо щодо вчинку, з повагою до особистості</small></h3></summary>
+          <div class="tb">
+            <ol>
+              <li>Говоріть наодинці, без свідків і публічного сорому.</li>
+              <li>Опишіть факти: «Я бачив, як ти тричі цього тижня…»</li>
+              <li>Не приймайте виправдань «ми просто жартували». Жарт смішний обом.</li>
+              <li>Спитайте, як почувався постраждалий. Розвивайте емпатію.</li>
+              <li>Назвіть наслідки і домовтеся про конкретну зміну поведінки.</li>
+              <li>З'ясуйте причини. Часто кривдник сам переживає насильство чи шукає визнання.</li>
+            </ol>
+            <p class="say">«Ти мені не байдужий, і тому я не дозволю тобі так поводитися з іншими. Що відбувається, що тобі хочеться так робити?»</p>
+            <div class="law">Не влаштовуйте очних зустрічей «помиріться» між кривдником і постраждалим. Нерівність сил зберігається, і постраждалий почувається ще більш безпорадним. Медіацію проводять лише фахівці і лише за згодою сторін.</div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-coral">6</span><h3>Робота зі свідками і класом<small>Змінити правила гри</small></h3></summary>
+          <div class="tb">
+            <ul>
+              <li>Проведіть класну годину про роль свідків, без прямих згадок про конкретний випадок.</li>
+              <li>Разом створіть <b>правила класу</b>: як ми поводимося одне з одним, що робимо, коли бачимо цькування.</li>
+              <li>Навчіть простих дій свідка: не сміятися, стати поруч, покликати дорослого, підтримати після.</li>
+              <li>Поясніть різницю між «ябедничати» і «просити допомоги».</li>
+              <li>Змінюйте групи для роботи на уроці, щоб розбивати сталі угруповання.</li>
+              <li>Помічайте й хваліть учнів, які підтримують інших.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-lilac">7</span><h3>Кібербулінг<small>Коли цькування в чатах і соцмережах</small></h3></summary>
+          <div class="tb">
+            <ul>
+              <li>Кібербулінг — теж булінг. Реагування таке саме, навіть якщо все сталося поза школою.</li>
+              <li>Попросіть зробити скріншоти з датою і назвою акаунта. Не просіть пересилати інтимні фото — це заборонено.</li>
+              <li>Порадьте заблокувати кривдника і поскаржитися на контент у соцмережі.</li>
+              <li>Якщо є погрози, шантаж чи інтимні фото неповнолітніх — це підстава для звернення до поліції.</li>
+              <li>Класний чат має модератора-дорослого і правила спілкування.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-pine">8</span><h3>Профілактика впродовж року<small>Що працює краще за разові акції</small></h3></summary>
+          <div class="tb">
+            <ul>
+              <li><b>Щомісячна тема</b> на класних годинах (див. «Тему місяця» на головній).</li>
+              <li><b>Анонімне опитування</b> класу двічі на рік: «Чи почуваєшся ти в безпеці в школі?»</li>
+              <li><b>Мапа безпеки:</b> учні позначають місця в школі, де їм некомфортно. Туди — чергування.</li>
+              <li><b>Скринька довіри</b> — фізична і онлайн.</li>
+              <li><b>Власний приклад.</b> Сарказм і публічне приниження від учителя легалізують булінг у класі.</li>
+              <li><b>Спільні справи</b>, що об'єднують клас: проєкти, походи, волонтерство.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-alert">9</span><h3>Відповідальність за булінг<small>Стаття 173-4 КУпАП</small></h3></summary>
+          <div class="tb">
+            <div class="tscroll"><table>
+              <tr><th>Хто</th><th>Відповідальність</th></tr>
+              <tr><td>Кривдник від 16 років</td><td>Штраф 50–100 неоподатковуваних мінімумів (850–1700 грн) або 20–40 годин громадських робіт</td></tr>
+              <tr><td>Групою або повторно</td><td>Штраф 100–200 н. м. (1700–3400 грн) або 40–60 годин громадських робіт</td></tr>
+              <tr><td>Кривдник 14–16 років</td><td>Штраф накладається на батьків</td></tr>
+              <tr><td>Керівник закладу, що не повідомив поліцію</td><td>Штраф 50–100 н. м. або виправні роботи до 1 місяця</td></tr>
+            </table></div>
+            <p class="muted" style="font-size:.9rem">Комісія закладу збирає інформацію і дає рекомендації. Остаточно факт правопорушення встановлюють поліція і суд.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="ic i-sun">10</span><h3>Типові помилки<small>Яких дій варто уникати</small></h3></summary>
+          <div class="tb">
+            <ul>
+              <li>Вважати це «дитячими сварками», які минуть самі.</li>
+              <li>Розбирати ситуацію при всьому класі.</li>
+              <li>Змушувати постраждалого «змінитися», щоб його не чіпали.</li>
+              <li>Проводити примирення віч-на-віч без фахівця.</li>
+              <li>Обмежитися покаранням кривдника без роботи з причинами і з класом.</li>
+              <li>Не повідомити адміністрацію, бо «не хочеться розголосу».</li>
+              <li>Не перевіряти, як почувається постраждалий через тиждень і через місяць.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="topics">
+      <div class="tgroup"><h3>Урок і клас</h3><p>Прийоми, які знижують напругу і тримають увагу</p></div>
+      <details>
+        <summary><span class="ic i-sun">1</span><h3>Психологія уроку<small>Увага, мотивація, налаштування</small></h3></summary>
+        <div class="tb">
+          <p><b>Налаштування вчителя.</b> Доброзичливість, установка на співпрацю й успіх, емпатія і такт. Учні зчитують настрій з перших хвилин.</p>
+          <p><b>Увага погано підкоряється наказам.</b> Її тримає нове, контрастне й особисто значуще. Без зміни діяльності стійкої уваги підліткам вистачає приблизно на 7 хвилин.</p>
+          <ul>
+            <li>Чергуйте види роботи кожні 7–10 хвилин.</li>
+            <li>Називайте мету і план уроку на початку.</li>
+            <li>Створюйте проблемні ситуації: питання, відповіді на яке ще не знають.</li>
+            <li>Задійте різні канали: показати, пояснити, дати зробити руками.</li>
+          </ul>
+          <p><b>Три типи учнів за мотивацією:</b> ті, хто прагне успіху; ті, хто уникає невдачі; ті, хто звик до невдач. Для двох останніх важливі посильні завдання і помічений маленький успіх.</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-coral">2</span><h3>П'ятихвилинки на уроці<small>Вправи, щоб перезавантажити клас</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li><b>«Дзеркало»</b> — пари повторюють рухи одне одного в повільному темпі.</li>
+            <li><b>«Лимон»</b> — стиснути кулаки, ніби вичавлюєш лимон, 5 секунд, розслабити. Тричі.</li>
+            <li><b>«Сова»</b> — повільно повернути голову ліворуч і праворуч, дивлячись «крізь стіни».</li>
+            <li><b>«Колір»</b> — за 30 секунд знайти в класі 5 предметів одного кольору.</li>
+            <li><b>«Хмаринка думок»</b> — заплющити очі й уявити, як тривожні думки відпливають, ніби хмарки.</li>
+          </ul>
+          <p>Більше вправ — у Релакс-студії, їх можна вмикати на проєкторі.</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-lilac">3</span><h3>Після повітряної тривоги<small>Стабілізація класу за 3 хвилини</small></h3></summary>
+        <div class="tb">
+          <ol>
+            <li>Дайте змогу випити води і сісти зручно.</li>
+            <li>Три довгі видихи разом усім класом.</li>
+            <li>Коротке питання по колу: «Одне слово про свій стан».</li>
+            <li>Почніть із знайомого і простого завдання, не з контрольної.</li>
+          </ol>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-pine">4</span><h3>Тривожний учень на уроці<small>Як допомогти непомітно</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Не викликайте до дошки несподівано. Попередьте: «Наступним відповідатимеш ти».</li>
+            <li>Дозвольте відповідати письмово або з місця.</li>
+            <li>Хваліть конкретно і наодинці: «Твій висновок у задачі був дуже точним».</li>
+            <li>Домовтеся про таємний знак, яким учень може показати, що йому потрібна пауза.</li>
+            <li>Розбивайте великі завдання на частини з чіткими кроками.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-sun">5</span><h3>Травмочутливий клас<small>Принципи, що знижують напругу</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li><b>Передбачуваність.</b> Однаковий початок і кінець уроку, план на дошці.</li>
+            <li><b>Вибір.</b> Дайте хоча б маленький вибір: яке завдання першим, з ким у парі.</li>
+            <li><b>Безпека.</b> Без публічного сорому, сарказму і порівнянь.</li>
+            <li><b>Тіло.</b> Дозвольте встати, попити води, пом'яти антистрес.</li>
+            <li><b>Тригери.</b> Будьте обережні з темами втрати, війни й сім'ї. Попереджайте про складні теми заздалегідь.</li>
+          </ul>
+          <p>Агресія, «витання в хмарах» чи сльози можуть бути реакцією на стрес, а не непослухом.</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-coral">6</span><h3>Інклюзивний клас<small>Базові принципи</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Спирайтеся на сильні сторони дитини, а не лише на обмеження.</li>
+            <li>Використовуйте візуальні підказки: розклад, інструкції картинками, таймер.</li>
+            <li>Дайте більше часу на виконання і менший обсяг завдань, якщо так передбачено ІПР.</li>
+            <li>Вчіть клас приймати відмінності: «Усі ми різні, і кожен вчиться по-своєму».</li>
+            <li>Тісно співпрацюйте з асистентом учителя, психологом і батьками.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-lilac">7</span><h3>Ідеї для класних годин<small>Теми, які працюють</small></h3></summary>
+        <div class="tb">
+          <div class="tscroll"><table>
+            <tr><th>Тема</th><th>Клас</th><th>Формат</th></tr>
+            <tr><td>«Моя суперсила»: сильні сторони кожного</td><td>1–6</td><td>Кожен малює свій «щит» зі своїми якостями</td></tr>
+            <tr><td>Емоції: як їх розпізнати</td><td>1–4</td><td>Гра «Покажи емоцію», вгадування за мімікою</td></tr>
+            <tr><td>Правила нашого класу</td><td>1–11</td><td>Разом створюємо і підписуємо договір класу</td></tr>
+            <tr><td>Свідки булінгу: що я можу зробити</td><td>5–11</td><td>Розбір ситуацій у групах</td></tr>
+            <tr><td>Кібербезпека і цифровий слід</td><td>5–11</td><td>Квест: знайди небезпеку в профілі</td></tr>
+            <tr><td>Стрес перед іспитами</td><td>9–11</td><td>Тренінг з дихальними вправами і плануванням</td></tr>
+            <tr><td>Я-повідомлення: говоримо без образ</td><td>5–9</td><td>Рольові ігри в парах</td></tr>
+            <tr><td>Ким я хочу бути</td><td>8–11</td><td>Тест Голланда + зустріч з людьми різних професій</td></tr>
+          </table></div>
+        </div>
+      </details>
+      <div class="tgroup"><h3>Складні ситуації</h3><p>Коли потрібні чіткі дії</p></div>
+      <details>
+        <summary><span class="ic i-sun">1</span><h3>Коли направляти до психолога<small>Сигнали, які не можна пропускати</small></h3></summary>
+        <div class="tb">
+          <ul>
+            <li>Різкі зміни поведінки, успішності, зовнішнього вигляду.</li>
+            <li>Замкнутість, постійні сльози або спалахи агресії.</li>
+            <li>Сліди самоушкодження, висловлювання про безнадію чи небажання жити — <b>одразу, того самого дня</b>.</li>
+            <li>Повторювані конфлікти або ізоляція учня в класі.</li>
+          </ul>
+          <div class="warn">Не обіцяйте учневі тримати в секреті інформацію про загрозу його життю. Скажіть: «Я мушу розповісти, бо хочу, щоб ти був у безпеці».</div>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-coral">2</span><h3>Коли клас переживає втрату<small>Якщо загинув рідний учня чи хтось із громади</small></h3></summary>
+        <div class="tb">
+          <ol>
+            <li>Домовтеся з родиною і психологом, що і як повідомити класу.</li>
+            <li>Скажіть правду коротко і спокійно. Дозвольте дітям ставити питання.</li>
+            <li>Запропонуйте спосіб висловити підтримку: листівка, малюнок, хвилина мовчання.</li>
+            <li>Коли учень повернеться до школи, поводьтеся звично, але м'якше. Не змушуйте говорити про втрату.</li>
+            <li>Стежте за іншими дітьми: втрата може активувати їхні власні переживання.</li>
+          </ol>
+        </div>
+      </details>
+      <details>
+        <summary><span class="ic i-lilac">3</span><h3>Розмова з батьками в конфлікті<small>Як не перейти в оборону</small></h3></summary>
+        <div class="tb">
+          <ol>
+            <li>Почніть з сильних сторін дитини.</li>
+            <li>Описуйте факти і поведінку, а не особистість: «Тричі цього тижня не мав зошита».</li>
+            <li>Спитайте, що бачать батьки вдома.</li>
+            <li>Домовтеся про один конкретний спільний крок і дату наступної розмови.</li>
+            <li>Якщо розмова стає агресивною — завершіть і запропонуйте зустріч за участі психолога або адміністрації.</li>
+          </ol>
+        </div>
+      </details>
+      <div class="tgroup"><h3>Для вас</h3><p>Ресурс учителя — теж частина безпеки класу</p></div>
+      <details>
+        <summary><span class="ic i-sun">1</span><h3>Профілактика вигорання<small>Як зберегти себе</small></h3></summary>
+        <div class="tb">
+          <p>Три ознаки вигорання: виснаження, цинізм щодо роботи і відчуття, що від ваших зусиль нічого не змінюється.</p>
+          <ul>
+            <li>Мікропаузи між уроками: вода, вікно, три повільні видихи.</li>
+            <li>Чати з батьками — у визначені години, не вночі.</li>
+            <li>Одна справа на день, яка дає радість і не пов'язана зі школою.</li>
+            <li>Підтримка колег. Говоріть про складнощі, а не лише про досягнення.</li>
+            <li>Не ставте за мету «врятувати всіх». Робіть свою частину добре.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- =================== RELAX =================== -->
+<section class="view" id="v-relax" data-view="relax" hidden>
+  <div class="wrap">
+    <div class="view-head">
+      <span class="chip c-pine">Релакс-студія</span>
+      <h1>Натисни «Почати» і дихай</h1>
+      <p>Понад 20 вправ, які повертають спокій за кілька хвилин. Для перерви, укриття чи вечора перед сном. Вчителі можуть вмикати їх на проєкторі для всього класу.</p>
+    </div>
+
+    <div class="studio">
+
+      <!-- ===== 1. Коли накриває ===== -->
+      <div class="sgroup"><h2>Коли накриває</h2><p>Швидка допомога собі за 1–3 хвилини.</p></div>
+
+      <div class="tool wide" style="background:var(--alert-soft); border-color:transparent">
+        <h3>SOS-алгоритм у кризі</h3>
+        <p class="how" style="color:var(--ink)">Для паніки, сильного страху або різкого стресу, наприклад під час вибухів. Спершу — фізична безпека: укриття.</p>
+        <div class="sos3">
+          <div class="panel" style="box-shadow:none"><span class="eyebrow">Крок 1</span><h4 style="font-family:var(--body); font-weight:700; margin-block:6px">Назви, що відбувається</h4><p>Скажи вголос або подумки: «Я відчуваю страх. Це реакція мозку на загрозу. Вона пройде». Повтори повільно кілька разів.</p></div>
+          <div class="panel" style="box-shadow:none"><span class="eyebrow">Крок 2</span><h4 style="font-family:var(--body); font-weight:700; margin-block:6px">Відчуй опору тілом</h4><p>Стисни кулаки, натисни ступнями в підлогу, поклади руки на груди чи живіт. Тіло виходить зі стану паніки.</p></div>
+          <div class="panel" style="box-shadow:none"><span class="eyebrow">Крок 3</span><h4 style="font-family:var(--body); font-weight:700; margin-block:6px">Дай собі одну інструкцію</h4><p>«Я йду в укриття». «Сідаю, дихаю, перевіряю речі». Якщо поруч дитина — говори впевнено й просто, тримай за руку.</p></div>
+        </div>
+        <span class="src">За матеріалами програми <a href="https://howareu.com/alhorytm_kryza" target="_blank" rel="noopener">«Ти як?»</a></span>
+      </div>
+
+      <div class="tool">
+        <h3>Заземлення 5-4-3-2-1</h3>
+        <p class="how">Повертає в «тут і зараз», коли накриває тривога або паніка.</p>
+        <div class="stepper">
+          <div class="step-card"><span class="n" id="g-n">5</span><p id="g-t"></p></div>
+          <div class="row" style="justify-content:space-between"><div class="dots" id="g-dots"></div><div class="row"><button type="button" class="btn line sm" id="g-prev">Назад</button><button type="button" class="btn pine sm" id="g-next">Далі</button></div></div>
+        </div>
+      </div>
+
+      <div class="tool">
+        <h3>Техніка СТОПП</h3>
+        <p class="how">Пауза між емоцією і реакцією. Коли хочеться накричати, грюкнути дверима чи написати різке повідомлення.</p>
+        <div class="stepper">
+          <div class="step-card"><span class="n" id="s-n">С</span><p id="s-t"></p></div>
+          <div class="row" style="justify-content:space-between"><div class="dots" id="s-dots"></div><div class="row"><button type="button" class="btn line sm" id="s-prev">Назад</button><button type="button" class="btn pine sm" id="s-next">Далі</button></div></div>
+        </div>
+        <span class="src">Джерело: <a href="https://howareu.com/tekhnika_stopp" target="_blank" rel="noopener">«Ти як?»</a></span>
+      </div>
+
+      <div class="tool third">
+        <h3>Обійми метелика</h3>
+        <p class="how">Схрести руки на грудях, долоні на плечах. По черзі легенько постукуй: ліва, права. Дихай повільно 1–2 хвилини.</p>
+        <div class="butterfly" id="bfly" aria-hidden="true"><span class="wing l"></span><span class="wing r"></span></div>
+        <button type="button" class="btn line sm" id="bfly-btn" style="justify-self:start">Показати ритм</button>
+      </div>
+      <div class="tool third">
+        <h3>Рахунок назад</h3>
+        <p class="how">Коли думки біжать по колу, дай мозку складне завдання. Воно «перемикає» увагу з тривоги.</p>
+        <ul>
+          <li>Від 100 віднімай по 7: 93, 86, 79…</li>
+          <li>Назви по одній тварині на кожну літеру алфавіту.</li>
+          <li>Згадай 5 міст України на літеру «К».</li>
+        </ul>
+      </div>
+      <div class="tool third">
+        <h3>Відчуй опору</h3>
+        <p class="how">30 секунд, можна просто на уроці, ніхто не помітить.</p>
+        <ul>
+          <li>Відчуй, як стопи торкаються підлоги.</li>
+          <li>Відчуй спину на спинці стільця.</li>
+          <li>Долонями відчуй поверхню парти: холодна, гладка?</li>
+          <li>Скажи собі: «Я тут. Зараз я в безпеці».</li>
+        </ul>
+      </div>
+
+      <!-- ===== 2. Дихання ===== -->
+      <div class="sgroup"><h2>Дихання</h2><p>Довгий видих — найшвидший спосіб заспокоїти нервову систему.</p></div>
+      <div class="tool wide">
+        <h3>Дихалка</h3>
+        <div class="breather">
+          <div class="patterns" id="patterns"></div>
+          <div class="bstage">
+            <div class="bcircle"><div class="bball" id="bball"></div></div>
+            <div class="bphase" id="bphase" aria-live="polite">Обери техніку</div>
+            <div class="bmeta" id="bmeta"></div>
+            <button type="button" class="btn dark" id="bstart">Почати</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 3. Тіло ===== -->
+      <div class="sgroup"><h2>Тіло</h2><p>Напруга живе в м'язах. Відпустиш тіло — заспокояться й думки.</p></div>
+      <div class="tool">
+        <h3>Розслаблення м'язів</h3>
+        <p class="how">Метод Джекобсона: напружуєш групу м'язів на 5 секунд, потім відпускаєш на 10. Тіло вчиться помічати різницю між напругою і спокоєм.</p>
+        <div class="pmr-stage">
+          <span class="eyebrow" id="pmr-step">7 груп м'язів · ≈2 хвилини</span>
+          <div class="pmr-part" id="pmr-part">Сядь зручно</div>
+          <div class="pmr-cue" id="pmr-cue">Постав ноги на підлогу, руки поклади на коліна.</div>
+          <div class="bar"><i id="pmr-bar"></i></div>
+        </div>
+        <button type="button" class="btn dark" id="pmr-start" style="justify-self:start">Почати</button>
+      </div>
+      <div class="tool">
+        <h3>Хвилинка руху</h3>
+        <p class="how">Розминка на 2 хвилини для перерви або початку уроку. Можна робити всім класом.</p>
+        <div class="pmr-stage">
+          <span class="eyebrow" id="mv-step">8 рухів · 2 хвилини</span>
+          <div class="pmr-part" id="mv-part">Встань рівно</div>
+          <div class="pmr-cue" id="mv-cue">Ноги на ширині плечей, руки вільно.</div>
+          <div class="bar"><i id="mv-bar"></i></div>
+        </div>
+        <button type="button" class="btn dark" id="mv-start" style="justify-self:start">Почати</button>
+      </div>
+      <div class="tool">
+        <h3>Сканування тіла</h3>
+        <p class="how">Добре перед сном. Повільно «пройдися» увагою від маківки до п'ят.</p>
+        <div class="script">
+          <p>Ляж або сядь зручно. Помічай, як повітря входить і виходить.</p>
+          <p>Переведи увагу на голову й обличчя. Розслаб лоб, щелепу, язик.</p>
+          <p>Плечі й руки. Дозволь їм стати важкими й теплими.</p>
+          <p>Груди й живіт. Просто спостерігай, як вони піднімаються.</p>
+          <p>Ноги аж до кінчиків пальців. Відчуй, як вони торкаються опори.</p>
+          <p>Побудь хвилину в цьому спокої, перш ніж відкрити очі.</p>
+        </div>
+      </div>
+      <div class="tool">
+        <h3>Самомасаж за 1 хвилину</h3>
+        <p class="how">Знімає напругу після довгого сидіння і перед контрольною.</p>
+        <div class="script">
+          <p>Розітри долоні, поки не стануть теплими. Приклади їх до очей на 10 секунд.</p>
+          <p>Кінчиками пальців помасажуй скроні маленькими колами.</p>
+          <p>Помни мочки вух і розтягни вушка вгору, вниз і в сторони.</p>
+          <p>Правою рукою помни ліве плече, потім навпаки.</p>
+          <p>Легенько постукай пальцями по голові, ніби йде дощик.</p>
+        </div>
+      </div>
+
+      <!-- ===== 4. Думки ===== -->
+      <div class="sgroup"><h2>Думки</h2><p>Вправи з когнітивно-поведінкової терапії: як не вірити кожній тривожній думці.</p></div>
+      <div class="tool">
+        <h3>Факт чи думка?</h3>
+        <p class="how">Факт — те, що можна побачити чи перевірити. Думка — наше пояснення. Тривога часто видає думки за факти. Потренуйся розрізняти.</p>
+        <div class="qcard">
+          <span class="eyebrow" id="fd-count">1 / 8</span>
+          <p class="q" id="fd-q"></p>
+          <div class="choice" id="fd-choice"><button type="button" id="fd-f" data-a="f">Факт</button><button type="button" id="fd-d" data-a="d">Думка</button></div>
+          <p class="fb" id="fd-fb" aria-live="polite"></p>
+        </div>
+        <button type="button" class="btn line sm" id="fd-next" style="justify-self:start">Наступне твердження</button>
+        <span class="src">Техніка: <a href="https://howareu.com/tekhnika_fakt_chy_dumka" target="_blank" rel="noopener">«Ти як?»</a></span>
+      </div>
+      <div class="tool">
+        <h3>Дерево переживань</h3>
+        <p class="how">Коли щось турбує, дай відповідь на два питання, і дерево підкаже, що робити.</p>
+        <div class="qcard">
+          <p class="q" id="tr-q">Це вже сталося чи я уявляю, що може статися?</p>
+          <div class="choice" id="tr-choice"></div>
+          <div class="tree-out" id="tr-out" hidden></div>
+        </div>
+        <button type="button" class="btn line sm" id="tr-reset" style="justify-self:start">Спочатку</button>
+        <span class="src">Техніка: <a href="https://howareu.com/tekhnika_derevo_perezhyvan" target="_blank" rel="noopener">«Ти як?»</a></span>
+      </div>
+      <div class="tool">
+        <h3>Коло контролю</h3>
+        <p class="how">Розділи свої переживання на дві частини. Енергію витрачай лише на ліву.</p>
+        <div class="circle-ctl">
+          <div style="background:var(--pine-soft)"><b>Можу вплинути</b><ul><li>як я готуюся до контрольної</li><li>що я кажу і роблю</li><li>скільки сплю і гуляю</li><li>кого прошу про допомогу</li><li>що читаю і дивлюся</li></ul></div>
+          <div style="background:var(--bg2)"><b>Не можу вплинути</b><ul><li>повітряні тривоги</li><li>що думають інші</li><li>погода, новини</li><li>минуле</li><li>вчинки інших людей</li></ul></div>
+        </div>
+        <p style="font-size:.93rem">Спробуй виписати свої переживання на аркуш і розкласти їх так само.</p>
+      </div>
+      <div class="tool">
+        <h3>Листочки на струмку</h3>
+        <p class="how">Дистанціювання від думок: ти — не твої думки. Ти той, хто їх помічає.</p>
+        <div class="script">
+          <p>Сядь зручно і заплющ очі. Уяви повільний струмок, по якому пливуть листочки.</p>
+          <p>Щойно з'являється думка, поклади її на листочок. Будь-яку: тривожну, дурну, приємну.</p>
+          <p>Дивись, як листочок відпливає. Не підганяй і не затримуй.</p>
+          <p>Відволікся — нічого страшного. Просто повернися до струмка.</p>
+          <p>Через 3–5 хвилин відкрий очі. Помітив, що думки приходять і йдуть?</p>
+        </div>
+      </div>
+
+      <!-- ===== 5. Уява ===== -->
+      <div class="sgroup"><h2>Уява</h2><p>Візуалізації на 3–5 хвилин. Можна читати вголос для класу.</p></div>
+      <div class="tool">
+        <h3>Безпечне місце</h3>
+        <div class="script">
+          <p>Заплющ очі, зроби кілька повільних видихів.</p>
+          <p>Уяви місце, де тобі спокійно: справжнє чи вигадане.</p>
+          <p>Що ти бачиш? Які там кольори і світло?</p>
+          <p>Що чуєш? Шум хвиль, пташок, тишу?</p>
+          <p>Яка там температура, які запахи?</p>
+          <p>Побудь там. Запам'ятай, що можеш повернутися будь-коли.</p>
+        </div>
+      </div>
+      <div class="tool">
+        <h3>Контейнер</h3>
+        <div class="script">
+          <p>Уяви міцний контейнер: скриню, сейф, банку з кришкою. Який він за кольором і розміром?</p>
+          <p>Поклади туди все, що зараз заважає: тривожні думки, образи, неприємні картинки.</p>
+          <p>Щільно закрий кришку. Можна уявити замок або ключ.</p>
+          <p>Постав контейнер туди, де він не заважатиме: на полицю, у підвал, на інший берег.</p>
+          <p>Ти можеш повернутися до вмісту пізніше — сам або з психологом, коли будеш готовий.</p>
+        </div>
+      </div>
+
+      <!-- ===== 6. Малечі ===== -->
+      <div class="sgroup"><h2>Для молодших класів</h2><p>Ігри-релаксації на 1–2 хвилини між уроками або в укритті. Вчитель показує, діти повторюють.</p></div>
+      <div class="tool wide">
+        <div class="games">
+          <div class="game"><b>Лимон</b><p>Уяви лимон у кожній руці. Вичави з нього весь сік, щосили стискаючи кулаки. Кинь лимони і розслаб руки. Тричі.</p></div>
+          <div class="game"><b>Повітряна кулька</b><p>Долоні на животик. Повільно вдихни носом і «надуй» живіт, як кульку. Повільно видихни ротом — кулька здувається.</p></div>
+          <div class="game"><b>Задуй свічку</b><p>Уяви торт зі свічками. Глибоко вдихни і дуже повільно видихни, щоб полум'я лише хилилося, а не гасло.</p></div>
+          <div class="game"><b>Спагеті</b><p>Стань твердим, як сире спагеті. А тепер «зварися» і стань м'яким: руки звисають, тіло хитається.</p></div>
+          <div class="game"><b>Черепаха</b><p>Черепаха ховається в панцир: плечі до вух, голова вниз, 5 секунд. Визирає на сонечко — розслабитися.</p></div>
+          <div class="game"><b>Дерево</b><p>Стоїмо на одній нозі, руки-гілки вгору. Дме вітер, дерево хитається, але стоїть міцно.</p></div>
+          <div class="game"><b>Сніговик тане</b><p>Ми — сніговики: тверді, руки в боки. Виходить сонечко, і ми повільно «танемо», аж поки не сядемо калюжкою на підлогу.</p></div>
+          <div class="game"><b>Кошеня</b><p>Кошеня прокинулось: потягнулося вгору, вигнуло спинку, позіхнуло на весь рот і тихенько муркнуло.</p></div>
+          <div class="game"><b>Бджілка</b><p>Вдихни носом, а на видиху тихо гуди «ж-ж-ж», поки вистачає повітря. Відчуй, як дзижчить у голові. 5 разів.</p></div>
+          <div class="game"><b>Пір'їнка</b><p>Уяви на долоні легку пір'їнку. Дмухай на неї так обережно, щоб вона не злетіла, а тільки ворушилася.</p></div>
+          <div class="game"><b>Світлофор емоцій</b><p>Червоний — зупинись і не роби нічого. Жовтий — подумай, що відчуваєш і чого хочеш. Зелений — скажи або зроби найкраще рішення.</p></div>
+          <div class="game"><b>Я бачу…</b><p>Для укриття: «Я бачу щось зелене». Інші вгадують, що це. Хто вгадав, загадує наступний предмет.</p></div>
+        </div>
+      </div>
+
+      <!-- ===== 7. Для себе ===== -->
+      <div class="sgroup"><h2>Звук і щоденник</h2></div>
+      <div class="tool">
+        <h3>Звук дощу</h3>
+        <p class="how">М'який шум, який заглушує тривожні думки. Для навчання, сну або тиші на перерві.</p>
+        <div class="row">
+          <button type="button" class="btn pine" id="noise-btn">Увімкнути</button>
+          <label class="muted" for="noise-vol" style="font-size:.85rem">Гучність</label>
+          <input type="range" id="noise-vol" min="0" max="100" value="40" style="flex:1; min-width:100px; accent-color:var(--pine)">
+        </div>
+      </div>
+      <div class="tool">
+        <h3>Щоденник настрою</h3>
+        <p class="how">Відмічай свою «погоду» щодня. Записи зберігаються лише на цьому пристрої.</p>
+        <div class="diary">
+          <div class="weather" id="weather-diary"></div>
+          <div class="diary-days" id="diary-days" aria-label="Останні 14 днів"></div>
+          <div class="legend" id="legend"></div>
+          <p class="muted" id="diary-note" style="font-size:.9rem"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TESTS =================== -->
+<section class="view" id="v-tests" data-view="tests" hidden>
+  <div class="wrap">
+    <div class="view-head">
+      <span class="chip c-lilac">Самоперевірка</span>
+      <h1>Зрозуміти себе трохи краще</h1>
+      <p>Короткі опитувальники для самоспостереження. Це не діагноз і не оцінка. Відповіді ніде не зберігаються і не передаються.</p>
+    </div>
+    <div class="checks-grid">
+      <!-- stress -->
+      <div class="test">
+        <span class="chip c-coral">5–11 клас · 3 хвилини</span>
+        <h3>Мій рівень стресу</h3>
+        <p class="muted">Як часто за останні 2 тижні з тобою траплялося таке?</p>
+        <div class="qlist" id="stress-q"></div>
+        <button type="button" class="btn dark" id="stress-go" style="justify-self:start">Показати результат</button>
+        <div class="result" id="stress-res" hidden></div>
+      </div>
+      <!-- bullying -->
+      <div class="test">
+        <span class="chip c-alert">Для всіх · 2 хвилини</span>
+        <h3>Це булінг чи конфлікт?</h3>
+        <p class="muted">Прочитай ситуацію і обери відповідь. Навчися розрізняти, коли час кликати дорослого.</p>
+        <div class="qcard">
+          <span class="eyebrow" id="bq-count">1 / 6</span>
+          <p class="q" id="bq-q"></p>
+          <div class="choice" id="bq-choice"><button type="button" id="bq-b" data-a="b">Булінг</button><button type="button" id="bq-c" data-a="c">Конфлікт</button></div>
+          <p class="fb" id="bq-fb" aria-live="polite"></p>
+        </div>
+        <button type="button" class="btn line sm" id="bq-next" style="justify-self:start">Наступна ситуація</button>
+        <div class="law" style="font-size:.9rem; background:var(--lilac-soft); padding:12px 14px; border-radius:12px"><b>Ознаки булінгу:</b> повторюваність, нерівність сил (кривдник сильніший або їх більше), намір зашкодити, страх і приниження у постраждалого. У конфлікті сторони рівні й можуть домовитися.</div>
+      </div>
+      <!-- riasec -->
+      <div class="test wide">
+        <span class="chip c-sun">8–11 клас · 4 хвилини</span>
+        <h3>Ким я можу стати?</h3>
+        <p class="muted">Спрощений профорієнтаційний опитувальник за типологією Голланда. Показує, яке середовище роботи тобі ближче. Обговори результат з психологом або батьками.</p>
+        <div class="checks-grid">
+          <div class="qlist" id="ri-q1"></div>
+          <div class="qlist" id="ri-q2"></div>
+        </div>
+        <button type="button" class="btn dark" id="ri-go" style="justify-self:start">Показати результат</button>
+        <div class="result" id="ri-res" hidden style="background:var(--lilac-soft)"></div>
+      </div>
+      <!-- safety plan -->
+      <div class="test wide">
+        <span class="chip c-pine">Для підлітків · заповни, коли спокійно</span>
+        <h3>Мій план безпеки</h3>
+        <p class="muted">План на випадок, коли стане дуже важко. Заповни його зараз, щоб у складну хвилину не думати, а діяти за списком. Записи зберігаються лише на цьому пристрої. Можна також переписати план у блокнот або сфотографувати.</p>
+        <div class="checks-grid plan">
+          <div><label for="sp1">1. Мої тривожні сигнали<small>Думки, почуття, ситуації, після яких мені гіршає</small></label><textarea id="sp1" placeholder="Напр.: не можу заснути, хочеться ні з ким не говорити"></textarea></div>
+          <div><label for="sp2">2. Що мені допомагає самому<small>Музика, прогулянка, дихання, душ, малювання</small></label><textarea id="sp2" placeholder="Напр.: дихання «Квадрат», вийти на вулицю"></textarea></div>
+          <div><label for="sp3">3. Люди і місця, які відволікають<small>Де і з ким мені стає легше</small></label><textarea id="sp3" placeholder="Напр.: бабуся, тренування, друг Максим"></textarea></div>
+          <div><label for="sp4">4. Кому я можу розповісти<small>Імена і телефони людей, яким довіряю</small></label><textarea id="sp4" placeholder="Напр.: мама, класна керівниця"></textarea></div>
+          <div><label for="sp5">5. Фахівці<small>Психолог ліцею, гарячі лінії</small></label><textarea id="sp5">Психолог ліцею: [кабінет]
+Дитяча лінія: 116 111
+Екстрена допомога: 112</textarea></div>
+          <div><label for="sp6">6. Що для мене важливе<small>Люди, мрії, тварини, заради яких варто триматися</small></label><textarea id="sp6" placeholder="Напр.: мій пес, поїздка на море влітку"></textarea></div>
+        </div>
+        <div class="row"><button type="button" class="btn pine" id="sp-save">Зберегти на цьому пристрої</button><button type="button" class="btn line" id="sp-clear">Очистити</button><span class="muted" id="sp-note" style="font-size:.88rem"></span></div>
+        <div class="law" style="background:var(--alert-soft); padding:12px 14px; border-radius:12px">Якщо думки про те, щоб зробити собі боляче, стають сильними, не залишайся з ними наодинці. Скажи дорослому або телефонуй <b>116 111</b>. При загрозі життю — <b>112</b>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ABOUT =================== -->
+<section class="view" id="v-about" data-view="about" hidden>
+  <div class="wrap">
+    <div class="view-head">
+      <span class="chip c-pine">Про кабінет</span>
+      <h1>Як звернутися до психолога</h1>
+      <p>Прийти в кабінет, написати анонімно або записатися на консультацію.</p>
+    </div>
+    <div class="about">
+      <div class="portrait">[фото]</div>
+      <div class="panel" style="display:grid; gap:20px; align-content:start">
+        <div>
+          <h3 style="font-size:1.4rem">[Ім'я Прізвище]</h3>
+          <p class="muted">Практичний психолог Великовисківського ліцею</p>
+        </div>
+        <dl class="facts">
+          <dt>Кабінет</dt><dd>[№]</dd>
+          <dt>Графік</dt><dd>[пн–пт, 08:30–15:30]</dd>
+          <dt>Телефон</dt><dd>[номер]</dd>
+          <dt>Email</dt><dd>[адреса]</dd>
+        </dl>
+        <div>
+          <h4 style="font-family:var(--body); font-weight:700; margin-bottom:10px">З чим можна прийти</h4>
+          <ul class="checks">
+            <li>Тривога, страх, поганий настрій, стрес через війну</li>
+            <li>Конфлікти з однокласниками, вчителями, батьками</li>
+            <li>Булінг — якщо це відбувається з вами або поруч</li>
+            <li>Складнощі з навчанням, увагою, мотивацією</li>
+            <li>Адаптація до нового класу чи школи</li>
+            <li>Вибір професії, підготовка до НМТ</li>
+            <li>Втрата, розлука з близькими</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="help-grid">
+      <div class="panel" style="display:grid; gap:12px">
+        <span class="chip c-lilac">Анонімно</span>
+        <h3>Скринька довіри</h3>
+        <p class="muted">Напиши про те, що турбує тебе або когось поруч. Ім'я вказувати не потрібно, повідомлення читає лише психолог.</p>
+        <a class="btn dark" id="trust-link" href="#about" style="justify-self:start">Написати</a>
+        <span class="muted" id="trust-note" style="font-size:.85rem"></span>
+      </div>
+      <div class="panel" style="display:grid; gap:12px">
+        <span class="chip c-sun">Учні · батьки · вчителі</span>
+        <h3>Запис на консультацію</h3>
+        <p class="muted">Обери зручний день і формат: у кабінеті або онлайн. Психолог підтвердить час.</p>
+        <a class="btn dark" id="book-link" href="#about" style="justify-self:start">Записатися</a>
+        <span class="muted" id="book-note" style="font-size:.85rem"></span>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:16px; display:grid; gap:12px">
+      <h3>Принципи роботи</h3>
+      <ul class="checks">
+        <li><b>Конфіденційність.</b> Сказане залишається між нами, крім випадків загрози життю чи здоров'ю.</li>
+        <li><b>Добровільність.</b> Звернення — ваш вибір, ніхто не змушує.</li>
+        <li><b>Повага без осуду.</b> Тут немає «дурних» питань і «неправильних» почуттів.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =================== HELP =================== -->
+<section class="view" id="v-help" data-view="help" hidden>
+  <div class="wrap">
+    <div class="view-head">
+      <span class="chip c-alert">Допомога зараз</span>
+      <h1>Ти не сам. Допомога поруч</h1>
+      <p>Дзвінки на ці лінії безкоштовні й анонімні. Якщо є загроза життю — одразу телефонуй 112.</p>
+    </div>
+    <div class="lines">
+      <div class="line urgent"><span class="eyebrow">Загроза життю</span><span class="num">112</span><p>Єдина служба порятунку. Швидка — 103, поліція — 102.</p><button type="button" class="copy" data-copy="112">Копіювати</button></div>
+      <div class="line"><span class="eyebrow">Дітям і молоді</span><span class="num">116 111</span><span class="alt">0 800 500 225</span><p>Національна дитяча гаряча лінія «Ла Страда-Україна»: булінг, конфлікти в сім'ї, насильство, стосунки.</p><button type="button" class="copy" data-copy="116111">Копіювати</button></div>
+      <div class="line"><span class="eyebrow">Насильство</span><span class="num">116 123</span><span class="alt">0 800 500 335</span><p>Національна лінія з протидії домашньому насильству і торгівлі людьми.</p><button type="button" class="copy" data-copy="116123">Копіювати</button></div>
+      <div class="line"><span class="eyebrow">Урядова лінія</span><span class="num">1547</span><p>Цілодобово: насильство щодо дітей, булінг, домашнє насильство.</p><button type="button" class="copy" data-copy="1547">Копіювати</button></div>
+      <div class="line"><span class="eyebrow">Психологічна підтримка</span><span class="num">0 800 21 01 60</span><p>Лінія «Людина в біді», цілодобово.</p><button type="button" class="copy" data-copy="0800210160">Копіювати</button></div>
+      <div class="line"><span class="eyebrow">Після травматичних подій</span><span class="num">0 800 600 044</span><p>ГО «Дівчата»: підтримка дітям і дорослим, 8:00–20:00.</p><button type="button" class="copy" data-copy="0800600044">Копіювати</button></div>
+      <div class="line"><span class="eyebrow">Військовим і родинам</span><span class="num">0 800 33 27 20</span><p>Щодня 10:00–20:00.</p><button type="button" class="copy" data-copy="0800332720">Копіювати</button></div>
+      <div class="line"><span class="eyebrow">Для чоловіків</span><span class="num">2345</span><p>Стрес, вигорання, тривога. Щодня 14:00–6:00, з мобільного.</p><button type="button" class="copy" data-copy="2345">Копіювати</button></div>
+      <div class="line"><span class="eyebrow">Правова допомога</span><span class="num">0 800 213 103</span><p>Безоплатна правнича допомога.</p><button type="button" class="copy" data-copy="0800213103">Копіювати</button></div>
+    </div>
+
+    <h3 class="group-title">Онлайн-підтримка</h3>
+    <div class="lines">
+      <a class="line" href="https://teenergizer.org/consultations/" target="_blank" rel="noopener" style="text-decoration:none; color:inherit"><span class="eyebrow">Для підлітків</span><span class="num" style="font-size:1.25rem">Teenergizer ↗</span><p>Анонімні онлайн-консультації для підлітків: булінг, сім'я, стосунки.</p></a>
+      <a class="line" href="https://howareu.com/self-help" target="_blank" rel="noopener" style="text-decoration:none; color:inherit"><span class="eyebrow">Самодопомога</span><span class="num" style="font-size:1.25rem">«Ти як?» ↗</span><p>Техніки, «аптечка самодопомоги» і кризові алгоритми програми ментального здоров'я.</p></a>
+      <a class="line" href="https://howareu.com/materials/sensoteka-ty-iak" target="_blank" rel="noopener" style="text-decoration:none; color:inherit"><span class="eyebrow">Підтримка</span><span class="num" style="font-size:1.25rem">Сенсотека ↗</span><p>Підтримувальні послання психологині Світлани Ройз.</p></a>
+    </div>
+
+    <div class="help-grid">
+      <div class="panel" style="display:grid; gap:10px">
+        <h3>Якщо тобі дуже погано просто зараз</h3>
+        <ol style="display:grid; gap:6px">
+          <li>Зроби кілька довгих видихів. Видих довший за вдих.</li>
+          <li>Назви 5 речей, які бачиш навколо.</li>
+          <li>Напиши або зателефонуй людині, якій довіряєш.</li>
+          <li>Зателефонуй на <b>116 111</b>. Там вислухають без осуду.</li>
+        </ol>
+      </div>
+      <div class="panel" style="display:grid; gap:10px">
+        <h3>Якщо погано другові</h3>
+        <ol style="display:grid; gap:6px">
+          <li>Будь поруч і вислухай.</li>
+          <li>Спитай прямо: «Ти думаєш про те, щоб зробити собі боляче?»</li>
+          <li>Не тримай це в секреті. Скажи дорослому.</li>
+          <li>Якщо є загроза — <b>112</b>, і не залишай його самого.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Великовисківський ліцей · Великовисківська сільська рада · Кіровоградська обл.</span>
+    <span>Психологічна служба · 2026/2027 н. р.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+// Посилання на Google Forms — вставити, коли форми будуть створені
+const FORMS = { trust: "", book: "" };
+
+/* ---------- router ---------- */
+const views=[...document.querySelectorAll('[data-view]')];
+const tabs=[...document.querySelectorAll('#tabs a')];
+function show(){
+  const id=(location.hash||'#home').slice(1);
+  const v=views.find(x=>x.dataset.view===id)||views[0];
+  views.forEach(x=>x.hidden=(x!==v));
+  tabs.forEach(a=>a.getAttribute('href')==='#'+v.dataset.view?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+  window.scrollTo(0,0);
+  if(v.dataset.view!=='relax') stopAll();
+}
+window.addEventListener('hashchange',show);
+
+/* ---------- forms ---------- */
+[["trust","trust-link","trust-note"],["book","book-link","book-note"]].forEach(([k,a,n])=>{
+  const link=document.getElementById(a), note=document.getElementById(n);
+  if(FORMS[k]){link.href=FORMS[k]; link.target="_blank"; link.rel="noopener";}
+  else note.textContent="Форма незабаром. Поки що звертайтеся особисто.";
+});
+
+/* ---------- weather ---------- */
+const W=[
+  {k:5,name:"Сонячно",color:"#F3B23A",svg:'<circle cx="17" cy="17" r="7" fill="#F3B23A"/><g stroke="#F3B23A" stroke-width="2.5" stroke-linecap="round"><path d="M17 3v4M17 27v4M3 17h4M27 17h4M7 7l2.8 2.8M24.2 24.2L27 27M7 27l2.8-2.8M24.2 9.8L27 7"/></g>',msg:"Чудово! Запам'ятай, що сьогодні допомогло почуватися так, і поділись цим настроєм з кимось."},
+  {k:4,name:"Хмарно з сонцем",color:"#8CC56A",svg:'<circle cx="13" cy="13" r="6" fill="#F3B23A"/><path d="M11 27h15a5 5 0 0 0 0-10 7 7 0 0 0-13.4 2A4 4 0 0 0 11 27z" fill="#9FB8B0"/>',msg:"Добрий день. Знайди хвилинку на те, що тобі подобається."},
+  {k:3,name:"Хмарно",color:"#9FB8B0",svg:'<path d="M8 25h18a6 6 0 0 0 0-12 8 8 0 0 0-15.5 2.2A5 5 0 0 0 8 25z" fill="#9FB8B0"/>',msg:"Буває. Спробуй Дихалку в Релакс-студії або коротку прогулянку. Якщо «хмарно» вже кілька днів — зайди до психолога."},
+  {k:2,name:"Дощ",color:"#6E8FD1",svg:'<path d="M8 19h18a6 6 0 0 0 0-12 8 8 0 0 0-15.5 2.2A5 5 0 0 0 8 19z" fill="#8397A8"/><g stroke="#6E8FD1" stroke-width="2.5" stroke-linecap="round"><path d="M11 23l-2 5M18 23l-2 5M25 23l-2 5"/></g>',msg:"Сумувати — нормально. Не тримай це в собі: розкажи людині, якій довіряєш, або напиши у скриньку довіри."},
+  {k:1,name:"Гроза",color:"#8C7BDB",svg:'<path d="M8 18h18a6 6 0 0 0 0-12 8 8 0 0 0-15.5 2.2A5 5 0 0 0 8 18z" fill="#6D7488"/><path d="M18 19l-5 7h5l-2 6 7-9h-5l2-4z" fill="#F3B23A"/>',msg:"Мені шкода, що тобі так важко. Ти не сам. Поговори з дорослим поруч або зателефонуй на 116 111 — безкоштовно й анонімно. Якщо є небезпека — 112."}
+];
+function buildWeather(el,onPick){
+  el.innerHTML=W.map(w=>`<button type="button" id="${el.id}-${w.k}" data-k="${w.k}" aria-pressed="false"><svg viewBox="0 0 34 34">${w.svg}</svg>${w.name}</button>`).join('');
+  el.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+    el.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));
+    b.setAttribute('aria-pressed','true'); onPick(W.find(w=>w.k==b.dataset.k));
+  }));
+}
+const hout=document.getElementById('weather-home-out');
+buildWeather(document.getElementById('weather-home'),w=>{hout.textContent=w.msg; hout.classList.toggle('bad',w.k<=2); hout.classList.remove('muted');});
+
+/* ---------- diary (localStorage, per device) ---------- */
+const KEY='vvl-mood-diary';
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+function save(d){try{localStorage.setItem(KEY,JSON.stringify(d)); return true}catch(e){return false}}
+const dayKey=dt=>dt.toISOString().slice(0,10);
+function renderDiary(){
+  const d=load(), box=document.getElementById('diary-days'); let html='', n=0;
+  for(let i=13;i>=0;i--){const dt=new Date(); dt.setDate(dt.getDate()-i); const v=d[dayKey(dt)]; const w=W.find(x=>x.k==v); if(w)n++;
+    html+=`<i title="${dt.toLocaleDateString('uk-UA')}${w?': '+w.name:''}" style="${w?'background:'+w.color:''}"></i>`;}
+  box.innerHTML=html;
+  document.getElementById('diary-note').textContent=n?`Відмічено днів за два тижні: ${n}.`:"Тут з'являться кольорові кружечки за останні 14 днів.";
+}
+document.getElementById('legend').innerHTML=W.map(w=>`<span><i style="background:${w.color}"></i>${w.name}</span>`).join('');
+buildWeather(document.getElementById('weather-diary'),w=>{const d=load(); d[dayKey(new Date())]=w.k; if(!save(d)) document.getElementById('diary-note').textContent="Цей браузер не дозволяє зберігати записи."; else renderDiary();});
+renderDiary();
+
+/* ---------- tip of the day ---------- */
+const TIPS=["Видих, довший за вдих, заспокоює нервову систему швидше за будь-які слова.","Назви почуття вголос: «Я злюся». Це вже зменшує його силу.","20 хвилин прогулянки знижують рівень стресу краще, ніж 20 хвилин у телефоні.","Попроси про допомогу. Це вміння сильних людей.","Випий склянку води. Навіть легке зневоднення погіршує настрій і увагу.","Запиши три речі, які сьогодні вдалися. Мозок звикає помічати хороше.","Сварка — це не кінець дружби. Кінець — коли перестають говорити.","Сон — це «прибирання» мозку. Відклади телефон за годину до сну.","Спитай друга: «Як ти насправді?» І дочекайся відповіді.","Не все, що ти думаєш, — правда. Думка — це лише думка.","Обійми тривають 20 секунд, щоб заспокоїти — порахуй.","Помилка — це інформація, а не вирок."];
+let ti=new Date().getDate()%TIPS.length; const tipEl=document.getElementById('tip');
+tipEl.textContent=TIPS[ti];
+document.getElementById('tip-next').addEventListener('click',()=>{ti=(ti+1)%TIPS.length; tipEl.textContent=TIPS[ti];});
+
+/* ---------- month theme ---------- */
+const MONTHS={8:["Вересень","Адаптація і знайомство. Новий клас, нові правила, нові друзі: вчимося домовлятися і поважати кордони одне одного."],9:["Жовтень","Дружба і повага. Як бути поруч, коли другові важко, і чому «просто жарт» може ранити."],10:["Листопад","Толерантність і різноманіття. 16 листопада — Міжнародний день толерантності."],11:["Грудень","Мої емоції: як розпізнавати злість, сум і тривогу та що з ними робити."],0:["Січень","Безпека в інтернеті. Кібербулінг: як розпізнати і куди звертатися."],1:["Лютий","Конфлікти без насильства. Вчимося говорити «я-повідомленнями»."],2:["Березень","Стоп булінг: свідки мають силу зупинити цькування."],3:["Квітень","Стрес і відпочинок. Готуємося до контрольних і НМТ без паніки."],4:["Травень","Підсумки року, плани на літо, безпечні канікули."],5:["Червень","Літо без тривог: відпочинок, режим і безпека."],6:["Липень","Літо без тривог: відпочинок, режим і безпека."],7:["Серпень","Готуємося до нового навчального року без стресу."]};
+const mm=MONTHS[new Date().getMonth()]; document.getElementById('month-name').textContent=mm[0]; document.getElementById('month-text').textContent=mm[1];
+
+/* ---------- students segment ---------- */
+document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-selected',x===b));
+  document.querySelectorAll('[data-pane]').forEach(p=>p.hidden=p.dataset.pane!==b.dataset.seg);
+}));
+
+/* ---------- breathing ---------- */
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const PAT=[
+  {id:"box",name:"Квадрат",desc:"4 · 4 · 4 · 4 — для зосередження",ph:[["Вдих",4,1],["Пауза",4,1],["Видих",4,.45],["Пауза",4,.45]],rounds:5},
+  {id:"calm",name:"Спокійний видих",desc:"вдих 4 · видих 6 — від тривоги",ph:[["Вдих",4,1],["Видих",6,.45]],rounds:8},
+  {id:"478",name:"4-7-8",desc:"для засинання",ph:[["Вдих носом",4,1],["Затримай",7,1],["Видих ротом",8,.45]],rounds:4},
+  {id:"kid",name:"Кулька (для малечі)",desc:"вдих 3 · видих 4",ph:[["Надуваємо кульку",3,1],["Здуваємо",4,.45]],rounds:6},
+  {id:"bee",name:"Бджілка",desc:"вдих 4 · видих 6 з тихим гудінням «м-м-м»",ph:[["Вдих носом",4,1],["Видих: м-м-м…",6,.45]],rounds:6},
+  {id:"sigh",name:"Подвійний вдих",desc:"два вдихи носом · довгий видих ротом — найшвидше знімає напругу",ph:[["Вдих",2,.8],["Ще трохи вдиху",1,1],["Довгий видих",6,.45]],rounds:5}
+];
+let cur=PAT[1], btimer=null;
+const pwrap=document.getElementById('patterns'), ball=document.getElementById('bball'), bphase=document.getElementById('bphase'), bmeta=document.getElementById('bmeta'), bstart=document.getElementById('bstart');
+pwrap.innerHTML=PAT.map(p=>`<button type="button" id="pat-${p.id}" data-id="${p.id}" aria-pressed="${p===cur}"><b>${p.name}</b><span>${p.desc}</span></button>`).join('');
+pwrap.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{stopBreath(); cur=PAT.find(p=>p.id===b.dataset.id); pwrap.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b)); bphase.textContent=cur.name; bmeta.textContent=cur.rounds+" кіл · натисни «Почати»";}));
+bphase.textContent=cur.name; bmeta.textContent=cur.rounds+" кіл · натисни «Почати»";
+function stopBreath(){clearTimeout(btimer); btimer=null; bstart.textContent="Почати"; ball.style.transitionDuration='1s'; ball.style.transform='scale(.45)';}
+bstart.addEventListener('click',()=>{
+  if(btimer){stopBreath(); bphase.textContent=cur.name; bmeta.textContent=cur.rounds+" кіл"; return;}
+  bstart.textContent="Зупинити"; let round=1, pi=0, left=0;
+  const run=()=>{
+    if(left<=0){
+      if(pi>=cur.ph.length){pi=0; round++;}
+      if(round>cur.rounds){stopBreath(); bphase.textContent="Молодець"; bmeta.textContent="Помітив, як змінилося тіло?"; return;}
+      const [label,sec,scale]=cur.ph[pi]; left=sec; bphase.textContent=label;
+      ball.style.transitionDuration=reduce?'0s':sec+'s'; ball.style.transform=`scale(${scale})`; pi++;
+    }
+    bmeta.textContent=left+" · коло "+round+" з "+cur.rounds; left--;
+    btimer=setTimeout(run,1000);
+  };
+  run();
+});
+
+/* ---------- grounding ---------- */
+const G=[[5,"Назви 5 речей, які ти бачиш навколо. Помічай кольори і форми."],[4,"Назви 4 речі, яких можеш торкнутися. Відчуй їхню текстуру: гладка, шорстка, тепла?"],[3,"Прислухайся і назви 3 звуки. Навіть найтихіші."],[2,"Назви 2 запахи. Якщо не відчуваєш — згадай улюблені."],[1,"Назви 1 смак, який відчуваєш зараз. Зроби повільний видих. Ти тут, і ти в безпеці."]];
+let gi=0; const gn=document.getElementById('g-n'), gt=document.getElementById('g-t'), gd=document.getElementById('g-dots');
+function rg(){gn.textContent=G[gi][0]; gt.textContent=G[gi][1]; gd.innerHTML=G.map((_,i)=>`<i class="${i<=gi?'on':''}"></i>`).join(''); document.getElementById('g-next').textContent=gi===G.length-1?"Спочатку":"Далі";}
+document.getElementById('g-next').addEventListener('click',()=>{gi=gi===G.length-1?0:gi+1; rg();});
+document.getElementById('g-prev').addEventListener('click',()=>{gi=Math.max(0,gi-1); rg();});
+rg();
+
+/* ---------- PMR ---------- */
+const PMR=[["Кисті рук","Стисни кулаки якомога сильніше"],["Плечі","Підніми плечі до вух"],["Обличчя","Зажмур очі й зморщ носик"],["Щелепа","Міцно стисни зуби"],["Живіт","Напруж живіт, ніби готуєшся до удару м'ячем"],["Ноги","Натисни п'ятами в підлогу, напруж стегна"],["Стопи","Потягни пальці ніг на себе"]];
+let ptimer=null; const pBtn=document.getElementById('pmr-start'), pPart=document.getElementById('pmr-part'), pCue=document.getElementById('pmr-cue'), pStep=document.getElementById('pmr-step'), pBar=document.getElementById('pmr-bar');
+function stopPmr(){clearTimeout(ptimer); ptimer=null; pBtn.textContent="Почати"; pBar.style.width='0';}
+pBtn.addEventListener('click',()=>{
+  if(ptimer){stopPmr(); pPart.textContent="Сядь зручно"; pCue.textContent="Постав ноги на підлогу, руки поклади на коліна."; pStep.textContent="7 груп м'язів · ≈2 хвилини"; return;}
+  pBtn.textContent="Зупинити"; let i=0, phase=0, t=0;
+  const tick=()=>{
+    if(t<=0){
+      if(phase===2){phase=0; i++;}
+      if(i>=PMR.length){stopPmr(); pPart.textContent="Готово"; pCue.textContent="Посидь ще хвилинку. Помічай тепло і важкість у тілі."; pStep.textContent="Молодець"; return;}
+      phase++; t=phase===1?5:10;
+      pStep.textContent=(i+1)+" з "+PMR.length;
+      pPart.textContent=PMR[i][0];
+      pCue.textContent=phase===1?PMR[i][1]+"…":"Відпусти. Відчуй, як напруга витікає.";
+      pBar.style.transition='none'; pBar.style.width='0'; void pBar.offsetWidth; pBar.style.transition='';
+      pBar.dataset.total=t;
+    }
+    t--; pBar.style.width=(100*(pBar.dataset.total-t)/pBar.dataset.total)+'%';
+    ptimer=setTimeout(tick,1000);
+  };
+  tick();
+});
+
+/* ---------- butterfly ---------- */
+const bf=document.getElementById('bfly'), bfb=document.getElementById('bfly-btn');
+bfb.addEventListener('click',()=>{const on=bf.classList.toggle('run'); bfb.textContent=on?"Зупинити":"Показати ритм";});
+
+/* ---------- noise (generated rain) ---------- */
+let ctx=null, src=null, gain=null;
+const nBtn=document.getElementById('noise-btn'), vol=document.getElementById('noise-vol');
+function stopNoise(){if(src){try{src.stop()}catch(e){} src=null;} nBtn.textContent="Увімкнути";}
+nBtn.addEventListener('click',()=>{
+  if(src){stopNoise(); return;}
+  try{
+    ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();
+    const len=ctx.sampleRate*4, buf=ctx.createBuffer(2,len,ctx.sampleRate);
+    for(let c=0;c<2;c++){const d=buf.getChannelData(c); let last=0; for(let i=0;i<len;i++){const w=Math.random()*2-1; last=(last+0.02*w)/1.02; d[i]=last*3.2 + w*0.035;}}
+    src=ctx.createBufferSource(); src.buffer=buf; src.loop=true;
+    const lp=ctx.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=1800;
+    gain=ctx.createGain(); gain.gain.value=vol.value/100*.6;
+    src.connect(lp).connect(gain).connect(ctx.destination); src.start(); ctx.resume();
+    nBtn.textContent="Вимкнути";
+  }catch(e){nBtn.textContent="Звук недоступний";}
+});
+vol.addEventListener('input',()=>{if(gain) gain.gain.value=vol.value/100*.6;});
+
+
+/* ---------- generic stepper ---------- */
+function stepper(pref,items){
+  let i=0; const n=document.getElementById(pref+'-n'), t=document.getElementById(pref+'-t'), d=document.getElementById(pref+'-dots'), nx=document.getElementById(pref+'-next');
+  const r=()=>{n.textContent=items[i][0]; t.textContent=items[i][1]; d.innerHTML=items.map((_,k)=>`<i class="${k<=i?'on':''}"></i>`).join(''); nx.textContent=i===items.length-1?"Спочатку":"Далі";};
+  nx.addEventListener('click',()=>{i=i===items.length-1?0:i+1; r();});
+  document.getElementById(pref+'-prev').addEventListener('click',()=>{i=Math.max(0,i-1); r();});
+  r();
+}
+stepper('s',[["С","Стій. Відчуваєш, що емоції переповнюють? Зупинись і скажи собі подумки або вголос: «Стоп»."],["Т","Тримай подих. Зроби кілька повільних вдихів і видихів, щоб знизити напругу."],["О","Оціни стан. Що я відчуваю? Де це в тілі? Які думки з'являються? Просто помічай, без оцінок."],["П","Подивись ширше. Як би на це подивився друг? Чи є інше пояснення? Що буде через тиждень?"],["П","Прийми рішення. Обери реакцію, про яку не пошкодуєш і яка відповідає тому, яким ти хочеш бути."]]);
+
+/* ---------- fact or thought ---------- */
+const FD=[["Я отримав 7 балів за контрольну.","f","Факт: це можна перевірити в журналі."],["Я тупий у математиці.","d","Думка: це оцінка, а не факт. Факт — лише одна оцінка за одну роботу."],["Оля не відповіла на моє повідомлення.","f","Факт: повідомлення без відповіді."],["Оля на мене образилась.","d","Думка: ти вгадуєш її почуття. Може, вона просто зайнята."],["Усі в класі з мене сміються.","d","Думка: «усі» — узагальнення. Хто саме і коли?"],["Сьогодні двічі була повітряна тривога.","f","Факт: це сталося насправді."],["Я ніколи не складу НМТ.","d","Думка: передбачення майбутнього. Ніхто не знає його напевно."],["Вчителька попросила мене залишитися після уроку.","f","Факт. А от «мене сваритимуть» — це вже думка."]];
+let fi=0, fdone=false; const fq=document.getElementById('fd-q'), ffb=document.getElementById('fd-fb'), fc=document.getElementById('fd-count'), fbtns=[...document.querySelectorAll('#fd-choice button')];
+const fr=()=>{fq.textContent="«"+FD[fi][0]+"»"; ffb.textContent=""; fc.textContent=(fi+1)+" / "+FD.length; fbtns.forEach(b=>b.className=''); fdone=false;};
+fbtns.forEach(b=>b.addEventListener('click',()=>{if(fdone)return; fdone=true; const ok=b.dataset.a===FD[fi][1]; b.className=ok?'ok':'no'; ffb.textContent=(ok?"Так! ":"Не зовсім. ")+FD[fi][2];}));
+document.getElementById('fd-next').addEventListener('click',()=>{fi=(fi+1)%FD.length; fr();}); fr();
+
+/* ---------- worry tree ---------- */
+const trq=document.getElementById('tr-q'), trc=document.getElementById('tr-choice'), tro=document.getElementById('tr-out');
+function tree(step){
+  tro.hidden=true;
+  if(step===0){trq.textContent="Це вже сталося, чи я уявляю, що може статися?"; trc.innerHTML='<button type="button" id="tr-a1">Уже сталося</button><button type="button" id="tr-a2">Уявляю, що може статися</button>'; trc.hidden=false;
+    document.getElementById('tr-a1').onclick=()=>tree(1); document.getElementById('tr-a2').onclick=()=>tree(2);}
+  if(step===1){trq.textContent="Чи можу я щось зробити з цим прямо зараз?"; trc.innerHTML='<button type="button" id="tr-b1">Так</button><button type="button" id="tr-b2">Ні</button>';
+    document.getElementById('tr-b1').onclick=()=>tree(3); document.getElementById('tr-b2').onclick=()=>tree(2);}
+  if(step===2){trq.textContent="Це гіпотетична тривога"; trc.hidden=true; tro.hidden=false; tro.innerHTML="Майбутнє не піддається контролю, і це нормально. Визнай тривогу: «Я хвилююся, і це зрозуміло». Відклади її на «час для хвилювань» — 15–20 хвилин увечері. Зараз зроби щось приємне, щоб повернутися в теперішнє: прогулянка, музика, розмова.";}
+  if(step===3){trq.textContent="Це реальна проблема"; trc.hidden=true; tro.hidden=false; tro.innerHTML="Спитай себе: «Який перший маленький крок я можу зробити?» Зроби його зараз. Якщо зараз не можна — запиши план: що, коли і з ким. Потім переключись на інші справи.";}
+}
+document.getElementById('tr-reset').addEventListener('click',()=>tree(0)); tree(0);
+
+/* ---------- movement runner ---------- */
+const MV=[["Потягнись","Руки вгору, потягнися до стелі, стань на носочки",15],["Кола плечима","Повільно обертай плечима назад, 5 разів",15],["Сова","Поверни голову ліворуч і праворуч, повільно",15],["Млин","Прямими руками роби великі кола вперед",15],["Нахили","Руки на поясі, нахиляйся вліво і вправо",15],["Кроки на місці","Марш на місці, коліна високо",15],["Трусимо","Струси кисті, потім ноги, ніби з них стікає вода",15],["Три видихи","Руки вгору на вдиху, вниз на довгому видиху",15]];
+let mt=null; const mB=document.getElementById('mv-start'), mP=document.getElementById('mv-part'), mC=document.getElementById('mv-cue'), mS=document.getElementById('mv-step'), mBar=document.getElementById('mv-bar');
+function stopMv(){clearTimeout(mt); mt=null; mB.textContent="Почати"; mBar.style.width='0';}
+mB.addEventListener('click',()=>{
+  if(mt){stopMv(); mP.textContent="Встань рівно"; mC.textContent="Ноги на ширині плечей, руки вільно."; mS.textContent="8 рухів · 2 хвилини"; return;}
+  mB.textContent="Зупинити"; let i=-1, t=0, tot=1;
+  const tick=()=>{
+    if(t<=0){i++; if(i>=MV.length){stopMv(); mP.textContent="Готово!"; mC.textContent="Сядь і відчуй, як тепло розійшлося тілом."; mS.textContent="Молодці"; return;}
+      [mP.textContent,mC.textContent,t]=MV[i]; tot=t; mS.textContent=(i+1)+" з "+MV.length; mBar.style.transition='none'; mBar.style.width='0'; void mBar.offsetWidth; mBar.style.transition='';}
+    t--; mBar.style.width=(100*(tot-t)/tot)+'%'; mt=setTimeout(tick,1000);
+  };
+  tick();
+});
+
+/* ---------- stress check ---------- */
+const SQ=["Мені важко заснути або я прокидаюся вночі","Я втомлений навіть після відпочинку","Мене легко роздратувати дрібницями","Мені важко зосередитися на уроках","Я хвилююся через речі, які не можу контролювати","У мене болить голова чи живіт без явної причини","Мені не хочеться робити те, що раніше подобалося","Я уникаю друзів і спілкування","Мені здається, що я не справляюся","Я відчуваю напругу в тілі: плечі, щелепа, кулаки"];
+const SA=["Ніколи","Іноді","Часто","Майже завжди"];
+const sqEl=document.getElementById('stress-q');
+sqEl.innerHTML=SQ.map((q,i)=>`<div class="qrow"><span>${q}</span><div class="scale" role="radiogroup" aria-label="${q}">${SA.map((a,v)=>`<label><input type="radio" name="sq${i}" id="sq${i}-${v}" value="${v}"><span>${a}</span></label>`).join('')}</div></div>`).join('');
+document.getElementById('stress-go').addEventListener('click',()=>{
+  const res=document.getElementById('stress-res'); let sum=0, n=0;
+  SQ.forEach((_,i)=>{const c=document.querySelector(`input[name="sq${i}"]:checked`); if(c){sum+=+c.value; n++;}});
+  res.hidden=false;
+  if(n<SQ.length){res.style.background='var(--bg2)'; res.innerHTML=`<p>Дай відповідь на всі питання: залишилось ${SQ.length-n}.</p>`; return;}
+  const lv=sum<=8?["Низький рівень стресу","var(--pine-soft)","Ти добре справляєшся. Продовжуй те, що допомагає: сон, рух, спілкування з друзями."]:sum<=16?["Помірний рівень стресу","var(--sun-soft)","Звичайне навантаження шкільного життя. Додай у день більше відпочинку і спробуй вправи з Релакс-студії."]:sum<=23?["Підвищений рівень стресу","var(--coral-soft)","Тобі зараз непросто. Варто поговорити з кимось, кому довіряєш, і зайти до шкільного психолога."]:["Високий рівень стресу","var(--alert-soft)","Тобі дуже важко, і ти не мусиш справлятися сам. Будь ласка, звернись до психолога ліцею або зателефонуй на 116 111."];
+  res.style.background=lv[1];
+  res.innerHTML=`<h4>${lv[0]} · ${sum} з 30</h4><div class="meter"><i style="left:${sum/30*100}%"></i></div><p>${lv[2]}</p><p class="muted" style="font-size:.85rem">Це не діагноз, а привід прислухатися до себе.</p>`;
+});
+
+/* ---------- bullying quiz ---------- */
+const BQ=[["Двоє друзів посварилися через гру і тиждень не розмовляють.","c","Конфлікт: сторони рівні, це одноразова сварка. Вони можуть помиритися."],["Група учнів щодня ховає портфель однокласника і сміється з нього.","b","Булінг: повторюється, група проти одного, мета — принизити."],["Хтось створив чат, щоб висміювати фото однокласниці.","b","Кібербулінг — теж булінг. Скріншоти і розмова з дорослим обов'язкові."],["Під час футболу хлопці штовхнулися і посварились, а наступного дня знову грають разом.","c","Конфлікт: випадковий, без наміру принизити, і вже вичерпаний."],["Старшокласник щотижня вимагає гроші в п'ятикласника.","b","Булінг: повторюється, нерівність сил, економічне насильство. Треба одразу сказати дорослим."],["Однокласниця один раз грубо відповіла через поганий настрій, а потім вибачилась.","c","Конфлікт: одноразово, і вона визнала помилку."]];
+let bi=0, bdone=false; const bq=document.getElementById('bq-q'), bqfb=document.getElementById('bq-fb'), bc=document.getElementById('bq-count'), bbtns=[...document.querySelectorAll('#bq-choice button')];
+const br=()=>{bq.textContent=BQ[bi][0]; bqfb.textContent=""; bc.textContent=(bi+1)+" / "+BQ.length; bbtns.forEach(b=>b.className=''); bdone=false;};
+bbtns.forEach(b=>b.addEventListener('click',()=>{if(bdone)return; bdone=true; const ok=b.dataset.a===BQ[bi][1]; b.className=ok?'ok':'no'; bqfb.textContent=(ok?"Правильно. ":"Не зовсім. ")+BQ[bi][2];}));
+document.getElementById('bq-next').addEventListener('click',()=>{bi=(bi+1)%BQ.length; br();}); br();
+
+/* ---------- RIASEC ---------- */
+const RT={R:["Практик","Тобі подобається результат, який можна побачити і помацати: техніка, будівництво, природа, тварини.","інженер, агроном, автомеханік, електрик, кухар, ветеринар, IT-інженер з обладнання"],I:["Дослідник","Тобі цікаво розбиратися, як усе влаштовано, ставити питання і шукати відповіді.","програміст, лікар, науковець, фармацевт, еколог, аналітик даних"],A:["Митець","Тобі важливо творити, виражати себе і робити по-своєму.","дизайнер, архітектор, журналіст, музикант, фотограф, SMM-спеціаліст"],S:["Помічник","Тобі подобається допомагати, пояснювати і підтримувати людей.","вчитель, психолог, лікар, медсестра чи медбрат, соціальний працівник, тренер"],E:["Лідер","Тобі подобається організовувати, переконувати і вести за собою.","підприємець, менеджер, юрист, маркетолог, організатор подій, політик"],C:["Організатор","Тобі комфортно, коли є порядок, чіткі правила і точність.","бухгалтер, логіст, банківський працівник, адміністратор, аудитор, аналітик"]};
+const RQ=[["R","Люблю майструвати, ремонтувати, працювати руками"],["I","Люблю розбиратися, як усе влаштовано, ставити експерименти"],["A","Люблю малювати, писати, грати музику чи знімати відео"],["S","Мені подобається допомагати людям і пояснювати їм щось"],["E","Люблю бути лідером і організовувати інших"],["C","Люблю порядок, таблиці і чіткі інструкції"],["R","Мені подобається працювати на свіжому повітрі, з технікою чи тваринами"],["I","Мене цікавлять математика, фізика, біологія чи програмування"],["A","Мені важливо робити щось по-своєму, не за шаблоном"],["S","Друзі часто звертаються до мене по пораду"],["E","Мені цікаві бізнес, власна справа, виступи перед людьми"],["C","Мені подобається рахувати, планувати і працювати з документами"]];
+const RA=["Ні","Трохи","Так"];
+const rrow=(q,i)=>`<div class="qrow"><span>${q[1]}</span><div class="scale" role="radiogroup" aria-label="${q[1]}">${RA.map((a,v)=>`<label><input type="radio" name="rq${i}" id="rq${i}-${v}" value="${v}"><span>${a}</span></label>`).join('')}</div></div>`;
+document.getElementById('ri-q1').innerHTML=RQ.slice(0,6).map((q,i)=>rrow(q,i)).join('');
+document.getElementById('ri-q2').innerHTML=RQ.slice(6).map((q,i)=>rrow(q,i+6)).join('');
+document.getElementById('ri-q2').style.counterReset='q 6';
+document.getElementById('ri-go').addEventListener('click',()=>{
+  const sc={R:0,I:0,A:0,S:0,E:0,C:0}; let n=0; const res=document.getElementById('ri-res');
+  RQ.forEach((q,i)=>{const c=document.querySelector(`input[name="rq${i}"]:checked`); if(c){sc[q[0]]+=+c.value; n++;}});
+  res.hidden=false;
+  if(n<RQ.length){res.innerHTML=`<p>Дай відповідь на всі питання: залишилось ${RQ.length-n}.</p>`; return;}
+  const ord=Object.keys(sc).sort((a,b)=>sc[b]-sc[a]); const top=ord.slice(0,2);
+  res.innerHTML=`<h4>Твої провідні типи: ${RT[top[0]][0]} і ${RT[top[1]][0]}</h4>`+top.map(k=>`<p><b>${RT[k][0]}.</b> ${RT[k][1]} <br><span class="muted">Професії: ${RT[k][2]}.</span></p>`).join('')+`<div class="riasec">${ord.map(k=>`<div class="bar-row"><span>${RT[k][0]}</span><span class="track"><i style="width:${sc[k]/4*100}%"></i></span><span>${sc[k]}</span></div>`).join('')}</div><p class="muted" style="font-size:.85rem">Це лише напрям для роздумів. Інтереси змінюються, і більшість людей поєднують кілька типів.</p>`;
+});
+
+/* ---------- safety plan ---------- */
+const SPK='vvl-safety-plan', spIds=['sp1','sp2','sp3','sp4','sp5','sp6'], spNote=document.getElementById('sp-note');
+try{const saved=JSON.parse(localStorage.getItem(SPK)||'null'); if(saved) spIds.forEach(id=>{if(saved[id]!=null) document.getElementById(id).value=saved[id];});}catch(e){}
+document.getElementById('sp-save').addEventListener('click',()=>{
+  const o={}; spIds.forEach(id=>o[id]=document.getElementById(id).value);
+  try{localStorage.setItem(SPK,JSON.stringify(o)); spNote.textContent="Збережено на цьому пристрої.";}catch(e){spNote.textContent="Цей браузер не дозволяє зберігати. Перепиши план у блокнот.";}
+});
+let spArm=false; const spClr=document.getElementById('sp-clear');
+spClr.addEventListener('click',()=>{
+  if(!spArm){spArm=true; spClr.textContent="Точно очистити?"; setTimeout(()=>{spArm=false; spClr.textContent="Очистити";},3000); return;}
+  spIds.forEach(id=>{if(id!=='sp5') document.getElementById(id).value='';}); try{localStorage.removeItem(SPK);}catch(e){} spArm=false; spClr.textContent="Очистити"; spNote.textContent="Очищено.";
+});
+
+function stopAll(){stopBreath(); stopPmr(); stopMv(); stopNoise(); bf.classList.remove('run'); bfb.textContent="Показати ритм";}
+
+/* ---------- copy letter ---------- */
+const lc=document.getElementById('letter-copy');
+lc.addEventListener('click',()=>{const t=document.getElementById('letter').textContent;
+  try{navigator.clipboard.writeText(t).then(()=>{lc.textContent="Скопійовано"; setTimeout(()=>lc.textContent="Скопіювати текст заяви",1800);}).catch(()=>{const r=document.createRange(); r.selectNodeContents(document.getElementById('letter')); const sl=getSelection(); sl.removeAllRanges(); sl.addRange(r); lc.textContent="Виділено — натисни Ctrl+C";});}catch(e){}
+});
+
+/* ---------- copy ---------- */
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{
+  const v=b.dataset.copy, done=()=>{b.textContent="Скопійовано"; setTimeout(()=>b.textContent="Копіювати",1600);};
+  try{navigator.clipboard.writeText(v).then(done).catch(()=>{b.textContent=v;});}catch(e){b.textContent=v;}
+}));
+
+show();
+})();
+</script>
+
+</body>
+</html>
