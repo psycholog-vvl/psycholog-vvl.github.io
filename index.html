@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Віртуальний кабінет психолога · Великовисківський ліцей</title>
-<meta name="description" content="Віртуальний кабінет практичного психолога Великовисківського ліцею: поради учням, батькам і вчителям, вправи для заспокоєння, самоперевірка, гарячі лінії.">
-<meta property="og:title" content="Віртуальний кабінет психолога · Великовисківський ліцей">
+<title>Кабінет психолога Білецького А. О. · Великовисківський ліцей</title>
+<meta name="description" content="Віртуальний кабінет практичного психолога Великовисківського ліцею Білецького Антона Олександровича: поради учням, батькам і вчителям, вправи для заспокоєння, самоперевірка, гарячі лінії.">
+<meta property="og:title" content="Кабінет психолога Білецького Антона Олександровича · Великовисківський ліцей">
 <meta property="og:description" content="Поради, вправи для заспокоєння і підтримка для учнів, батьків і вчителів.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://psycholog-vvl.github.io/">
 <meta name="theme-color" content="#1D6B58">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.35' cy='.35'%3E%3Cstop offset='0' stop-color='%23F3B23A'/%3E%3Cstop offset='.55' stop-color='%23E7705A'/%3E%3Cstop offset='1' stop-color='%238C7BDB'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='30' fill='url(%23g)'/%3E%3C/svg%3E">
 <style>[hidden]{display:none!important} img{max-width:100%} :root{padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px)}</style>
@@ -273,7 +274,12 @@ button{font-family:inherit}
 /* ---------- ABOUT ---------- */
 .about{display:grid; grid-template-columns:1fr 1.3fr; gap:16px}
 @media (max-width:860px){.about{grid-template-columns:1fr}}
-.portrait{aspect-ratio:4/5; max-width:100%; border-radius:var(--r); background:linear-gradient(160deg,var(--pine-soft),var(--lilac-soft)); display:grid; place-items:center; color:var(--muted); font-weight:600}
+.portrait{aspect-ratio:4/5; max-width:100%; border-radius:var(--r); background:linear-gradient(160deg,var(--pine-soft),var(--lilac-soft)); display:grid; place-content:center; justify-items:center; gap:14px; color:var(--muted); font-weight:600}
+.portrait-av{width:140px; height:140px; border-radius:50%; display:grid; place-items:center; font-family:var(--display); font-size:3rem; font-weight:700; color:#fff; background:radial-gradient(circle at 35% 30%,var(--sun),var(--coral) 55%,var(--lilac))}
+.owner{display:inline-flex; align-items:center; gap:12px; padding:8px 18px 8px 8px; border-radius:28px; background:var(--surface); border:1px solid var(--line); box-shadow:var(--shadow); text-decoration:none; color:var(--ink); max-width:100%}
+.owner-av{width:44px; height:44px; flex:none; border-radius:50%; display:grid; place-items:center; font-family:var(--display); font-weight:700; font-size:.95rem; color:#fff; background:radial-gradient(circle at 35% 30%,var(--sun),var(--coral) 55%,var(--lilac))}
+.owner b{display:block; font-size:1rem; line-height:1.25}
+.owner small{display:block; color:var(--muted); font-size:.85rem; line-height:1.3}
 .facts{display:grid; grid-template-columns:auto 1fr; gap:8px 18px; margin:0}
 .facts dt{color:var(--muted)}
 .facts dd{margin:0; font-weight:600}
@@ -368,7 +374,7 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
 
 <nav class="nav" aria-label="Розділи сайту">
   <div class="wrap">
-    <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"></span><span><b>Кабінет психолога</b><small>Великовисківський ліцей</small></span></a>
+    <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"></span><span><b>Кабінет психолога</b><small>Білецький А. О. · Великовисківський ліцей</small></span></a>
     <div class="tabs" id="tabs">
       <a href="#home">Головна</a>
       <a href="#students">Учням</a>
@@ -388,9 +394,12 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
   <div class="wrap">
     <div class="hero">
       <div>
-        <span class="eyebrow">Психологічна служба · 1–11 класи</span>
-        <h1 style="margin-top:14px">Місце, де можна <span class="hl">видихнути</span></h1>
-        <p class="lead">Поради, вправи для заспокоєння і підтримка для учнів, батьків і вчителів Великовисківського ліцею. Сюди можна прийти з будь-яким питанням, навіть якщо здається, що воно дрібне.</p>
+        <a class="owner" href="#about">
+          <span class="owner-av" aria-hidden="true">АБ</span>
+          <span><b>Білецький Антон Олександрович</b><small>практичний психолог Великовисківського ліцею</small></span>
+        </a>
+        <h1 style="margin-top:22px">Місце, де можна <span class="hl">видихнути</span></h1>
+        <p class="lead">Віртуальний кабінет Антона Олександровича: поради, вправи для заспокоєння і підтримка для учнів 1–11 класів, батьків і вчителів. Сюди можна прийти з будь-яким питанням, навіть якщо здається, що воно дрібне.</p>
         <div class="hero-actions">
           <a class="btn dark" href="#relax">Заспокоїтися зараз</a>
           <a class="btn line" href="#about">Звернутися до психолога</a>
@@ -1777,7 +1786,7 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
           <div><label for="sp2">2. Що мені допомагає самому<small>Музика, прогулянка, дихання, душ, малювання</small></label><textarea id="sp2" placeholder="Напр.: дихання «Квадрат», вийти на вулицю"></textarea></div>
           <div><label for="sp3">3. Люди і місця, які відволікають<small>Де і з ким мені стає легше</small></label><textarea id="sp3" placeholder="Напр.: бабуся, тренування, друг Максим"></textarea></div>
           <div><label for="sp4">4. Кому я можу розповісти<small>Імена і телефони людей, яким довіряю</small></label><textarea id="sp4" placeholder="Напр.: мама, класна керівниця"></textarea></div>
-          <div><label for="sp5">5. Фахівці<small>Психолог ліцею, гарячі лінії</small></label><textarea id="sp5">Психолог ліцею: [кабінет]
+          <div><label for="sp5">5. Фахівці<small>Психолог ліцею, гарячі лінії</small></label><textarea id="sp5">Психолог ліцею: Білецький Антон Олександрович, [кабінет]
 Дитяча лінія: 116 111
 Екстрена допомога: 112</textarea></div>
           <div><label for="sp6">6. Що для мене важливе<small>Люди, мрії, тварини, заради яких варто триматися</small></label><textarea id="sp6" placeholder="Напр.: мій пес, поїздка на море влітку"></textarea></div>
@@ -1795,13 +1804,13 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
     <div class="view-head">
       <span class="chip c-pine">Про кабінет</span>
       <h1>Як звернутися до психолога</h1>
-      <p>Прийти в кабінет, написати анонімно або записатися на консультацію.</p>
+      <p>До практичного психолога Білецького Антона Олександровича можна прийти в кабінет, написати анонімно або записатися на консультацію.</p>
     </div>
     <div class="about">
-      <div class="portrait">[фото]</div>
+      <div class="portrait"><span class="portrait-av">АБ</span><span class="muted" style="font-size:.85rem">[тут буде фото]</span></div>
       <div class="panel" style="display:grid; gap:20px; align-content:start">
         <div>
-          <h3 style="font-size:1.4rem">[Ім'я Прізвище]</h3>
+          <h3 style="font-size:1.4rem">Білецький Антон Олександрович</h3>
           <p class="muted">Практичний психолог Великовисківського ліцею</p>
         </div>
         <dl class="facts">
@@ -1905,7 +1914,7 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
 <footer>
   <div class="wrap">
     <span>Великовисківський ліцей · Великовисківська сільська рада · Кіровоградська обл.</span>
-    <span>Психологічна служба · 2026/2027 н. р.</span>
+    <span>Практичний психолог Білецький Антон Олександрович · 2026/2027 н. р.</span>
   </div>
 </footer>
 
