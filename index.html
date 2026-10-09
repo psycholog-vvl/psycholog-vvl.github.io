@@ -18,38 +18,19 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Onest:wght@400;500;600;700&display=swap">
 <style>
 :root{
-  --bg:#EEF3EF; --bg2:#E3ECE6; --surface:#FFFFFF; --ink:#142C2A; --muted:#546B67; --line:#D3DFD8;
-  --pine:#1D6B58; --pine-ink:#FFFFFF; --pine-soft:#D8ECE4;
-  --sun:#F3B23A; --sun-soft:#FCEFD2; --sun-ink:#5A3E00;
-  --coral:#E7705A; --coral-soft:#FBE3DC; --coral-ink:#6B2416;
-  --lilac:#8C7BDB; --lilac-soft:#E7E3FA; --lilac-ink:#2F2470;
-  --alert:#B83B2E; --alert-soft:#F9E1DD;
-  --display:"Unbounded","Trebuchet MS",system-ui,sans-serif;
+  color-scheme:light;
+  --frame:#3E481B; --frame-ink:#E9F0C8;
+  --bg:#C5D66A; --bg2:#B3C557; --surface:#F6F8E6; --ink:#1B2110; --muted:#46511F; --line:rgba(27,33,16,.18);
+  --cobalt:#2632D4; --orange:#F2581C; --pink:#F59ACF; --green:#0A9466; --mustard:#DBA521; --lime2:#D8EC3C; --violet:#8E7CF7;
+  --pine:#2632D4; --pine-ink:#FFFFFF; --pine-soft:#DCDFFB;
+  --sun:#DBA521; --sun-soft:#F7E8B4; --sun-ink:#553B00;
+  --coral:#F2581C; --coral-soft:#FDDACA; --coral-ink:#7A2405;
+  --lilac:#8E7CF7; --lilac-soft:#E4DFFE; --lilac-ink:#2B2280;
+  --alert:#C8321A; --alert-soft:#FFE1D8;
+  --display:"Onest","Segoe UI",system-ui,sans-serif;
   --body:"Onest","Segoe UI",system-ui,sans-serif;
-  --r:22px;
-  --shadow:0 1px 2px rgba(20,44,42,.06),0 8px 24px -12px rgba(20,44,42,.18);
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#0E1A19; --bg2:#132322; --surface:#172B29; --ink:#E6F0EC; --muted:#98AFA9; --line:#27403D;
-    --pine:#5CC2A3; --pine-ink:#062019; --pine-soft:#1B3A33;
-    --sun:#F5C35E; --sun-soft:#352A12; --sun-ink:#FBE3AE;
-    --coral:#F08C78; --coral-soft:#3A221D; --coral-ink:#FAD0C6;
-    --lilac:#A99BEF; --lilac-soft:#27234A; --lilac-ink:#DCD6FB;
-    --alert:#F07E70; --alert-soft:#3B211E;
-    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.6);
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#0E1A19; --bg2:#132322; --surface:#172B29; --ink:#E6F0EC; --muted:#98AFA9; --line:#27403D;
-  --pine:#5CC2A3; --pine-ink:#062019; --pine-soft:#1B3A33;
-  --sun:#F5C35E; --sun-soft:#352A12; --sun-ink:#FBE3AE;
-  --coral:#F08C78; --coral-soft:#3A221D; --coral-ink:#FAD0C6;
-  --lilac:#A99BEF; --lilac-soft:#27234A; --lilac-ink:#DCD6FB;
-  --alert:#F07E70; --alert-soft:#3B211E;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.6);
+  --r:24px;
+  --shadow:0 1px 0 rgba(27,33,16,.06);
 }
 *{box-sizing:border-box}
 html{scroll-padding-top:90px}
@@ -367,14 +348,134 @@ button{font-family:inherit}
 
 footer{border-top:1px solid var(--line); padding-block:28px 40px; color:var(--muted); font-size:.87rem}
 footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px}
+
+/* ================= PRINT VIBE ================= */
+body{background:var(--frame); padding:14px; font-size:16.5px}
+@media (max-width:600px){body{padding:8px}}
+.frame{background:var(--bg); border-radius:34px; min-height:calc(100vh - 28px); position:relative}
+@media (max-width:600px){.frame{border-radius:22px}}
+h1,h2,h3,h4{font-family:var(--display); font-weight:600; letter-spacing:-.025em}
+.nav{background:transparent; border-bottom:0; backdrop-filter:none; -webkit-backdrop-filter:none; padding-top:14px}
+.nav .wrap{max-width:1240px; gap:12px}
+.brand{background:rgba(48,58,18,.32); border-radius:999px; padding:6px 16px 6px 6px; color:#fff; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px)}
+.brand small{color:rgba(255,255,255,.82)}
+.brand-orn{width:34px; height:34px; border-radius:50%; background:var(--surface); flex:none}
+.tabs{background:rgba(48,58,18,.32); border-radius:999px; padding:5px; gap:2px; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); margin-inline:auto}
+.tabs a{color:#fff; padding:9px 13px; font-size:.88rem}
+@media (max-width:1360px){.brand small{display:none}}
+.tabs a:hover{background:rgba(255,255,255,.14)}
+.tabs a[aria-current="page"]{background:#fff; color:var(--ink)}
+.tabs a.sos{color:#FFE0D6}
+.tabs a.sos[aria-current="page"]{background:var(--orange); color:#fff}
+@media (max-width:820px){.tabs{margin-inline:0}}
+.wrap{max-width:1240px}
+
+.hero{grid-template-columns:1.05fr 1fr; padding-block:8px 0; gap:24px}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.orn-hero{width:min(420px,100%)}}
+.wordmark{font-family:var(--display); font-weight:600; color:#fff; font-size:clamp(3.2rem,9.5vw,8.4rem); line-height:.88; letter-spacing:-.045em; margin:6px 0 26px}
+.hero-sub{font-size:clamp(1.5rem,3vw,2.2rem); color:var(--ink); margin-top:22px}
+.hero .lead{color:var(--muted)}
+.orn-stage{position:relative; display:grid; place-items:center; gap:8px}
+.orn-hero{width:min(560px,100%); aspect-ratio:1; animation:breathe2 10s ease-in-out infinite}
+@keyframes breathe2{0%,100%{transform:scale(.9)}40%{transform:scale(1)}}
+@media (prefers-reduced-motion: reduce){.orn-hero{animation:none}}
+.orn-ctrl{display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:center}
+.orn-label{font-weight:600; color:var(--muted); min-width:5.5em; text-align:center}
+.orn-label span{animation:lab 10s ease-in-out infinite}
+.orn-label span:nth-child(2){animation-name:lab2; margin-left:-5.2em}
+canvas.orn{display:block}
+
+.owner{background:rgba(255,255,255,.55); border-color:transparent; box-shadow:none}
+.owner-av,.portrait-av{background:var(--cobalt)}
+
+.btn{border-radius:999px}
+.btn.dark,.btn.pine{background:var(--cobalt); color:#fff}
+.btn.line{background:transparent; border-color:var(--ink); color:var(--ink)}
+.btn.sos{background:var(--orange); color:#fff}
+
+.doors{gap:12px}
+.door{min-height:240px; border-radius:26px; padding:22px}
+.door canvas.orn{width:78px; height:78px}
+.door.d-sun{background:var(--orange); color:#fff}
+.door.d-coral{background:var(--pink); color:var(--ink)}
+.door.d-lilac{background:var(--cobalt); color:#fff}
+.door.d-pine{background:var(--green); color:#fff}
+.door.d-ink{background:var(--violet); color:var(--ink)}
+.door p{opacity:.92}
+
+.panel,.tool,.test,.lines .line,.feature,.topics details,.callout{border-radius:24px}
+.panel,.tool,.test,.feature{background:var(--surface); border:0}
+.topics details{background:var(--surface); border:0}
+.feature .topics details{background:#fff}
+.lines .line{background:var(--surface); border:0}
+.lines .line.urgent{background:var(--orange); color:#fff}
+.lines .line.urgent .num,.lines .line.urgent .eyebrow,.lines .line.urgent p{color:#fff}
+.lines .line.urgent .copy{color:#fff; border-color:rgba(255,255,255,.6)}
+.callout{background:var(--frame); color:var(--frame-ink)}
+.callout .btn.line{color:#fff; border-color:rgba(255,255,255,.5)}
+.month-card .m{color:var(--cobalt)}
+.chip{background:rgba(255,255,255,.6)}
+.seg{background:rgba(48,58,18,.18)}
+.weather button,.patterns button,.choice button,.scale span{background:#fff}
+.view-head{position:relative; max-width:none; padding-right:min(300px,32%); min-height:180px}
+.view-head h1{color:#fff; font-size:clamp(2.4rem,6vw,4.6rem); line-height:.95; letter-spacing:-.04em}
+.view-head p{color:var(--muted)}
+.orn-corner{position:absolute; right:0; top:-10px; width:min(260px,30%); aspect-ratio:1}
+@media (max-width:760px){.view-head{padding-right:0; min-height:0}.orn-corner{position:static; width:120px; order:-1}}
+.sgroup,.tgroup{border-bottom-color:rgba(27,33,16,.2)}
+.band{width:100%; height:64px; display:block; margin-bottom:22px}
+footer{border-top:0; color:var(--muted)}
+.portrait{background:var(--surface)}
+.game{background:#fff}
+.game b{color:var(--orange)}
+.i-sun{background:var(--sun-soft)} .i-pine{background:var(--pine-soft)}
+.diary-days i{background:#fff}
+
+/* ---------- antistress games ---------- */
+.sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+.kal-wrap{position:relative; max-width:440px; width:100%; justify-self:center}
+.kal{display:block; width:100%; aspect-ratio:1; background:#fff; border-radius:20px; touch-action:none; cursor:crosshair; box-shadow:0 0 0 2px var(--cobalt)}
+.kal-hint{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); padding:6px 14px; border-radius:999px; background:var(--cobalt); color:#fff; font-weight:700; font-size:.85rem; pointer-events:none; animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.95; transform:translate(-50%,-50%) scale(1)}50%{opacity:.7; transform:translate(-50%,-50%) scale(1.08)}}
+.swatches{display:flex; flex-wrap:wrap; gap:8px; justify-content:center}
+.swatches button{width:32px; height:32px; border-radius:50%; border:3px solid #fff; box-shadow:0 0 0 2px var(--cobalt); cursor:pointer; transition:transform .15s}
+.swatches button[aria-pressed="true"]{transform:scale(1.18); box-shadow:0 0 0 3px var(--ink)}
+.swatches .rb{background:conic-gradient(#F2581C,#DBA521,#D8EC3C,#0A9466,#2632D4,#8E7CF7,#F59ACF,#F2581C)}
+.bubbles{display:grid; grid-template-columns:repeat(8,1fr); gap:8px; touch-action:none}
+.bubble{aspect-ratio:1; border-radius:50%; border:0; padding:0; cursor:pointer; background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95) 0 14%,transparent 15%),var(--c); box-shadow:inset -3px -5px 0 rgba(0,0,0,.14),0 0 0 2px var(--cobalt); transition:transform .12s}
+.bubble:hover{transform:scale(1.08)}
+.bubble.popped{background:transparent; box-shadow:0 0 0 2px rgba(38,50,212,.22); transform:scale(.72); cursor:default; animation:pop .22s ease-out}
+@keyframes pop{0%{transform:scale(1.2)}100%{transform:scale(.72)}}
+.sky{position:relative; height:260px; border-radius:20px; overflow:hidden; background:linear-gradient(180deg,#C9D9FF 0%,#EAF0FF 55%,#F6F8E6 100%); box-shadow:0 0 0 2px var(--cobalt)}
+.sky-sun{position:absolute; right:22px; top:20px; width:46px; height:46px; border-radius:50%; background:var(--mustard); box-shadow:0 0 0 2px var(--cobalt),0 0 0 12px rgba(219,165,33,.22); animation:sunb 6s ease-in-out infinite}
+@keyframes sunb{50%{box-shadow:0 0 0 2px var(--cobalt),0 0 0 22px rgba(219,165,33,.12)}}
+.balloon{position:absolute; bottom:-90px; max-width:68%; padding:12px 18px; border-radius:26px 26px 26px 6px; border:2px solid var(--cobalt); color:var(--ink); font-weight:600; line-height:1.3; animation:float 8s cubic-bezier(.4,.1,.6,1) forwards}
+.balloon::after{content:""; position:absolute; left:14px; bottom:-38px; width:2px; height:36px; background:var(--cobalt); transform:rotate(8deg); transform-origin:top}
+@keyframes float{0%{transform:translate(0,0) rotate(-3deg); opacity:1}35%{transform:translate(18px,-150px) rotate(3deg)}70%{transform:translate(-12px,-280px) rotate(-2deg); opacity:.85}100%{transform:translate(10px,-420px) rotate(2deg); opacity:0}}
+@media (prefers-reduced-motion: reduce){.balloon{animation:fadeo 3s forwards; bottom:40%}@keyframes fadeo{to{opacity:0}}.kal-hint,.sky-sun{animation:none}}
+.worry{flex:1; min-width:180px; border:2px solid var(--cobalt); border-radius:999px; padding:11px 16px; font:inherit; background:#fff; color:var(--ink)}
+.garden{display:block; width:100%; height:260px; border-radius:20px; background:linear-gradient(180deg,#F6F8E6,#E6EFB6); box-shadow:0 0 0 2px var(--cobalt); cursor:pointer}
+/* living ornaments */
+.door canvas.orn{transition:transform .8s cubic-bezier(.3,1.4,.5,1)}
+.door:hover canvas.orn{transform:rotate(90deg) scale(1.12)}
+.orn-corner{animation:breathe2 12s ease-in-out infinite}
+.brand-orn{animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.orn-corner,.brand-orn{animation:none}}
+.orn-hero{cursor:pointer}
+.teaser{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-top:16px; text-decoration:none; color:var(--ink); background:var(--frame)!important; color:var(--frame-ink)}
+.teaser b{display:block; font-size:1.2rem; margin-top:4px; color:#fff}
+.teaser .eyebrow{color:var(--lime2)}
+.teaser:hover .btn{transform:translateY(-1px)}
 </style>
 </head>
 <body>
 
 
+<div class="frame">
 <nav class="nav" aria-label="Розділи сайту">
   <div class="wrap">
-    <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"></span><span><b>Кабінет психолога</b><small>Білецький А. О. · Великовисківський ліцей</small></span></a>
+    <a class="brand" href="#home"><canvas class="orn brand-orn" data-seed="11" data-n="13" aria-hidden="true"></canvas><span><b>Кабінет психолога</b><small>Білецький А. О. · Великовисківський ліцей</small></span></a>
     <div class="tabs" id="tabs">
       <a href="#home">Головна</a>
       <a href="#students">Учням</a>
@@ -394,11 +495,12 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
   <div class="wrap">
     <div class="hero">
       <div>
+        <h1 class="wordmark">Кабінет<br>психолога</h1>
         <a class="owner" href="#about">
           <span class="owner-av" aria-hidden="true">АБ</span>
           <span><b>Білецький Антон Олександрович</b><small>практичний психолог Великовисківського ліцею</small></span>
         </a>
-        <h1 style="margin-top:22px">Місце, де можна <span class="hl">видихнути</span></h1>
+        <p class="hero-sub">Місце, де можна видихнути</p>
         <p class="lead">Віртуальний кабінет Антона Олександровича: поради, вправи для заспокоєння і підтримка для учнів 1–11 класів, батьків і вчителів. Сюди можна прийти з будь-яким питанням, навіть якщо здається, що воно дрібне.</p>
         <div class="hero-actions">
           <a class="btn dark" href="#relax">Заспокоїтися зараз</a>
@@ -406,40 +508,39 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
           <a class="btn sos" href="#help">Мені дуже погано</a>
         </div>
       </div>
-      <div class="orb-stage" aria-hidden="true">
-        <div class="orb-ring"></div>
-        <div class="orb"></div>
-        <div class="orb-label"><span>вдих…</span><span>видих…</span></div>
+      <div class="orn-stage">
+        <canvas class="orn orn-hero" id="orn-hero" data-seed="2026" data-n="33" aria-label="Візерунок, який повільно дихає: вдих і видих" role="img"></canvas>
+        <div class="orn-ctrl"><span class="orn-label" aria-hidden="true"><span>вдих…</span><span>видих…</span></span><button type="button" class="btn line sm" id="orn-new">Новий візерунок</button></div>
       </div>
     </div>
 
     <div class="doors">
       <a class="door d-sun" href="#students">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="24" cy="24" r="9" fill="currentColor"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.9 9.9l4.2 4.2M33.9 33.9l4.2 4.2M9.9 38.1l4.2-4.2M33.9 14.1l4.2-4.2"/></svg>
+        <canvas class="orn" data-seed="101" data-n="15" aria-hidden="true"></canvas>
         <h3>Я учень</h3>
         <p>Емоції, дружба, булінг, тривога, іспити. Окремо для молодших і старших.</p>
         <span class="go">Відкрити →</span>
       </a>
       <a class="door d-coral" href="#parents">
-        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 42s-15-9.2-15-20.2C9 16 13.2 12 18 12c2.8 0 4.9 1.3 6 3.3C25.1 13.3 27.2 12 30 12c4.8 0 9 4 9 9.8C39 32.8 24 42 24 42z"/></svg>
+        <canvas class="orn" data-seed="202" data-n="15" aria-hidden="true"></canvas>
         <h3>Я батьки</h3>
         <p>Адаптація, розмови про війну, підлітки, гаджети, ознаки булінгу.</p>
         <span class="go">Відкрити →</span>
       </a>
       <a class="door d-lilac" href="#teachers">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M6 12c6-3 12-3 18 1 6-4 12-4 18-1v26c-6-3-12-3-18 1-6-4-12-4-18-1z" fill="currentColor" fill-opacity=".2"/><path d="M24 13v26"/></svg>
+        <canvas class="orn" data-seed="303" data-n="15" aria-hidden="true"></canvas>
         <h3>Я вчитель</h3>
         <p>Алгоритми дій, психологія уроку, п'ятихвилинки, профілактика вигорання.</p>
         <span class="go">Відкрити →</span>
       </a>
       <a class="door d-pine" href="#relax">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 20c5-5 10-5 15 0s10 5 15 0 7-4 10-2"/><path d="M4 30c5-5 10-5 15 0s10 5 15 0 7-4 10-2"/></svg>
+        <canvas class="orn" data-seed="404" data-n="15" aria-hidden="true"></canvas>
         <h3>Релакс-студія</h3>
         <p>Понад 20 вправ: дихання, заземлення, тіло, думки, ігри для малечі.</p>
         <span class="go">Спробувати →</span>
       </a>
       <a class="door d-ink" href="#tests">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="30" height="36" rx="5"/><path d="M16 18l3 3 6-6M16 30l3 3 6-6M29 19h4M29 31h4"/></svg>
+        <canvas class="orn" data-seed="505" data-n="15" aria-hidden="true"></canvas>
         <h3>Самоперевірка</h3>
         <p>Рівень стресу, тест «Ким я можу стати», план безпеки.</p>
         <span class="go">Пройти →</span>
@@ -458,6 +559,10 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
         <button type="button" class="btn line sm" id="tip-next" style="justify-self:start">Ще одна порада</button>
       </div>
     </div>
+    <a class="panel teaser" href="#relax">
+      <span><span class="eyebrow">Антистрес за хвилину</span><b>Намалюй оберіг, полопай бульбашки, відпусти думку чи посади сад спокою</b></span>
+      <span class="btn dark sm">Грати →</span>
+    </a>
     <div class="panel month-card" style="margin-top:16px">
       <span class="eyebrow">Тема місяця</span>
       <div class="m" id="month-name">Вересень</div>
@@ -470,6 +575,7 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
 <section class="view" id="v-students" data-view="students" hidden>
   <div class="wrap">
     <div class="view-head">
+      <canvas class="orn orn-corner" data-seed="737" data-n="23" aria-hidden="true"></canvas>
       <span class="chip c-sun">Учням</span>
       <h1>Коли всередині неспокійно</h1>
       <p>Тут відповіді на питання, які буває соромно поставити вголос. Обери свій вік.</p>
@@ -791,6 +897,7 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
 <section class="view" id="v-parents" data-view="parents" hidden>
   <div class="wrap">
     <div class="view-head">
+      <canvas class="orn orn-corner" data-seed="774" data-n="23" aria-hidden="true"></canvas>
       <span class="chip c-coral">Батькам</span>
       <h1>Спокійний дорослий — найкраща опора</h1>
       <p>Практичні пам'ятки про адаптацію, розмови з дітьми і тривожні сигнали. Консультація для батьків можлива особисто або онлайн.</p>
@@ -1149,6 +1256,7 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
 <section class="view" id="v-teachers" data-view="teachers" hidden>
   <div class="wrap">
     <div class="view-head">
+      <canvas class="orn orn-corner" data-seed="811" data-n="23" aria-hidden="true"></canvas>
       <span class="chip c-lilac">Вчителям</span>
       <h1>Для тих, хто щодня тримає клас</h1>
       <p>Алгоритми дій, прийоми для уроку і підтримка для вас самих.</p>
@@ -1489,6 +1597,7 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
 <section class="view" id="v-relax" data-view="relax" hidden>
   <div class="wrap">
     <div class="view-head">
+      <canvas class="orn orn-corner" data-seed="848" data-n="23" aria-hidden="true"></canvas>
       <span class="chip c-pine">Релакс-студія</span>
       <h1>Натисни «Почати» і дихай</h1>
       <p>Понад 20 вправ, які повертають спокій за кілька хвилин. Для перерви, укриття чи вечора перед сном. Вчителі можуть вмикати їх на проєкторі для всього класу.</p>
@@ -1497,6 +1606,34 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
     <div class="studio">
 
       <!-- ===== 1. Коли накриває ===== -->
+      <div class="sgroup"><h2>Антистрес-ігри</h2><p>Малюй, лопай, відпускай, саджай — руки зайняті, голова відпочиває.</p></div>
+      <div class="tool">
+        <h3>Намалюй свій оберіг</h3>
+        <p class="how">Води пальцем або мишкою — візерунок дзеркалиться у 8 сторін, як мандала чи вишивка. Малювання симетричних візерунків заспокоює і повертає увагу в «тут і зараз».</p>
+        <div class="kal-wrap"><canvas class="kal" id="kal" aria-label="Полотно для малювання симетричного візерунка" role="img"></canvas><span class="kal-hint" id="kal-hint">малюй тут</span></div>
+        <div class="swatches" id="kal-sw" role="group" aria-label="Колір"></div>
+        <div class="row"><button type="button" class="btn line sm" id="kal-clear">Очистити</button><button type="button" class="btn line sm" id="kal-seed">Здивуй мене</button></div>
+      </div>
+      <div class="tool">
+        <h3>Пухирчаста плівка</h3>
+        <p class="how">Лопай бульбашки — по одній або проведи пальцем. Коли закінчаться, з'явиться нова плівка.</p>
+        <div class="bubbles" id="bubbles"></div>
+        <div class="row" style="justify-content:space-between"><span class="muted">Лопнуто: <b id="bub-n">0</b></span><button type="button" class="btn line sm" id="bub-new">Нова плівка</button></div>
+      </div>
+      <div class="tool">
+        <h3>Відпусти думку</h3>
+        <p class="how">Напиши думку, яка не дає спокою, і відпусти її, як повітряну кульку. Ти не мусиш боротися з думками — достатньо дозволити їм відлетіти. Написане ніде не зберігається.</p>
+        <div class="sky" id="sky"><span class="sky-sun" aria-hidden="true"></span></div>
+        <div class="row"><label class="sr" for="worry">Твоя думка</label><input id="worry" class="worry" maxlength="90" placeholder="Напр.: я не встигну все вивчити" autocomplete="off"><button type="button" class="btn pine sm" id="worry-go">Відпустити</button></div>
+        <p class="muted" id="worry-out" aria-live="polite" style="min-height:1.5em"></p>
+      </div>
+      <div class="tool">
+        <h3>Сад спокою</h3>
+        <p class="how">Натискай на полотно — і на цьому місці повільно виросте квітка-візерунок. Спостерігай, як вона розкривається, і дихай у її ритмі.</p>
+        <canvas class="garden" id="garden" aria-label="Сад: натисни, щоб посадити квітку" role="img"></canvas>
+        <div class="row" style="justify-content:space-between"><span class="muted">Квітів у саду: <b id="garden-n">3</b></span><button type="button" class="btn line sm" id="garden-clear">Почати новий сад</button></div>
+      </div>
+
       <div class="sgroup"><h2>Коли накриває</h2><p>Швидка допомога собі за 1–3 хвилини.</p></div>
 
       <div class="tool wide" style="background:var(--alert-soft); border-color:transparent">
@@ -1736,6 +1873,7 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
 <section class="view" id="v-tests" data-view="tests" hidden>
   <div class="wrap">
     <div class="view-head">
+      <canvas class="orn orn-corner" data-seed="885" data-n="23" aria-hidden="true"></canvas>
       <span class="chip c-lilac">Самоперевірка</span>
       <h1>Зрозуміти себе трохи краще</h1>
       <p>Короткі опитувальники для самоспостереження. Це не діагноз і не оцінка. Відповіді ніде не зберігаються і не передаються.</p>
@@ -1802,6 +1940,7 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
 <section class="view" id="v-about" data-view="about" hidden>
   <div class="wrap">
     <div class="view-head">
+      <canvas class="orn orn-corner" data-seed="922" data-n="23" aria-hidden="true"></canvas>
       <span class="chip c-pine">Про кабінет</span>
       <h1>Як звернутися до психолога</h1>
       <p>До практичного психолога Білецького Антона Олександровича можна прийти в кабінет, написати анонімно або записатися на консультацію.</p>
@@ -1864,6 +2003,7 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
 <section class="view" id="v-help" data-view="help" hidden>
   <div class="wrap">
     <div class="view-head">
+      <canvas class="orn orn-corner" data-seed="959" data-n="23" aria-hidden="true"></canvas>
       <span class="chip c-alert">Допомога зараз</span>
       <h1>Ти не сам. Допомога поруч</h1>
       <p>Дзвінки на ці лінії безкоштовні й анонімні. Якщо є загроза життю — одразу телефонуй 112.</p>
@@ -1912,11 +2052,13 @@ footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:12
 </main>
 
 <footer>
+  <canvas class="orn band" id="band" aria-hidden="true"></canvas>
   <div class="wrap">
     <span>Великовисківський ліцей · Великовисківська сільська рада · Кіровоградська обл.</span>
     <span>Практичний психолог Білецький Антон Олександрович · 2026/2027 н. р.</span>
   </div>
 </footer>
+</div>
 
 <script>
 (function(){
@@ -2193,6 +2335,133 @@ document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',(
 }));
 
 show();
+
+/* ---------- ornament engine ---------- */
+const ORN={fills:['#F2581C','#8E7CF7','#F59ACF','#0A9466','#DBA521','#D8EC3C','#FFFFFF','#2632D4','#B3A94A'],line:'#2632D4'};
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function makeGrid(seed,N){
+  const r=rng(seed), c=(N-1)/2, g=new Int8Array(N*N).fill(-1);
+  const pick=()=>Math.floor(r()*ORN.fills.length);
+  const set=(a,b,col)=>{for(const [x,y] of [[a,b],[b,a]]) for(const sx of [1,-1]) for(const sy of [1,-1]){const X=c+sx*x,Y=c+sy*y; if(X>=0&&X<N&&Y>=0&&Y<N) g[Y*N+X]=col;}};
+  const diamond=(a,b,rad,col)=>{for(let i=-rad;i<=rad;i++)for(let j=-rad;j<=rad;j++) if(Math.abs(i)+Math.abs(j)<=rad) set(Math.abs(a+i),Math.abs(b+j),col);};
+  const plus=(a,b,rad,col)=>{for(let i=-rad;i<=rad;i++){set(Math.abs(a+i),Math.abs(b),col);set(Math.abs(a),Math.abs(b+i),col);}};
+  const square=(a,b,rad,col)=>{for(let i=-rad;i<=rad;i++)for(let j=-rad;j<=rad;j++) set(Math.abs(a+i),Math.abs(b+j),col);};
+  // stems
+  const L=Math.floor(c*(0.55+r()*0.4)), s1=pick(), s2=pick();
+  for(let t=0;t<=L;t++) set(t,0,s1);
+  const D=Math.floor(c*(0.4+r()*0.35)); for(let t=0;t<=D;t++) set(t,t,s2);
+  // motifs, big first
+  const m=Math.max(5,Math.floor(N/3)+Math.floor(r()*5));
+  const items=[];
+  for(let k=0;k<m;k++){const a=2+Math.floor(r()*(c-1)); const b=Math.floor(r()*(a+1)); const rad=1+Math.floor(r()*Math.max(1,Math.min(4,N/9))); const q=r(); const t=q<.48?0:q<.88?1:2; items.push([t===2?Math.min(rad,2):rad,a,b,t,pick()]);}
+  items.sort((x,y)=>y[0]-x[0]);
+  for(const [rad,a,b,t,col] of items){ if(a+rad>c) continue; [diamond,plus,square][t](a,b,rad,col); if(rad>1&&r()<.6) [diamond,plus][Math.floor(r()*2)](a,b,rad-1,pick()); }
+  diamond(0,0,1+Math.floor(r()*Math.max(1,N/10)),pick());
+  if(r()<.7) set(0,0,pick());
+  return {g,N,dot:pick()};
+}
+function paintGrid(ctx,G,x0,y0,size,maxR){
+  const {g,N,dot}=G, s=size/N, lw=Math.max(1,s*.2), cc=(N-1)/2;
+  const vis=(x,y)=>maxR===undefined||Math.max(Math.abs(x-cc),Math.abs(y-cc))<=maxR;
+  for(let y=0;y<N;y++)for(let x=0;x<N;x++){const v=vis(x,y)?g[y*N+x]:-1; if(v<0)continue; ctx.fillStyle=ORN.fills[v]; ctx.fillRect(x0+x*s-.3,y0+y*s-.3,s+.6,s+.6);
+    if(v===dot&&s>5){ctx.fillStyle=v===7?'#F59ACF':'#2632D4'; ctx.beginPath(); ctx.arc(x0+x*s+s/2,y0+y*s+s/2,s*.2,0,7); ctx.fill();}}
+  ctx.strokeStyle=ORN.line; ctx.lineWidth=lw; ctx.lineCap='round'; ctx.beginPath();
+  const at=(x,y)=>(x<0||y<0||x>=N||y>=N||!vis(x,y))?-1:g[y*N+x];
+  for(let y=0;y<N;y++)for(let x=0;x<N;x++){const v=at(x,y); if(v<0)continue; const X=x0+x*s,Y=y0+y*s;
+    if(at(x,y-1)!==v){ctx.moveTo(X,Y);ctx.lineTo(X+s,Y);} if(at(x,y+1)!==v&&at(x,y+1)<0){ctx.moveTo(X,Y+s);ctx.lineTo(X+s,Y+s);}
+    if(at(x-1,y)!==v){ctx.moveTo(X,Y);ctx.lineTo(X,Y+s);} if(at(x+1,y)!==v&&at(x+1,y)<0){ctx.moveTo(X+s,Y);ctx.lineTo(X+s,Y+s);} }
+  ctx.stroke();
+}
+function drawOrn(cv){
+  const dpr=Math.min(2,window.devicePixelRatio||1), w=cv.clientWidth, h=cv.clientHeight; if(!w||!h) return;
+  cv.width=Math.round(w*dpr); cv.height=Math.round(h*dpr); const ctx=cv.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,w,h);
+  if(cv.id==='band'){ const t=h-8, n=Math.ceil(w/(t+10))+1; const A=makeGrid(31,9), B=makeGrid(57,9); for(let i=0;i<n;i++) paintGrid(ctx,i%2?B:A,i*(t+10),4,t); return; }
+  const N=+cv.dataset.n||25, pad=Math.max(2,w*.02); paintGrid(ctx,makeGrid(+cv.dataset.seed,N),pad,pad,Math.min(w,h)-pad*2);
+}
+const orns=()=>document.querySelectorAll('canvas.orn');
+function drawVisible(){orns().forEach(cv=>{if(cv.offsetParent!==null) drawOrn(cv);});}
+let rz; window.addEventListener('resize',()=>{clearTimeout(rz); rz=setTimeout(drawVisible,150);});
+window.addEventListener('hashchange',()=>setTimeout(drawVisible,0));
+const REDUCE=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function grow(cv,dur){
+  if(REDUCE){drawOrn(cv);return;}
+  const dpr=Math.min(2,window.devicePixelRatio||1), w=cv.clientWidth, h=cv.clientHeight; if(!w) return;
+  cv.width=Math.round(w*dpr); cv.height=Math.round(h*dpr); const ctx=cv.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0);
+  const N=+cv.dataset.n||25, G=makeGrid(+cv.dataset.seed,N), pad=Math.max(2,w*.02), c=(N-1)/2, t0=performance.now();
+  (function f(t){const k=Math.min(1,(t-t0)/dur); ctx.clearRect(0,0,w,h); paintGrid(ctx,G,pad,pad,Math.min(w,h)-pad*2,Math.floor(c*(1-Math.pow(1-k,3)))); if(k<1) requestAnimationFrame(f);})(t0);
+}
+document.getElementById('orn-new').addEventListener('click',()=>{const cv=document.getElementById('orn-hero'); cv.dataset.seed=Math.floor(Math.random()*1e9); grow(cv,1100);});
+document.getElementById('orn-hero').addEventListener('click',()=>document.getElementById('orn-new').click());
+
+/* ---------- kaleidoscope: draw your amulet ---------- */
+(function(){
+  const cv=document.getElementById('kal'); if(!cv) return;
+  const N=31, c=15; let G={g:new Int8Array(N*N).fill(-1),N,dot:-1}, col=0, rainbow=false, last=null, down=false, ri=0;
+  const sw=document.getElementById('kal-sw');
+  sw.innerHTML=ORN.fills.slice(0,8).map((f,i)=>`<button type="button" id="kal-c${i}" data-i="${i}" aria-label="Колір ${i+1}" aria-pressed="${i===0}" style="background:${f}"></button>`).join('')+`<button type="button" id="kal-rb" class="rb" aria-label="Веселка" aria-pressed="false"></button>`;
+  sw.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{sw.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); rainbow=b.id==='kal-rb'; if(!rainbow) col=+b.dataset.i;}));
+  function render(){const dpr=Math.min(2,devicePixelRatio||1), w=cv.clientWidth; cv.width=cv.height=Math.round(w*dpr); const ctx=cv.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,w,w);
+    ctx.strokeStyle='rgba(38,50,212,.07)'; ctx.lineWidth=1; const s=w/N; ctx.beginPath(); for(let i=1;i<N;i++){ctx.moveTo(i*s,0);ctx.lineTo(i*s,w);ctx.moveTo(0,i*s);ctx.lineTo(w,i*s);} ctx.stroke();
+    ctx.strokeStyle='rgba(38,50,212,.18)'; ctx.beginPath(); ctx.moveTo(w/2,0);ctx.lineTo(w/2,w);ctx.moveTo(0,w/2);ctx.lineTo(w,w/2);ctx.moveTo(0,0);ctx.lineTo(w,w);ctx.moveTo(w,0);ctx.lineTo(0,w);ctx.stroke();
+    paintGrid(ctx,G,0,0,w);}
+  function put(x,y){const a=Math.abs(x-c), b=Math.abs(y-c); const v=rainbow?(ri++>>2)%8:col; for(const [p,q] of [[a,b],[b,a]]) for(const sx of [1,-1]) for(const sy of [1,-1]){const X=c+sx*p,Y=c+sy*q; if(X>=0&&X<N&&Y>=0&&Y<N) G.g[Y*N+X]=v;}}
+  function cell(e){const r=cv.getBoundingClientRect(); return [Math.floor((e.clientX-r.left)/r.width*N),Math.floor((e.clientY-r.top)/r.height*N)];}
+  function stroke(e){const [x,y]=cell(e); if(x<0||y<0||x>=N||y>=N) return; if(last){const n=Math.max(Math.abs(x-last[0]),Math.abs(y-last[1])); for(let i=1;i<=n;i++) put(Math.round(last[0]+(x-last[0])*i/n),Math.round(last[1]+(y-last[1])*i/n));} else put(x,y); last=[x,y]; render(); hint.hidden=true;}
+  const hint=document.getElementById('kal-hint');
+  cv.addEventListener('pointerdown',e=>{down=true; last=null; cv.setPointerCapture(e.pointerId); stroke(e);});
+  cv.addEventListener('pointermove',e=>{if(down) stroke(e);});
+  ['pointerup','pointercancel'].forEach(t=>cv.addEventListener(t,()=>{down=false; last=null;}));
+  document.getElementById('kal-clear').addEventListener('click',()=>{G.g.fill(-1); render(); hint.hidden=false;});
+  document.getElementById('kal-seed').addEventListener('click',()=>{G=makeGrid(Math.floor(Math.random()*1e9),N); G.dot=-1; render(); hint.hidden=true;});
+  // starter pattern so it is not empty at rest
+  [[15,12],[15,13],[15,14],[14,13],[16,13],[15,9],[15,8],[13,11],[12,10],[15,5],[14,5],[16,5]].forEach(([x,y],i)=>{col=[3,3,4,4,4,0,0,1,1,7,2,2][i]; put(x,y);}); col=0;
+  window.__kalRender=render; render();
+})();
+
+/* ---------- bubble wrap ---------- */
+(function(){
+  const box=document.getElementById('bubbles'); if(!box) return; const cnt=document.getElementById('bub-n'); let n=0, actx=null;
+  const cols=['#F59ACF','#8E7CF7','#D8EC3C','#F2581C','#0A9466','#DBA521'];
+  function pop(){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)(); const o=actx.createOscillator(), g=actx.createGain(); o.type='triangle'; o.frequency.setValueAtTime(520+Math.random()*300,actx.currentTime); o.frequency.exponentialRampToValueAtTime(90,actx.currentTime+.08); g.gain.setValueAtTime(.25,actx.currentTime); g.gain.exponentialRampToValueAtTime(.001,actx.currentTime+.1); o.connect(g).connect(actx.destination); o.start(); o.stop(actx.currentTime+.12);}catch(e){}}
+  function fill(){box.innerHTML=''; for(let i=0;i<40;i++){const b=document.createElement('button'); b.type='button'; b.className='bubble'; b.id='bub'+i; b.setAttribute('aria-label','Бульбашка'); b.style.setProperty('--c',cols[i%cols.length]);
+    b.addEventListener('click',()=>{if(b.classList.contains('popped'))return; b.classList.add('popped'); pop(); n++; cnt.textContent=n; if(navigator.vibrate) try{navigator.vibrate(12)}catch(e){} if(!box.querySelector('.bubble:not(.popped)')) setTimeout(fill,700);});
+    b.addEventListener('pointerenter',e=>{if(e.buttons===1) b.click();}); box.appendChild(b);}}
+  fill(); document.getElementById('bub-new').addEventListener('click',fill);
+})();
+
+/* ---------- let the thought go ---------- */
+(function(){
+  const sky=document.getElementById('sky'); if(!sky) return; const inp=document.getElementById('worry'), out=document.getElementById('worry-out');
+  const cols=['#F59ACF','#D8EC3C','#8E7CF7','#FFFFFF','#DBA521'];
+  const lines=['Думка полетіла. Ти — не твої думки.','Ти помітив думку — і відпустив її.','Вона може повернутися. Це нормально — відпусти знову.','Повільний видих… і далі.'];
+  function send(){const t=(inp.value||'').trim(); if(!t){inp.focus(); return;}
+    const b=document.createElement('div'); b.className='balloon'; b.textContent=t.slice(0,90); b.style.left=(8+Math.random()*50)+'%'; b.style.background=cols[Math.floor(Math.random()*cols.length)];
+    sky.appendChild(b); b.addEventListener('animationend',()=>b.remove()); inp.value=''; out.textContent=lines[Math.floor(Math.random()*lines.length)];}
+  document.getElementById('worry-go').addEventListener('click',send);
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter') send();});
+})();
+
+/* ---------- calm garden ---------- */
+(function(){
+  const cv=document.getElementById('garden'); if(!cv) return; const flowers=[]; let raf=null; const cache={};
+  const gridFor=seed=>cache[seed]||(cache[seed]=makeGrid(seed,11));
+  function size(){const dpr=Math.min(2,devicePixelRatio||1); cv.width=Math.round(cv.clientWidth*dpr); cv.height=Math.round(cv.clientHeight*dpr); cv.getContext('2d').setTransform(dpr,0,0,dpr,0,0);}
+  function frame(t){const ctx=cv.getContext('2d'), w=cv.clientWidth, h=cv.clientHeight; ctx.clearRect(0,0,w,h);
+    ctx.fillStyle='#B3C557'; ctx.fillRect(0,h-26,w,26); let busy=false;
+    for(const f of flowers){const k=REDUCE?1:Math.min(1,(t-f.t0)/1600); if(k<1) busy=true; const e=1-Math.pow(1-k,3);
+      const stemTop=f.y-f.s*.1; ctx.strokeStyle='#0A9466'; ctx.lineWidth=4; ctx.lineCap='round'; ctx.beginPath(); ctx.moveTo(f.x,h-14); ctx.lineTo(f.x,h-14-(h-14-stemTop)*Math.min(1,e*1.6)); ctx.stroke();
+      if(k>.3){const kk=(k-.3)/.7; paintGrid(ctx,gridFor(f.seed),f.x-f.s/2,f.y-f.s/2,f.s,Math.floor(5*(1-Math.pow(1-kk,2))));}}
+    raf=busy?requestAnimationFrame(frame):null;}
+  function plant(x,y){const h=cv.clientHeight; y=Math.min(y,h-60); flowers.push({x,y,s:50+Math.random()*46,seed:Math.floor(Math.random()*1e9),t0:performance.now()}); if(flowers.length>30) flowers.shift(); if(!raf) raf=requestAnimationFrame(frame);
+    document.getElementById('garden-n').textContent=flowers.length;}
+  cv.addEventListener('click',e=>{const r=cv.getBoundingClientRect(); plant(e.clientX-r.left,e.clientY-r.top);});
+  document.getElementById('garden-clear').addEventListener('click',()=>{flowers.length=0; document.getElementById('garden-n').textContent=0; requestAnimationFrame(frame);});
+  window.__garden=()=>{size(); if(!flowers.length){const w=cv.clientWidth; [[.2,.45],[.5,.3],[.8,.5]].forEach(([a,b],i)=>flowers.push({x:w*a,y:cv.clientHeight*b,s:70,seed:900+i*77,t0:-1e6}));} requestAnimationFrame(frame);};
+})();
+window.addEventListener('hashchange',()=>{if(location.hash==='#relax') setTimeout(()=>{window.__kalRender&&window.__kalRender(); window.__garden&&window.__garden();},30);});
+if(location.hash==='#relax') setTimeout(()=>{window.__kalRender&&window.__kalRender(); window.__garden&&window.__garden();},30);
+drawVisible();
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawVisible);
 })();
 </script>
 
