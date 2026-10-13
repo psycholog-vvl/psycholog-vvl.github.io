@@ -2141,12 +2141,12 @@ function show(){
 window.addEventListener('hashchange',show);
 
 /* ---------- class + letter pickers ---------- */
-// Літери паралелей: змініть тут, якщо в якомусь класі інший набір (напр. 5:['А','Б','В'])
-const CLASS_LETTERS={default:['А','Б']};
+// Мережа класів 2026/2027: паралелі з літерами лише у 2, 6 і 9 класах
+const CLASS_LETTERS={2:['А','Б'],6:['А','Б'],9:['А','Б'],default:[]};
 document.querySelectorAll('.cls').forEach(w=>{
   const n=w.querySelector('.cls-n'), l=w.querySelector('.cls-l'), h=w.querySelector('input[type=hidden]');
   n.innerHTML='<option value="">не вказувати</option>'+Array.from({length:11},(_,i)=>`<option value="${i+1}">${i+1} клас</option>`).join('')+(n.dataset.extra?'<option value="Батьки">Я батько / мати</option><option value="Вчитель">Я вчитель</option>':'');
-  const upd=()=>{const v=n.value; if(/^\d+$/.test(v)){const L=CLASS_LETTERS[v]||CLASS_LETTERS.default; if(l.hidden||l.dataset.for!==v){l.innerHTML='<option value="">літера</option>'+L.map(x=>`<option>${x}</option>`).join(''); l.dataset.for=v;} l.hidden=false; h.value=v+(l.value?'-'+l.value:'')+' клас';} else {l.hidden=true; h.value=v;}};
+  const upd=()=>{const v=n.value; if(/^\d+$/.test(v)){const L=CLASS_LETTERS[v]||CLASS_LETTERS.default; if(!L.length){l.hidden=true; l.value=''; h.value=v+' клас'; return;} if(l.hidden||l.dataset.for!==v){l.innerHTML='<option value="">літера</option>'+L.map(x=>`<option>${x}</option>`).join(''); l.dataset.for=v;} l.hidden=false; h.value=v+(l.value?'-'+l.value:'')+' клас';} else {l.hidden=true; h.value=v;}};
   n.addEventListener('change',upd); l.addEventListener('change',upd); w.closest('form').addEventListener('reset',()=>setTimeout(()=>{l.hidden=true; h.value='';},0));
 });
 
