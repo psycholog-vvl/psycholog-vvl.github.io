@@ -499,6 +499,10 @@ footer{border-top:0; color:var(--muted)}
 .lofi-play{display:inline-flex; align-items:center; gap:10px; border:0; border-radius:999px; padding:14px 22px; background:#fff; color:var(--ink); font:700 1rem var(--body); cursor:pointer; box-shadow:0 0 0 2px var(--cobalt); transition:transform .15s}
 .lofi-play:hover{transform:scale(1.05)}
 .lofi-ic{width:30px; height:30px; border-radius:50%; background:var(--orange); color:#fff; display:grid; place-items:center; font-size:.8rem}
+
+.cls{display:flex; gap:8px}
+.cls .cls-n{flex:1.4; min-width:0}
+.cls .cls-l{flex:1; min-width:0}
 </style>
 </head>
 <body>
@@ -2007,7 +2011,7 @@ footer{border-top:0; color:var(--muted)}
         <textarea id="t-msg" name="Повідомлення" required maxlength="3000" placeholder="Пиши, як є. Тут не буде осуду."></textarea>
         <div class="frow">
           <div><label for="t-class">Клас <small>(необов'язково)</small></label>
-            <select id="t-class" name="Клас"><option value="">не вказувати</option><option>1–4</option><option>5–6</option><option>7–9</option><option>10–11</option><option>Я батько / мати</option><option>Я вчитель</option></select></div>
+            <div class="cls"><select id="t-class" class="cls-n" data-extra="1"></select><select id="t-letter" class="cls-l" aria-label="Літера класу" hidden></select><input type="hidden" name="Клас"></div></div>
           <div><label for="t-contact">Як відповісти <small>(необов'язково)</small></label>
             <input id="t-contact" name="Контакт для відповіді" maxlength="120" placeholder="Ім'я, Viber або залиш порожнім"></div>
         </div>
@@ -2027,7 +2031,8 @@ footer{border-top:0; color:var(--muted)}
         </fieldset>
         <div class="frow">
           <div><label for="b-name">Ім'я <b class="req">*</b></label><input id="b-name" name="Ім'я" required maxlength="80" autocomplete="name"></div>
-          <div><label for="b-class">Клас дитини</label><input id="b-class" name="Клас" maxlength="20" placeholder="напр. 7-Б"></div>
+          <div><label for="b-class">Клас</label>
+            <div class="cls"><select id="b-class" class="cls-n"></select><select id="b-letter" class="cls-l" aria-label="Літера класу" hidden></select><input type="hidden" name="Клас"></div></div>
         </div>
         <label for="b-contact">Як з тобою зв'язатися <b class="req">*</b></label>
         <input id="b-contact" name="Контакт" required maxlength="120" placeholder="Телефон, Viber, Telegram або email">
@@ -2134,6 +2139,16 @@ function show(){
   if(v.dataset.view!=='relax') stopAll();
 }
 window.addEventListener('hashchange',show);
+
+/* ---------- class + letter pickers ---------- */
+// Літери паралелей: змініть тут, якщо в якомусь класі інший набір (напр. 5:['А','Б','В'])
+const CLASS_LETTERS={default:['А','Б']};
+document.querySelectorAll('.cls').forEach(w=>{
+  const n=w.querySelector('.cls-n'), l=w.querySelector('.cls-l'), h=w.querySelector('input[type=hidden]');
+  n.innerHTML='<option value="">не вказувати</option>'+Array.from({length:11},(_,i)=>`<option value="${i+1}">${i+1} клас</option>`).join('')+(n.dataset.extra?'<option value="Батьки">Я батько / мати</option><option value="Вчитель">Я вчитель</option>':'');
+  const upd=()=>{const v=n.value; if(/^\d+$/.test(v)){const L=CLASS_LETTERS[v]||CLASS_LETTERS.default; if(l.hidden||l.dataset.for!==v){l.innerHTML='<option value="">літера</option>'+L.map(x=>`<option>${x}</option>`).join(''); l.dataset.for=v;} l.hidden=false; h.value=v+(l.value?'-'+l.value:'')+' клас';} else {l.hidden=true; h.value=v;}};
+  n.addEventListener('change',upd); l.addEventListener('change',upd); w.closest('form').addEventListener('reset',()=>setTimeout(()=>{l.hidden=true; h.value='';},0));
+});
 
 /* ---------- forms: sent to the psychologist's email via FormSubmit ---------- */
 const FORM_ENDPOINT='https://formsubmit.co/ajax/antonbileckii15@gmail.com';
