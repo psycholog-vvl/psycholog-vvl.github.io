@@ -1886,7 +1886,7 @@ footer{border-top:0; color:var(--muted)}
         <h3>Lofi-музика для спокою</h3>
         <p class="how">Спокійні біти без слів від Lofi Girl — для домашки, читання чи відпочинку. Така музика допомагає зосередитися і заглушує тривожні думки.</p>
         <div class="lofi" id="lofi"><button type="button" class="lofi-play" id="lofi-btn"><span class="lofi-ic" aria-hidden="true">▶</span>Увімкнути lofi-радіо</button></div>
-        <div class="row"><a class="btn line sm" href="https://www.youtube.com/watch?v=jfKfPfyJRdk" target="_blank" rel="noopener">Відкрити на YouTube ↗</a><a class="btn line sm" href="https://www.youtube.com/@LofiGirl/streams" target="_blank" rel="noopener">Інші ефіри Lofi Girl ↗</a></div>
+        <div class="row"><a class="btn line sm" href="https://www.youtube.com/watch?v=rFZHOHl-L8A" target="_blank" rel="noopener">Відкрити на YouTube ↗</a><a class="btn line sm" href="https://www.youtube.com/@LofiGirl/streams" target="_blank" rel="noopener">Інші ефіри Lofi Girl ↗</a></div>
       </div>
       <div class="tool">
         <h3>Щоденник настрою</h3>
@@ -2292,7 +2292,7 @@ bfb.addEventListener('click',()=>{const on=bf.classList.toggle('run'); bfb.textC
 
 /* ---------- lofi radio (loads YouTube only after a click) ---------- */
 const lofi=document.getElementById('lofi'), lofiBtn=document.getElementById('lofi-btn');
-lofiBtn.addEventListener('click',()=>{lofi.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk?autoplay=1" title="Lofi Girl — lofi hip hop radio" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';});
+lofiBtn.addEventListener('click',()=>{lofi.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/rFZHOHl-L8A?autoplay=1" title="Lofi Girl — lofi hip hop radio" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';});
 function stopNoise(){if(lofi.querySelector('iframe')){lofi.innerHTML=''; lofi.appendChild(lofiBtn);}}
 
 
