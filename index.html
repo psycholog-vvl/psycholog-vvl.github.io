@@ -467,6 +467,32 @@ footer{border-top:0; color:var(--muted)}
 .teaser b{display:block; font-size:1.2rem; margin-top:4px; color:#fff}
 .teaser .eyebrow{color:var(--lime2)}
 .teaser:hover .btn{transform:translateY(-1px)}
+
+/* ---------- forms ---------- */
+.about-one{grid-template-columns:1fr}
+.fform{display:grid; gap:10px; align-content:start}
+.fform label,.fform legend{font-weight:700; font-size:.92rem}
+.fform label small{font-weight:500; color:var(--muted)}
+.fform .req{color:var(--orange)}
+.fform input:not([type=radio]),.fform select,.fform textarea{width:100%; border:2px solid rgba(27,33,16,.18); border-radius:14px; padding:11px 14px; font:inherit; background:#fff; color:var(--ink)}
+.fform textarea{min-height:110px; resize:vertical}
+.fform input:focus,.fform select:focus,.fform textarea:focus{outline:none; border-color:var(--cobalt)}
+.frow{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.frow > div{display:grid; gap:6px}
+@media (max-width:560px){.frow{grid-template-columns:1fr}}
+.fform button[type=submit]{justify-self:start; margin-top:4px}
+.fform button[disabled]{opacity:.6; cursor:wait}
+.seg-radio{border:0; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px}
+.seg-radio legend{margin-bottom:6px; width:100%}
+.seg-radio input{position:absolute; opacity:0}
+.seg-radio span{display:inline-block; padding:8px 16px; border-radius:999px; background:#fff; border:2px solid rgba(27,33,16,.18); font-weight:600; cursor:pointer}
+.seg-radio input:checked + span{background:var(--cobalt); color:#fff; border-color:var(--cobalt)}
+.seg-radio input:focus-visible + span{outline:3px solid var(--sun); outline-offset:2px}
+.hp{position:absolute; left:-9999px; width:1px; height:1px}
+.fmsg{min-height:1.4em; font-weight:600}
+.fmsg.ok{color:var(--green)}
+.fmsg.err{color:var(--alert)}
+.fnote{font-size:.88rem; background:var(--alert-soft); padding:10px 14px; border-radius:12px}
 </style>
 </head>
 <body>
@@ -1924,7 +1950,7 @@ footer{border-top:0; color:var(--muted)}
           <div><label for="sp2">2. Що мені допомагає самому<small>Музика, прогулянка, дихання, душ, малювання</small></label><textarea id="sp2" placeholder="Напр.: дихання «Квадрат», вийти на вулицю"></textarea></div>
           <div><label for="sp3">3. Люди і місця, які відволікають<small>Де і з ким мені стає легше</small></label><textarea id="sp3" placeholder="Напр.: бабуся, тренування, друг Максим"></textarea></div>
           <div><label for="sp4">4. Кому я можу розповісти<small>Імена і телефони людей, яким довіряю</small></label><textarea id="sp4" placeholder="Напр.: мама, класна керівниця"></textarea></div>
-          <div><label for="sp5">5. Фахівці<small>Психолог ліцею, гарячі лінії</small></label><textarea id="sp5">Психолог ліцею: Білецький Антон Олександрович, [кабінет]
+          <div><label for="sp5">5. Фахівці<small>Психолог ліцею, гарячі лінії</small></label><textarea id="sp5">Психолог ліцею: Білецький Антон Олександрович, antonbileckii15@gmail.com
 Дитяча лінія: 116 111
 Екстрена допомога: 112</textarea></div>
           <div><label for="sp6">6. Що для мене важливе<small>Люди, мрії, тварини, заради яких варто триматися</small></label><textarea id="sp6" placeholder="Напр.: мій пес, поїздка на море влітку"></textarea></div>
@@ -1945,18 +1971,15 @@ footer{border-top:0; color:var(--muted)}
       <h1>Як звернутися до психолога</h1>
       <p>До практичного психолога Білецького Антона Олександровича можна прийти в кабінет, написати анонімно або записатися на консультацію.</p>
     </div>
-    <div class="about">
-      <div class="portrait"><span class="portrait-av">АБ</span><span class="muted" style="font-size:.85rem">[тут буде фото]</span></div>
+    <div class="about about-one">
       <div class="panel" style="display:grid; gap:20px; align-content:start">
         <div>
           <h3 style="font-size:1.4rem">Білецький Антон Олександрович</h3>
           <p class="muted">Практичний психолог Великовисківського ліцею</p>
         </div>
         <dl class="facts">
-          <dt>Кабінет</dt><dd>[№]</dd>
-          <dt>Графік</dt><dd>[пн–пт, 08:30–15:30]</dd>
-          <dt>Телефон</dt><dd>[номер]</dd>
-          <dt>Email</dt><dd>[адреса]</dd>
+          <dt>Графік</dt><dd>пн–пт, 07:30–13:30</dd>
+          <dt>Email</dt><dd><a href="mailto:antonbileckii15@gmail.com">antonbileckii15@gmail.com</a></dd>
         </dl>
         <div>
           <h4 style="font-family:var(--body); font-weight:700; margin-bottom:10px">З чим можна прийти</h4>
@@ -1972,21 +1995,53 @@ footer{border-top:0; color:var(--muted)}
         </div>
       </div>
     </div>
-    <div class="help-grid">
-      <div class="panel" style="display:grid; gap:12px">
+    <div class="help-grid forms-grid" id="forms">
+      <form class="panel fform" id="f-trust" data-subject="Скринька довіри: нове повідомлення" novalidate>
         <span class="chip c-lilac">Анонімно</span>
         <h3>Скринька довіри</h3>
-        <p class="muted">Напиши про те, що турбує тебе або когось поруч. Ім'я вказувати не потрібно, повідомлення читає лише психолог.</p>
-        <a class="btn dark" id="trust-link" href="#about" style="justify-self:start">Написати</a>
-        <span class="muted" id="trust-note" style="font-size:.85rem"></span>
-      </div>
-      <div class="panel" style="display:grid; gap:12px">
+        <p class="muted">Напиши про те, що турбує тебе або когось поруч. Ім'я вказувати не потрібно. Повідомлення одразу приходить психологу на пошту і більше нікому.</p>
+        <label for="t-msg">Що сталося? <b class="req">*</b></label>
+        <textarea id="t-msg" name="Повідомлення" required maxlength="3000" placeholder="Пиши, як є. Тут не буде осуду."></textarea>
+        <div class="frow">
+          <div><label for="t-class">Клас <small>(необов'язково)</small></label>
+            <select id="t-class" name="Клас"><option value="">не вказувати</option><option>1–4</option><option>5–6</option><option>7–9</option><option>10–11</option><option>Я батько / мати</option><option>Я вчитель</option></select></div>
+          <div><label for="t-contact">Як відповісти <small>(необов'язково)</small></label>
+            <input id="t-contact" name="Контакт для відповіді" maxlength="120" placeholder="Ім'я, Viber або залиш порожнім"></div>
+        </div>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn dark" id="t-send">Надіслати анонімно</button>
+        <p class="fmsg" role="status" aria-live="polite"></p>
+        <p class="fnote">Якщо тобі або комусь загрожує небезпека прямо зараз — не чекай відповіді: <b>112</b> або дитяча лінія <b>116 111</b>.</p>
+      </form>
+      <form class="panel fform" id="f-book" data-subject="Запис на консультацію" novalidate>
         <span class="chip c-sun">Учні · батьки · вчителі</span>
         <h3>Запис на консультацію</h3>
-        <p class="muted">Обери зручний день і формат: у кабінеті або онлайн. Психолог підтвердить час.</p>
-        <a class="btn dark" id="book-link" href="#about" style="justify-self:start">Записатися</a>
-        <span class="muted" id="book-note" style="font-size:.85rem"></span>
-      </div>
+        <p class="muted">Залиш заявку — психолог зв'яжеться з тобою і підтвердить час. Консультації в робочі дні з 07:30 до 13:30.</p>
+        <fieldset class="seg-radio"><legend>Хто звертається <b class="req">*</b></legend>
+          <label><input type="radio" name="Хто звертається" value="Учень / учениця" id="b-who1" required><span>Учень</span></label>
+          <label><input type="radio" name="Хто звертається" value="Батько / мати" id="b-who2"><span>Батьки</span></label>
+          <label><input type="radio" name="Хто звертається" value="Вчитель" id="b-who3"><span>Вчитель</span></label>
+        </fieldset>
+        <div class="frow">
+          <div><label for="b-name">Ім'я <b class="req">*</b></label><input id="b-name" name="Ім'я" required maxlength="80" autocomplete="name"></div>
+          <div><label for="b-class">Клас дитини</label><input id="b-class" name="Клас" maxlength="20" placeholder="напр. 7-Б"></div>
+        </div>
+        <label for="b-contact">Як з тобою зв'язатися <b class="req">*</b></label>
+        <input id="b-contact" name="Контакт" required maxlength="120" placeholder="Телефон, Viber, Telegram або email">
+        <div class="frow">
+          <div><label for="b-topic">Тема</label>
+            <select id="b-topic" name="Тема"><option>Не хочу вказувати</option><option>Тривога, стрес, настрій</option><option>Стосунки з однолітками</option><option>Булінг</option><option>Сім'я</option><option>Навчання, мотивація</option><option>Вибір професії, НМТ</option><option>Адаптація</option><option>Інше</option></select></div>
+          <div><label for="b-format">Формат</label>
+            <select id="b-format" name="Формат"><option>У кабінеті</option><option>Онлайн</option><option>Телефоном</option></select></div>
+        </div>
+        <label for="b-when">Зручний день і час</label>
+        <input id="b-when" name="Зручний час" maxlength="120" placeholder="напр. вівторок після 3 уроку">
+        <label for="b-note">Коментар</label>
+        <textarea id="b-note" name="Коментар" maxlength="1500" placeholder="Що хочеш обговорити? (необов'язково)"></textarea>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn dark" id="b-send">Записатися</button>
+        <p class="fmsg" role="status" aria-live="polite"></p>
+      </form>
     </div>
     <div class="panel" style="margin-top:16px; display:grid; gap:12px">
       <h3>Принципи роботи</h3>
@@ -2063,7 +2118,6 @@ footer{border-top:0; color:var(--muted)}
 <script>
 (function(){
 // Посилання на Google Forms — вставити, коли форми будуть створені
-const FORMS = { trust: "", book: "" };
 
 /* ---------- router ---------- */
 const views=[...document.querySelectorAll('[data-view]')];
@@ -2078,11 +2132,26 @@ function show(){
 }
 window.addEventListener('hashchange',show);
 
-/* ---------- forms ---------- */
-[["trust","trust-link","trust-note"],["book","book-link","book-note"]].forEach(([k,a,n])=>{
-  const link=document.getElementById(a), note=document.getElementById(n);
-  if(FORMS[k]){link.href=FORMS[k]; link.target="_blank"; link.rel="noopener";}
-  else note.textContent="Форма незабаром. Поки що звертайтеся особисто.";
+/* ---------- forms: sent to the psychologist's email via FormSubmit ---------- */
+const FORM_ENDPOINT='https://formsubmit.co/ajax/antonbileckii15@gmail.com';
+document.querySelectorAll('form.fform').forEach(f=>{
+  const msg=f.querySelector('.fmsg'), btn=f.querySelector('button[type=submit]'), label=btn.textContent;
+  f.addEventListener('submit',async e=>{
+    e.preventDefault(); msg.className='fmsg';
+    const bad=[...f.querySelectorAll('[required]')].filter(el=>el.type==='radio'?!f.querySelector('input[name="'+el.name+'"]:checked'):!el.value.trim());
+    if(bad.length){msg.classList.add('err'); msg.textContent='Заповни, будь ласка, поля із зірочкою.'; (bad[0].type==='radio'?bad[0]:bad[0]).focus(); return;}
+    const data={}; new FormData(f).forEach((v,k)=>{if(String(v).trim()) data[k]=v;});
+    data._subject=f.dataset.subject; data._template='table'; data._captcha='false';
+    btn.disabled=true; btn.textContent='Надсилаю…';
+    try{
+      const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
+      const j=await r.json().catch(()=>({}));
+      if(!r.ok||String(j.success)==='false') throw new Error(j.message||r.status);
+      f.reset(); msg.classList.add('ok');
+      msg.textContent=f.id==='f-trust'?'Дякую, що довірився. Повідомлення отримано — психолог його прочитає.':'Заявку надіслано! Психолог зв\'яжеться з тобою, щоб підтвердити час.';
+    }catch(err){msg.classList.add('err'); msg.textContent='Не вдалося надіслати. Перевір інтернет і спробуй ще раз або напиши на antonbileckii15@gmail.com.';}
+    btn.disabled=false; btn.textContent=label;
+  });
 });
 
 /* ---------- weather ---------- */
