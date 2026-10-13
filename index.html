@@ -493,6 +493,12 @@ footer{border-top:0; color:var(--muted)}
 .fmsg.ok{color:var(--green)}
 .fmsg.err{color:var(--alert)}
 .fnote{font-size:.88rem; background:var(--alert-soft); padding:10px 14px; border-radius:12px}
+
+.lofi{aspect-ratio:16/9; width:100%; border-radius:18px; overflow:hidden; display:grid; place-items:center; background:radial-gradient(circle at 30% 30%,var(--violet),transparent 60%),radial-gradient(circle at 75% 70%,var(--pink),transparent 55%),var(--cobalt); box-shadow:0 0 0 2px var(--cobalt)}
+.lofi iframe{width:100%; height:100%; border:0; display:block}
+.lofi-play{display:inline-flex; align-items:center; gap:10px; border:0; border-radius:999px; padding:14px 22px; background:#fff; color:var(--ink); font:700 1rem var(--body); cursor:pointer; box-shadow:0 0 0 2px var(--cobalt); transition:transform .15s}
+.lofi-play:hover{transform:scale(1.05)}
+.lofi-ic{width:30px; height:30px; border-radius:50%; background:var(--orange); color:#fff; display:grid; place-items:center; font-size:.8rem}
 </style>
 </head>
 <body>
@@ -1871,15 +1877,12 @@ footer{border-top:0; color:var(--muted)}
       </div>
 
       <!-- ===== 7. Для себе ===== -->
-      <div class="sgroup"><h2>Звук і щоденник</h2></div>
+      <div class="sgroup"><h2>Музика і щоденник</h2></div>
       <div class="tool">
-        <h3>Звук дощу</h3>
-        <p class="how">М'який шум, який заглушує тривожні думки. Для навчання, сну або тиші на перерві.</p>
-        <div class="row">
-          <button type="button" class="btn pine" id="noise-btn">Увімкнути</button>
-          <label class="muted" for="noise-vol" style="font-size:.85rem">Гучність</label>
-          <input type="range" id="noise-vol" min="0" max="100" value="40" style="flex:1; min-width:100px; accent-color:var(--pine)">
-        </div>
+        <h3>Lofi-музика для спокою</h3>
+        <p class="how">Спокійні біти без слів від Lofi Girl — для домашки, читання чи відпочинку. Така музика допомагає зосередитися і заглушує тривожні думки.</p>
+        <div class="lofi" id="lofi"><button type="button" class="lofi-play" id="lofi-btn"><span class="lofi-ic" aria-hidden="true">▶</span>Увімкнути lofi-радіо</button></div>
+        <div class="row"><a class="btn line sm" href="https://www.youtube.com/watch?v=jfKfPfyJRdk" target="_blank" rel="noopener">Відкрити на YouTube ↗</a><a class="btn line sm" href="https://www.youtube.com/@LofiGirl/streams" target="_blank" rel="noopener">Інші ефіри Lofi Girl ↗</a></div>
       </div>
       <div class="tool">
         <h3>Щоденник настрою</h3>
@@ -2272,24 +2275,10 @@ pBtn.addEventListener('click',()=>{
 const bf=document.getElementById('bfly'), bfb=document.getElementById('bfly-btn');
 bfb.addEventListener('click',()=>{const on=bf.classList.toggle('run'); bfb.textContent=on?"Зупинити":"Показати ритм";});
 
-/* ---------- noise (generated rain) ---------- */
-let ctx=null, src=null, gain=null;
-const nBtn=document.getElementById('noise-btn'), vol=document.getElementById('noise-vol');
-function stopNoise(){if(src){try{src.stop()}catch(e){} src=null;} nBtn.textContent="Увімкнути";}
-nBtn.addEventListener('click',()=>{
-  if(src){stopNoise(); return;}
-  try{
-    ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();
-    const len=ctx.sampleRate*4, buf=ctx.createBuffer(2,len,ctx.sampleRate);
-    for(let c=0;c<2;c++){const d=buf.getChannelData(c); let last=0; for(let i=0;i<len;i++){const w=Math.random()*2-1; last=(last+0.02*w)/1.02; d[i]=last*3.2 + w*0.035;}}
-    src=ctx.createBufferSource(); src.buffer=buf; src.loop=true;
-    const lp=ctx.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=1800;
-    gain=ctx.createGain(); gain.gain.value=vol.value/100*.6;
-    src.connect(lp).connect(gain).connect(ctx.destination); src.start(); ctx.resume();
-    nBtn.textContent="Вимкнути";
-  }catch(e){nBtn.textContent="Звук недоступний";}
-});
-vol.addEventListener('input',()=>{if(gain) gain.gain.value=vol.value/100*.6;});
+/* ---------- lofi radio (loads YouTube only after a click) ---------- */
+const lofi=document.getElementById('lofi'), lofiBtn=document.getElementById('lofi-btn');
+lofiBtn.addEventListener('click',()=>{lofi.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk?autoplay=1" title="Lofi Girl — lofi hip hop radio" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';});
+function stopNoise(){if(lofi.querySelector('iframe')){lofi.innerHTML=''; lofi.appendChild(lofiBtn);}}
 
 
 /* ---------- generic stepper ---------- */
